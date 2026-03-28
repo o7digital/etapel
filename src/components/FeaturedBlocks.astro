@@ -1,28 +1,4 @@
 ---
-const cards = [
-  {
-    title: 'Contamos con lineas que contienen homologaciones',
-    text: '¡Contamos con líneas con mas de 15 homologaciones, identifícalas aquí...',
-    href: 'https://www.gys.fr/spip.php?page=accueil&lang=es',
-    image: '/images/featured-homologaciones.jpg',
-    tag: 'Homologaciones / GYS'
-  },
-  {
-    title: 'Líneas líderes a nivel mundial',
-    text: 'Traemos para ti, en exclusiva 48 líneas de productos líderes en el mercado a nivel mundial. Para potencializar tu rendimiento.',
-    href: '#linea-producto',
-    image: '/images/featured-lineas.jpg',
-    tag: 'Portafolio'
-  },
-  {
-    title: 'Centro de Capacitación',
-    text: 'Ofrecemos capacitación en pintura y carrocería. Aprende el uso adecuado de equipos, procesos homologados y actualización de productos. ¡Maximiza tu éxito!',
-    href: '#capacitacion',
-    image: '/images/featured-capacitacion.png',
-    tag: 'Capacitación'
-  }
-];
-
 const logos = [
   { src: '/logos/logo-sata.png', alt: 'SATA' },
   { src: '/logos/logo-farecla.png', alt: 'Farecla' },
@@ -37,65 +13,101 @@ const logos = [
 ];
 ---
 
-<section id="quienes-somos" class="relative overflow-hidden bg-[#050b12] py-20 sm:py-24">
-  <div class="shell">
-    <div class="grid gap-5 lg:grid-cols-3">
-      {
-        cards.map((card) => (
-          <article
-            class="group relative min-h-[380px] overflow-hidden rounded-[30px] border border-white/10 lg:min-h-[520px]"
-          >
-            <div
-              class="absolute inset-0 scale-100 bg-cover bg-center transition duration-700 group-hover:scale-105"
-              style={`background-image:
-                linear-gradient(180deg, rgba(2, 6, 23, 0.16), rgba(2, 6, 23, 0.78)),
-                url('${card.image}')`}
-            ></div>
-            <div class="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(5,11,18,0.88))]"></div>
-            <div class="relative flex h-full flex-col justify-end p-7 sm:p-8">
-              <span class="section-kicker text-slate-200">{card.tag}</span>
-              <h2 class="mt-5 text-2xl font-bold tracking-[-0.03em] text-white sm:text-[2rem]">
-                {card.title}
-              </h2>
-              <p class="mt-4 max-w-md text-base leading-7 text-slate-200">
-                {card.text}
-              </p>
-              <div class="mt-7">
-                <a
-                  href={card.href}
-                  class="btn-secondary"
-                  target={card.href.startsWith('http') ? '_blank' : undefined}
-                  rel={card.href.startsWith('http') ? 'noreferrer' : undefined}
-                >
-                  Me interesa
-                </a>
-              </div>
-            </div>
-          </article>
-        ))
-      }
-    </div>
-
-    <div class="panel mt-16 rounded-[34px] p-8 sm:p-10">
-      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div class="max-w-2xl">
-          <span class="section-kicker">Líneas líderes a nivel mundial</span>
-          <h3 class="section-title mt-4 text-white">Marcas globales con respaldo técnico y comercial</h3>
-        </div>
-        <p class="max-w-xl text-sm leading-7 text-slate-300">
-          La home actual ya comunica variedad y exclusividad. Aquí la convertimos en una vitrina más clara, premium y mucho más sólida visualmente.
+<section id="quienes-somos" class="bg-white py-16 sm:py-20">
+  <div class="shell space-y-8">
+    <article class="grid items-center gap-8 rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <div class="order-2 lg:order-1">
+        <span class="section-kicker text-slate-700">Homologaciones / GYS</span>
+        <h2 class="section-title mt-4 text-slate-950">Contamos con lineas que contienen homologaciones</h2>
+        <p class="section-copy mt-5 text-slate-600">
+          ¡Contamos con líneas con mas de 15 homologaciones, identifícalas aquí...
         </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href="https://www.gys.fr/spip.php?page=accueil&lang=es"
+            class="btn-primary"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Me interesa
+          </a>
+          <div class="flex items-center gap-3 rounded-full border border-slate-200 bg-slate-50 px-4 py-2">
+            <img src="/logos/logo-gys.png" alt="GYS" class="h-6 w-auto object-contain" loading="lazy" />
+            <span class="text-sm font-semibold text-slate-700">Líneas con homologaciones internacionales</span>
+          </div>
+        </div>
       </div>
 
-      <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-        {
-          logos.map((logo) => (
-            <div class="flex min-h-28 items-center justify-center rounded-[24px] border border-white/10 bg-white/[0.04] px-6 py-5 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07]">
-              <img src={logo.src} alt={logo.alt} class="max-h-10 w-auto object-contain opacity-90" loading="lazy" />
-            </div>
-          ))
-        }
+      <div class="order-1 lg:order-2">
+        <div class="overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100">
+          <img
+            src="/images/featured-homologaciones.jpg"
+            alt="Homologaciones Etapel"
+            class="h-[320px] w-full object-cover sm:h-[380px] lg:h-[430px]"
+            loading="lazy"
+          />
+        </div>
       </div>
-    </div>
+    </article>
+
+    <article class="grid items-center gap-8 rounded-[32px] border border-slate-200 bg-[#f5f8fc] p-8 shadow-[0_24px_70px_rgba(15,23,42,0.06)] sm:p-10 lg:grid-cols-[0.95fr_1.05fr]">
+      <div>
+        <span class="section-kicker text-slate-700">Líneas líderes a nivel mundial</span>
+        <h2 class="section-title mt-4 text-slate-950">Líneas líderes a nivel mundial</h2>
+        <p class="section-copy mt-5 text-slate-600">
+          Traemos para ti, en exclusiva 48 líneas de productos líderes en el mercado a nivel mundial. Para potencializar tu rendimiento.
+        </p>
+        <div class="mt-8">
+          <a href="#linea-producto" class="btn-outline">Me interesa</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="overflow-hidden rounded-[28px] border border-slate-200 bg-white">
+          <img
+            src="/images/featured-lineas.jpg"
+            alt="Líneas líderes a nivel mundial"
+            class="h-[320px] w-full object-cover sm:h-[380px] lg:h-[430px]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="lg:col-span-2">
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {
+            logos.map((logo) => (
+              <div class="flex min-h-28 items-center justify-center rounded-[22px] border border-slate-200 bg-white px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-0.5">
+                <img src={logo.src} alt={logo.alt} class="max-h-10 w-auto object-contain opacity-90" loading="lazy" />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+
+    <article id="capacitacion" class="grid items-center gap-8 rounded-[32px] border border-slate-200 bg-[#eef6fb] p-8 shadow-[0_24px_70px_rgba(15,23,42,0.06)] sm:p-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <div class="order-2 lg:order-1">
+        <span class="section-kicker text-slate-700">Capacitación</span>
+        <h2 class="section-title mt-4 text-slate-950">Centro de Capacitación</h2>
+        <p class="section-copy mt-5 text-slate-600">
+          Ofrecemos capacitación en pintura y carrocería. Aprende el uso adecuado de equipos, procesos homologados y actualización de productos. ¡Maximiza tu éxito!
+        </p>
+        <div class="mt-8">
+          <a href="#contacto" class="btn-outline">Me interesa</a>
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <div class="overflow-hidden rounded-[28px] border border-slate-200 bg-white">
+          <img
+            src="/images/featured-capacitacion.png"
+            alt="Centro de Capacitación Etapel"
+            class="h-[320px] w-full object-cover sm:h-[380px] lg:h-[430px]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </article>
   </div>
 </section>

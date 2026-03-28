@@ -24,27 +24,21 @@ const productLines = [
 ];
 ---
 
-<footer id="postventa" class="bg-[#050b12] pb-10 pt-10 text-white">
+<footer id="postventa" class="bg-[#09131c] pb-10 pt-12 text-white">
   <div class="shell">
-    <div class="grid gap-8 rounded-[34px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl sm:p-10 lg:grid-cols-[1.15fr_0.8fr_1fr]">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.8fr_1fr]">
       <div>
         <img src="/images/logo-etapel-white.png" alt="Etapel" class="h-12 w-auto" loading="lazy" />
-        <p class="mt-6 max-w-md text-lg leading-8 text-slate-200">
+        <p class="mt-6 max-w-md text-base leading-8 text-slate-300">
           En Etapel, no somos solo proveedores, somos socios en el crecimiento de tu negocio.
         </p>
         <p class="mt-4 max-w-md text-sm leading-7 text-slate-400">
           Descubre cómo podemos ayudarte a alcanzar nuevos niveles de éxito.
         </p>
-        <div class="mt-6 rounded-[24px] border border-white/10 bg-white/[0.05] p-5">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200">PostVenta</p>
-          <p class="mt-3 text-sm leading-7 text-slate-300">
-            Soporte técnico, seguimiento y continuidad comercial con una base lista para expandir el resto del sitio.
-          </p>
-        </div>
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-200">Navegación</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200">Navegación</h3>
         <ul class="mt-5 space-y-3">
           {
             navItems.map((item) => (
@@ -59,7 +53,7 @@ const productLines = [
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-200">Líneas de Producto</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200">Líneas de Producto</h3>
         <div class="mt-5 flex flex-wrap gap-2">
           {
             productLines.map((line) => (
@@ -72,7 +66,7 @@ const productLines = [
       </div>
     </div>
 
-    <div class="mt-6 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
       <p>Copyright © 2026 Etapel. Todos los derechos reservados.</p>
       <div class="flex items-center gap-4">
         <a href="#contacto" class="transition hover:text-white">¿Necesitas ayuda? ¡Contáctanos!</a>

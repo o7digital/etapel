@@ -10,8 +10,7 @@ const resources = [
 ];
 ---
 
-<section class="relative overflow-hidden bg-[#eef3f8] py-20 sm:py-24">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(96,165,250,0.14),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_30%)]"></div>
+<section class="relative overflow-hidden bg-white py-16 sm:py-20">
   <div class="shell relative">
     <div class="grid items-center gap-12 lg:grid-cols-[1fr_0.8fr]">
       <div>
@@ -27,7 +26,7 @@ const resources = [
         <div class="mt-8 grid max-w-2xl grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7">
           {
             resources.map((resource, index) => (
-              <div class="flex aspect-square items-center justify-center rounded-[20px] border border-slate-200 bg-white p-3 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+              <div class="flex aspect-square items-center justify-center rounded-[20px] border border-slate-200 bg-slate-50 p-3 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
                 <img src={resource} alt={`Recurso SATA ${index + 1}`} class="h-12 w-12 object-contain" loading="lazy" />
               </div>
             ))
@@ -40,12 +39,12 @@ const resources = [
       </div>
 
       <div class="relative">
-        <div class="absolute inset-4 rounded-[32px] bg-[radial-gradient(circle_at_top,rgba(96,165,250,0.26),transparent_60%)] blur-3xl"></div>
-        <div class="relative rounded-[34px] border border-slate-200 bg-[linear-gradient(180deg,#0b1320,#111c2c)] p-6 shadow-[0_35px_100px_rgba(2,6,23,0.28)] sm:p-8">
-          <div class="rounded-[26px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] px-6 py-4">
-            <p class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-200">Boquilla X</p>
-            <p class="mt-2 text-sm leading-7 text-slate-300">
-              Aplicación más suave, menor ruido y un mejor equilibrio entre precisión, velocidad y ahorro de material.
+        <div class="absolute inset-6 rounded-[32px] bg-[radial-gradient(circle_at_top,rgba(96,165,250,0.16),transparent_60%)] blur-3xl"></div>
+        <div class="relative rounded-[34px] border border-slate-200 bg-[linear-gradient(180deg,#f8fbff,#eef5fb)] p-6 shadow-[0_28px_80px_rgba(15,23,42,0.10)] sm:p-8">
+          <div class="rounded-[24px] border border-sky-100 bg-white px-6 py-4">
+            <p class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Boquilla X</p>
+            <p class="mt-2 text-sm leading-7 text-slate-600">
+              Reduce notablemente el ruido y proporciona una sensación de aplicación más suave y agradable.
             </p>
           </div>
           <img

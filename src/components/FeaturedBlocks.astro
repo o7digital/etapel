@@ -15,37 +15,60 @@ const logos = [
 
 <section id="quienes-somos" class="bg-white py-16 sm:py-20">
   <div class="shell space-y-8">
-    <article class="grid items-center gap-8 rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10 lg:grid-cols-[1.05fr_0.95fr]">
+    <article class="grid items-center gap-8 rounded-[32px] border border-slate-200 bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10 lg:grid-cols-[1.02fr_0.98fr]">
       <div class="order-2 lg:order-1">
         <span class="section-kicker text-slate-700">Homologaciones / GYS</span>
-        <h2 class="section-title mt-4 text-slate-950">Contamos con lineas que contienen homologaciones</h2>
+        <h2 class="section-title mt-4 text-slate-950">Soluciones certificadas por fabricantes internacionales</h2>
         <p class="section-copy mt-5 text-slate-600">
-          ¡Contamos con líneas con mas de 15 homologaciones, identifícalas aquí...
+          Trabajamos con equipos y procesos homologados por marcas líderes del sector automotriz, garantizando calidad, cumplimiento y resultados profesionales.
         </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
+            Estándares internacionales
+          </span>
+          <span class="rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
+            Procesos homologados
+          </span>
+        </div>
         <div class="mt-8 flex flex-wrap items-center gap-4">
           <a
-            href="https://www.gys.fr/spip.php?page=accueil&lang=es"
+            href="/contacto"
             class="btn-primary"
-            target="_blank"
-            rel="noreferrer"
           >
-            Me interesa
+            Ver soluciones certificadas
           </a>
-          <div class="flex items-center gap-3 rounded-full border border-slate-200 bg-slate-50 px-4 py-2">
+          <div class="flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2">
             <img src="/logos/logo-gys.png" alt="GYS" class="h-6 w-auto object-contain" loading="lazy" />
-            <span class="text-sm font-semibold text-slate-700">Líneas con homologaciones internacionales</span>
+            <span class="text-sm font-semibold text-slate-700">Tecnología partner integrada en la solución</span>
           </div>
         </div>
       </div>
 
       <div class="order-1 lg:order-2">
-        <div class="overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100">
+        <div class="relative overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100">
           <img
             src="/images/featured-homologaciones.jpg"
             alt="Homologaciones Etapel"
             class="h-[320px] w-full object-cover sm:h-[380px] lg:h-[430px]"
             loading="lazy"
           />
+          <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.10),rgba(15,23,42,0.18))]"></div>
+          <div class="absolute inset-x-5 bottom-5 rounded-[24px] border border-white/60 bg-white/88 p-5 shadow-[0_18px_50px_rgba(15,23,42,0.14)] backdrop-blur">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
+                Calidad
+              </span>
+              <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
+                Cumplimiento
+              </span>
+              <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
+                Resultados profesionales
+              </span>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-slate-600">
+              Etapel integra soluciones homologadas para trabajar con estándares reconocidos por fabricantes internacionales.
+            </p>
+          </div>
         </div>
       </div>
     </article>

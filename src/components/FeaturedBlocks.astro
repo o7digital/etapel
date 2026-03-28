@@ -41,9 +41,9 @@ const logos = [
   <div class="shell">
     <div class="grid gap-5 lg:grid-cols-3">
       {
-        cards.map((card, index) => (
+        cards.map((card) => (
           <article
-            class={`group relative min-h-[380px] overflow-hidden rounded-[30px] border border-white/10 ${index === 1 ? 'lg:-mt-8' : ''}`}
+            class="group relative min-h-[380px] overflow-hidden rounded-[30px] border border-white/10 lg:min-h-[520px]"
           >
             <div
               class="absolute inset-0 scale-100 bg-cover bg-center transition duration-700 group-hover:scale-105"

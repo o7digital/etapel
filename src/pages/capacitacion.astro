@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+  {
+    title: '1. Formación Especializada',
+    text: 'Nuestro equipo de expertos se encarga de capacitar a tu personal en el uso adecuado de los equipos, garantizando que aprovechen al máximo su potencial. Saber cómo utilizar eficazmente los equipos no solo aumenta la productividad, sino que también garantiza la seguridad en el lugar de trabajo.',
+    image: '/images/capacitacion-1.jpg'
+  },
+  {
+    title: '2. Limpieza Eficiente',
+    text: 'Enseñamos a tu personal las mejores prácticas de limpieza y mantenimiento de los equipos. Una limpieza adecuada prolonga la vida útil de los equipos y garantiza un rendimiento óptimo.',
+    image: '/images/capacitacion-2.jpg'
+  },
+  {
+    title: '3. Diseño de Espacios Eficientes',
+    text: 'Si es necesario, creamos diseños de layout personalizados para tu negocio. Estos diseños optimizan el flujo de trabajo y maximizan la eficiencia operativa.',
+    image: '/images/capacitacion-3.jpg'
+  },
+  {
+    title: '4. Procesos Homologados',
+    text: 'Nos aseguramos de que tus procesos cumplan con los estándares más altos de calidad y seguridad. Esto puede ayudarte a cumplir con regulaciones específicas de tu industria y mejorar la confiabilidad de tus operaciones.',
+    image: '/images/capacitacion-4.jpg'
+  },
+  {
+    title: '5. Seguridad del Personal',
+    text: 'La seguridad es primordial. Evaluamos y mejoramos las condiciones de trabajo para garantizar un entorno seguro para tu personal.',
+    image: '/images/capacitacion-5.jpg'
+  },
+  {
+    title: '6. Identificación de Oportunidades',
+    text: 'Realizamos un análisis detallado para identificar áreas de oportunidad en tus operaciones. Esto te permite tomar decisiones informadas para el crecimiento y la eficiencia de tu negocio.',
+    image: '/images/capacitacion-6.jpg'
+  }
+];
+---
+
+<Layout
+  title="Capacitación | Etapel"
+  description="Servicios de Capacitación en Etapel para formación especializada, limpieza eficiente, procesos homologados y seguridad del personal."
+>
+  <Header />
+
+  <main class="bg-white">
+    <section class="bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] pb-16 pt-32 sm:pb-20 sm:pt-36">
+      <div class="shell">
+        <div class="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
+          <div>
+            <span class="section-kicker text-slate-700">Sistema de enseñanza</span>
+            <h1 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
+              Servicios de Capacitación en Etapel
+            </h1>
+            <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+              Fortalecemos el uso adecuado de equipos, la eficiencia operativa y la seguridad del personal con capacitación enfocada en resultados.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="https://wa.link/oowyzu" class="btn-primary" target="_blank" rel="noreferrer">Haz clic aquí para contactarnos</a>
+              <a href="/contacto" class="btn-outline">Ir a contacto</a>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-[34px] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
+            <img
+              src="/images/capacitacion-1.jpg"
+              alt="Capacitación Etapel"
+              class="h-[320px] w-full object-cover sm:h-[420px] lg:h-[520px]"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 sm:py-20">
+      <div class="shell">
+        <div class="grid gap-6 lg:grid-cols-2">
+          {
+            services.map((service) => (
+              <article class="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.06)]">
+                <div class="grid gap-0 sm:grid-cols-[0.85fr_1.15fr]">
+                  <div class="h-full min-h-[240px] overflow-hidden bg-slate-100">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-7 sm:p-8">
+                    <h2 class="text-2xl font-bold tracking-[-0.03em] text-slate-950">{service.title}</h2>
+                    <p class="mt-4 text-base leading-8 text-slate-600">{service.text}</p>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f4f8fc] py-16 sm:py-20">
+      <div class="shell">
+        <div class="rounded-[34px] border border-slate-200 bg-white px-8 py-10 shadow-[0_22px_60px_rgba(15,23,42,0.06)] sm:px-10 sm:py-12">
+          <div class="max-w-4xl">
+            <h2 class="text-3xl font-bold tracking-[-0.04em] text-slate-950 sm:text-4xl">
+              Nuestro objetivo es ser tu socio estratégico en el camino hacia el éxito empresarial.
+            </h2>
+            <p class="mt-5 text-base leading-8 text-slate-600">
+              Contáctanos hoy mismo para descubrir cómo Etapel puede agregar un valor inigualable a tu empresa. ¡Juntos, podemos lograr grandes cosas!
+            </p>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="https://wa.link/oowyzu" class="btn-primary" target="_blank" rel="noreferrer">Haz clic aquí para contactarnos</a>
+            <a href="/contacto" class="btn-outline">Formulario de contacto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const offices = ['Monterrey', 'CDMX', 'Veracruz'];
+
+const topics = [
+  'Suscripción a ofertas especiales',
+  'Atención personalizada',
+  'Quejas o sugerencias'
+];
+---
+
+<Layout
+  title="Contacto | Etapel"
+  description="Página de contacto de Etapel con sedes de referencia, correo, teléfono, acceso a WhatsApp y formulario."
+>
+  <Header />
+
+  <main class="bg-white">
+    <section class="bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] pb-16 pt-32 sm:pb-20 sm:pt-36">
+      <div class="shell">
+        <div class="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+          <div>
+            <span class="section-kicker text-slate-700">CONTACTA CON UN EXPERTO</span>
+            <h1 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
+              Estamos aquí para ayudarte
+            </h1>
+            <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+              Escríbenos para recibir atención comercial, seguimiento y orientación sobre las soluciones de Etapel.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="mailto:ventas@etapel.com.mx" class="btn-primary">ventas@etapel.com.mx</a>
+              <a href="https://wa.link/oowyzu" class="btn-outline" target="_blank" rel="noreferrer">WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-[34px] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
+            <img
+              src="/images/contacto-etapel.jpg"
+              alt="Equipo Etapel"
+              class="h-[320px] w-full object-cover sm:h-[420px] lg:h-[520px]"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 sm:py-20">
+      <div class="shell">
+        <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <div class="grid gap-5 md:grid-cols-3">
+              {
+                offices.map((office) => (
+                  <article class="rounded-[28px] border border-slate-200 bg-slate-50 p-6 shadow-[0_14px_40px_rgba(15,23,42,0.05)]">
+                    <span class="section-kicker text-slate-700">{office}</span>
+                  </article>
+                ))
+              }
+            </div>
+
+            <div class="mt-6 rounded-[30px] border border-slate-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.06)]">
+              <h2 class="text-2xl font-bold tracking-[-0.03em] text-slate-950">Datos de contacto</h2>
+              <div class="mt-5 grid gap-4 text-base text-slate-600 sm:grid-cols-2">
+                <div class="rounded-[22px] border border-slate-200 bg-slate-50 p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700">Email</p>
+                  <a href="mailto:ventas@etapel.com.mx" class="mt-3 block text-lg font-semibold text-slate-950 transition hover:text-sky-700">
+                    ventas@etapel.com.mx
+                  </a>
+                </div>
+                <div class="rounded-[22px] border border-slate-200 bg-slate-50 p-5">
+                  <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700">Teléfono</p>
+                  <a href="tel:+525556895055" class="mt-3 block text-lg font-semibold text-slate-950 transition hover:text-sky-700">
+                    55 5689 5055
+                  </a>
+                </div>
+              </div>
+              <div class="mt-5">
+                <a href="https://wa.link/oowyzu" class="btn-outline" target="_blank" rel="noreferrer">contactanos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-[34px] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
+            <img
+              src="/images/mapa-etapel.png"
+              alt="Mapa de referencia Etapel"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f4f8fc] py-16 sm:py-20">
+      <div class="shell">
+        <div class="grid gap-8 rounded-[34px] border border-slate-200 bg-white p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <span class="section-kicker text-slate-700">Formulario</span>
+            <h2 class="section-title mt-4 text-slate-950">Contactanos, estamos para servirte</h2>
+            <p class="mt-5 text-base leading-8 text-slate-600">
+              Comparte tus datos y el tema sobre el cual requieres información.
+            </p>
+          </div>
+
+          <form class="grid gap-4">
+            <input class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" type="text" name="nombre" placeholder="Nombre *" />
+            <input class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" type="text" name="empresa" placeholder="Empresa" />
+            <input class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" type="tel" name="telefono" placeholder="Teléfono" />
+            <input class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" type="email" name="correo" placeholder="Correo *" />
+            <select class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" name="tema">
+              <option value="">Seleccione el tema del cual requiere información *</option>
+              {topics.map((topic) => <option value={topic}>{topic}</option>)}
+            </select>
+            <textarea class="min-h-[160px] rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" name="mensaje" placeholder="Mensaje opcional"></textarea>
+            <button type="submit" class="btn-primary w-full sm:w-auto">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

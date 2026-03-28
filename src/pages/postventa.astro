@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+  'Levantamientos',
+  'Mantenimientos',
+  'Reparaciones',
+  'Instalaciones',
+  'Desinstalaciones',
+  'Capacitaciones',
+  'Demostraciones'
+];
+---
+
+<Layout
+  title="PostVenta | Etapel"
+  description="Servicios de PostVenta en Etapel: levantamientos, mantenimientos, reparaciones, instalaciones, desinstalaciones, capacitaciones y demostraciones."
+>
+  <Header />
+
+  <main class="bg-white">
+    <section class="bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] pb-16 pt-32 sm:pb-20 sm:pt-36">
+      <div class="shell">
+        <div class="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <span class="section-kicker text-slate-700">Servicio</span>
+            <h1 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
+              PostVenta
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+              Soporte técnico y acompañamiento para mantener tus equipos y procesos en operación.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="https://wa.me/525570111515?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20PostVenta" class="btn-primary" target="_blank" rel="noreferrer">Contacta con un experto</a>
+              <a href="#formulario-postventa" class="btn-outline">Ir al formulario</a>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-[34px] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
+            <img
+              src="/images/postventa.jpg"
+              alt="Servicio PostVenta Etapel"
+              class="h-[320px] w-full object-cover sm:h-[420px] lg:h-[520px]"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 sm:py-20">
+      <div class="shell">
+        <div class="max-w-3xl">
+          <span class="section-kicker text-slate-700">PostVenta</span>
+          <h2 class="section-title mt-4 text-slate-950">Servicios</h2>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          {
+            services.map((service, index) => (
+              <article class="rounded-[28px] border border-slate-200 bg-slate-50 p-6 shadow-[0_14px_40px_rgba(15,23,42,0.05)]">
+                <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-sm font-bold text-cyan-700 shadow-[0_10px_20px_rgba(15,23,42,0.06)]">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <h3 class="mt-5 text-xl font-bold tracking-[-0.03em] text-slate-950">{service}</h3>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="formulario-postventa" class="bg-[#f4f8fc] py-16 sm:py-20">
+      <div class="shell">
+        <div class="grid gap-8 rounded-[34px] border border-slate-200 bg-white p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <span class="section-kicker text-slate-700">CONTACTA CON UN EXPERTO</span>
+            <h2 class="section-title mt-4 text-slate-950">Estamos aquí para ayudarte</h2>
+            <p class="mt-5 text-base leading-8 text-slate-600">
+              Compártenos tu requerimiento y nuestro equipo dará seguimiento al servicio que necesitas.
+            </p>
+            <a
+              href="https://wa.me/525570111515?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20PostVenta"
+              class="mt-8 inline-flex text-sm font-semibold text-cyan-700 transition hover:text-cyan-800"
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp
+            </a>
+          </div>
+
+          <form class="grid gap-4">
+            <input class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" type="text" name="nombre" placeholder="Nombre *" />
+            <input class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" type="text" name="empresa" placeholder="Empresa *" />
+            <input class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" type="tel" name="telefono" placeholder="Teléfono" />
+            <input class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" type="email" name="email" placeholder="Email *" />
+            <select class="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" name="tema">
+              <option value="">Seleccione el tema del cual requiere información *</option>
+              {services.map((service) => <option value={service}>{service}</option>)}
+            </select>
+            <textarea class="min-h-[160px] rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white" name="mensaje" placeholder="Mensaje opcional *"></textarea>
+            <button type="submit" class="btn-primary w-full sm:w-auto">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

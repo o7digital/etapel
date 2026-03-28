@@ -1,36 +1,53 @@
 ---
 import { productFamilies } from '../data/productLines';
 
-const navItems = [
-  { label: 'Home', href: '/' },
-  { label: '¿Quiénes Somos?', href: '/#quienes-somos' },
-  { label: 'Línea de Producto', href: '/linea-de-producto' },
-  { label: 'Capacitación', href: '/#capacitacion' },
-  { label: 'PostVenta', href: '/#postventa' },
-  { label: 'Contacto', href: '/#contacto' }
+const services = [
+  { label: 'Capacitación', href: '/capacitacion' },
+  { label: 'PostVenta', href: '/postventa' }
+];
+
+const contactLinks = [
+  { label: 'ventas@etapel.com.mx', href: 'mailto:ventas@etapel.com.mx' },
+  { label: '55 5689 5055', href: 'tel:+525556895055' },
+  { label: 'WhatsApp', href: 'https://wa.link/oowyzu' }
 ];
 ---
 
-<footer id="postventa" class="bg-[#09131c] pb-10 pt-12 text-white">
+<footer class="border-t border-slate-200 bg-[#f8fafc] pb-8 pt-14 text-slate-900">
   <div class="shell">
-    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.8fr_1fr]">
+    <div class="grid gap-10 lg:grid-cols-[1.15fr_0.95fr_0.8fr_0.9fr]">
       <div>
-        <img src="/images/logo-etapel-white.png" alt="Etapel" class="h-12 w-auto" loading="lazy" />
-        <p class="mt-6 max-w-md text-base leading-8 text-slate-300">
+        <img src="/images/logo-etapel.png" alt="Etapel" class="h-12 w-auto" loading="lazy" />
+        <p class="mt-6 max-w-md text-base leading-8 text-slate-700">
           En Etapel, no somos solo proveedores, somos socios en el crecimiento de tu negocio.
         </p>
-        <p class="mt-4 max-w-md text-sm leading-7 text-slate-400">
+        <p class="mt-4 max-w-md text-sm leading-7 text-slate-600">
           Descubre cómo podemos ayudarte a alcanzar nuevos niveles de éxito.
         </p>
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200">Navegación</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Línea de producto</h3>
         <ul class="mt-5 space-y-3">
           {
-            navItems.map((item) => (
+            productFamilies.map((family) => (
               <li>
-                <a href={item.href} class="text-sm text-slate-300 transition hover:text-white">
+                <a href={family.href} class="text-sm text-slate-700 transition hover:text-sky-700">
+                  {family.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Servicios</h3>
+        <ul class="mt-5 space-y-3">
+          {
+            services.map((item) => (
+              <li>
+                <a href={item.href} class="text-sm text-slate-700 transition hover:text-sky-700">
                   {item.label}
                 </a>
               </li>
@@ -40,24 +57,31 @@ const navItems = [
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200">Líneas de Producto</h3>
-        <div class="mt-5 flex flex-wrap gap-2">
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Contacto</h3>
+        <ul class="mt-5 space-y-3">
           {
-            productFamilies.map((family) => (
-              <a href={family.href} class="rounded-full border border-white/10 bg-white/[0.05] px-3 py-2 text-xs font-semibold text-slate-300 transition hover:text-white">
-                {family.title}
-              </a>
+            contactLinks.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="text-sm text-slate-700 transition hover:text-sky-700"
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
             ))
           }
-        </div>
+        </ul>
       </div>
     </div>
 
-    <div class="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-10 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
       <p>Copyright © 2026 Etapel. Todos los derechos reservados.</p>
       <div class="flex items-center gap-4">
-        <a href="/#contacto" class="transition hover:text-white">¿Necesitas ayuda? ¡Contáctanos!</a>
-        <a href="/aviso-de-privacidad" class="transition hover:text-white">Aviso de Privacidad</a>
+        <a href="/contacto" class="transition hover:text-sky-700">¿Necesitas ayuda? ¡Contáctanos!</a>
+        <a href="/aviso-de-privacidad" class="transition hover:text-sky-700">Aviso de Privacidad</a>
       </div>
     </div>
   </div>

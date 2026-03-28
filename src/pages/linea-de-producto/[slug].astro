@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { productFamilies, type ProductFamily } from '../../data/productLines';
+
+export function getStaticPaths() {
+  return productFamilies.map((family) => ({
+    params: { slug: family.slug },
+    props: { family }
+  }));
+}
+
+const { family } = Astro.props as { family: ProductFamily };
+---
+
+<Layout
+  title={`${family.title} | Línea de Producto | Etapel`}
+  description={family.pageDescription}
+>
+  <Header />
+
+  <main class="bg-white">
+    <section class={`bg-gradient-to-br ${family.accent} from-white via-slate-50 to-white pb-16 pt-32 sm:pb-20 sm:pt-36`}>
+      <div class="shell">
+        <div class="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <a href="/linea-de-producto" class="text-sm font-semibold text-cyan-700 transition hover:text-cyan-800">
+              ← Volver a Línea de Producto
+            </a>
+            <span class="section-kicker mt-6 text-slate-700">{family.title}</span>
+            <h1 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
+              {family.title}
+            </h1>
+            <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+              {family.pageDescription}
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="/#contacto" class="btn-primary">Solicitar información</a>
+              <a href="/linea-de-producto" class="btn-outline">Ver todas las líneas</a>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
+            <img src={family.image} alt={family.title} class="h-[320px] w-full object-cover sm:h-[420px]" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 sm:py-20">
+      <div class="shell">
+        <div class="max-w-3xl">
+          <span class="section-kicker text-slate-700">Subproductos</span>
+          <h2 class="section-title mt-4 text-slate-950">Subfamilias y soluciones</h2>
+          <p class="mt-5 text-base leading-8 text-slate-600">
+            Esta categoría agrupa las principales sublíneas para orientar la navegación y presentar la oferta de Etapel con mayor claridad.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {
+            family.items.map((item, index) => (
+              <article class="rounded-[28px] border border-slate-200 bg-slate-50 p-6 shadow-[0_14px_40px_rgba(15,23,42,0.05)]">
+                <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-sm font-bold text-cyan-700 shadow-[0_10px_20px_rgba(15,23,42,0.06)]">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <h3 class="mt-5 text-xl font-bold tracking-[-0.03em] text-slate-950">{item}</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Línea integrada dentro de {family.shortTitle.toLowerCase()} para construir una presentación más clara y una navegación más útil para el usuario.
+                </p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f3f7fb] py-16 sm:py-20">
+      <div class="shell">
+        <div class="rounded-[34px] border border-slate-200 bg-white px-8 py-10 shadow-[0_22px_60px_rgba(15,23,42,0.06)] sm:px-10 sm:py-12">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div class="max-w-3xl">
+              <h2 class="text-3xl font-bold tracking-[-0.04em] text-slate-950 sm:text-4xl">
+                ¿Necesitas ayuda para elegir la línea correcta?
+              </h2>
+              <p class="mt-4 text-base leading-8 text-slate-600">
+                Nuestro equipo puede orientarte según el tipo de taller, proceso o equipamiento que necesites.
+              </p>
+            </div>
+            <a href="/#contacto" class="btn-primary">Hablar con un asesor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

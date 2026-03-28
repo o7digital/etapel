@@ -1,24 +1,5 @@
 ---
-const categories = [
-  {
-    title: 'PISTOLAS DE PINTURA',
-    text: 'Somos los distribuidores exclusivos de SATA el Líder mundial en tecnología de pistolas de pintura',
-    href: '#contacto',
-    image: '/images/category-pistolas.jpg'
-  },
-  {
-    title: 'SOLDADORAS DE PLÁSTICO',
-    text: 'Contamos con una amplia gama de equipo para soldar, con la más alta tecnología a nivel mundial.',
-    href: '#contacto',
-    image: '/images/category-soldadoras.jpg'
-  },
-  {
-    title: 'LAMPARAS INFRARROJO',
-    text: 'Instalación en la que se produce un ambiente presurizado, idóneo para el pintado y secado de automóviles',
-    href: '#contacto',
-    image: '/images/category-infrarrojo.jpg'
-  }
-];
+import { productFamilies } from '../data/productLines';
 ---
 
 <section id="linea-producto" class="bg-[#f3f7fb] py-16 sm:py-20">
@@ -31,32 +12,39 @@ const categories = [
       </p>
     </div>
 
-    <div class="mt-12 grid gap-6 lg:grid-cols-3">
+    <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
       {
-        categories.map((category) => (
+        productFamilies.map((family) => (
           <article class="overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1">
             <div class="h-[250px] overflow-hidden bg-slate-100">
               <img
-                src={category.image}
-                alt={category.title}
+                src={family.image}
+                alt={family.title}
                 class="h-full w-full object-cover transition duration-700 hover:scale-105"
                 loading="lazy"
               />
             </div>
             <div class="p-7 sm:p-8">
-              <h3 class="max-w-xs text-2xl font-bold tracking-[-0.03em] text-slate-950">
-                {category.title}
+              <h3 class="text-2xl font-bold tracking-[-0.03em] text-slate-950">
+                {family.title}
               </h3>
-              <p class="mt-4 max-w-md text-sm leading-7 text-slate-600">
-                {category.text}
+              <p class="mt-4 text-sm leading-7 text-slate-600">
+                {family.menuDescription}
               </p>
+              <ul class="mt-5 space-y-2 text-sm text-slate-500">
+                {family.items.slice(0, 4).map((item) => <li>{item}</li>)}
+              </ul>
               <div class="mt-7">
-                <a href={category.href} class="btn-outline">SABER MÁS</a>
+                <a href={family.href} class="btn-outline">SABER MÁS</a>
               </div>
             </div>
           </article>
         ))
       }
+    </div>
+
+    <div class="mt-8 text-center">
+      <a href="/linea-de-producto" class="btn-primary">Ver todas las líneas de producto</a>
     </div>
   </div>
 </section>

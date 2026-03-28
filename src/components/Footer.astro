@@ -13,26 +13,26 @@ const contactLinks = [
 ];
 ---
 
-<footer class="border-t border-slate-200 bg-[#f8fafc] pb-8 pt-14 text-slate-900">
+<footer class="border-t border-slate-300/80 bg-[#d6e1ea] pb-8 pt-14 text-slate-900">
   <div class="shell">
     <div class="grid gap-10 lg:grid-cols-[1.15fr_0.95fr_0.8fr_0.9fr]">
       <div>
         <img src="/images/logo-etapel.png" alt="Etapel" class="h-12 w-auto" loading="lazy" />
-        <p class="mt-6 max-w-md text-base leading-8 text-slate-700">
+        <p class="mt-6 max-w-md text-base leading-8 text-slate-800">
           En Etapel, no somos solo proveedores, somos socios en el crecimiento de tu negocio.
         </p>
-        <p class="mt-4 max-w-md text-sm leading-7 text-slate-600">
+        <p class="mt-4 max-w-md text-sm leading-7 text-slate-700">
           Descubre cómo podemos ayudarte a alcanzar nuevos niveles de éxito.
         </p>
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Línea de producto</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Línea de producto</h3>
         <ul class="mt-5 space-y-3">
           {
             productFamilies.map((family) => (
               <li>
-                <a href={family.href} class="text-sm text-slate-700 transition hover:text-sky-700">
+                <a href={family.href} class="text-sm text-slate-800 transition hover:text-sky-700">
                   {family.title}
                 </a>
               </li>
@@ -42,12 +42,12 @@ const contactLinks = [
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Servicios</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Servicios</h3>
         <ul class="mt-5 space-y-3">
           {
             services.map((item) => (
               <li>
-                <a href={item.href} class="text-sm text-slate-700 transition hover:text-sky-700">
+                <a href={item.href} class="text-sm text-slate-800 transition hover:text-sky-700">
                   {item.label}
                 </a>
               </li>
@@ -57,14 +57,14 @@ const contactLinks = [
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Contacto</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Contacto</h3>
         <ul class="mt-5 space-y-3">
           {
             contactLinks.map((item) => (
               <li>
                 <a
                   href={item.href}
-                  class="text-sm text-slate-700 transition hover:text-sky-700"
+                  class="text-sm text-slate-800 transition hover:text-sky-700"
                   target={item.href.startsWith('http') ? '_blank' : undefined}
                   rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
                 >
@@ -77,7 +77,7 @@ const contactLinks = [
       </div>
     </div>
 
-    <div class="mt-10 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-10 flex flex-col gap-4 border-t border-slate-300/80 pt-6 text-sm text-slate-700 sm:flex-row sm:items-center sm:justify-between">
       <p>Copyright © 2026 Etapel. Todos los derechos reservados.</p>
       <div class="flex items-center gap-4">
         <a href="/contacto" class="transition hover:text-sky-700">¿Necesitas ayuda? ¡Contáctanos!</a>

@@ -5,12 +5,12 @@
   --font-body: 'Manrope', sans-serif;
   --color-ink: #0f172a;
   --color-ink-soft: #07111d;
-  --color-panel: rgba(255, 255, 255, 0.86);
-  --color-line: rgba(148, 163, 184, 0.18);
-  --color-accent: #5fa8ff;
-  --color-accent-strong: #2b6cb0;
+  --color-panel: rgba(255, 255, 255, 0.9);
+  --color-line: rgba(148, 163, 184, 0.22);
+  --color-accent: #0f6cbd;
+  --color-accent-strong: #0b5aa1;
   --color-copy: #475569;
-  --shadow-panel: 0 28px 80px rgba(2, 6, 23, 0.18);
+  --shadow-panel: 0 24px 70px rgba(15, 23, 42, 0.08);
 }
 
 @layer base {
@@ -22,7 +22,7 @@
   body {
     min-width: 320px;
     font-family: var(--font-body);
-    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 40%, #ffffff 100%);
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 32%, #f5f8fc 100%);
     color: #0f172a;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -66,7 +66,7 @@
 
   .section-kicker::before {
     content: '';
-    @apply h-2 w-2 rounded-full bg-sky-300;
+    @apply h-2 w-2 rounded-full bg-sky-500;
   }
 
   .section-title {
@@ -78,7 +78,7 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full border border-sky-300/40 bg-sky-500 px-5 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-sky-400;
+    @apply inline-flex items-center justify-center rounded-full border border-sky-700 bg-sky-700 px-5 py-3 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(14,116,144,0.18)] transition duration-300 hover:-translate-y-0.5 hover:border-sky-800 hover:bg-sky-800;
   }
 
   .btn-secondary {
@@ -86,7 +86,29 @@
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 transition duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-sky-700;
+    @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-[0_10px_24px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700;
+  }
+
+  .surface-card {
+    @apply rounded-[32px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] shadow-[0_22px_60px_rgba(15,23,42,0.07)];
+  }
+
+  .surface-card-soft {
+    @apply rounded-[28px] border border-slate-200 bg-slate-50 shadow-[0_14px_40px_rgba(15,23,42,0.05)];
+  }
+
+  .surface-panel {
+    @apply rounded-[34px] border border-slate-200 bg-[linear-gradient(180deg,#f9fbfd_0%,#eef5fb_100%)] shadow-[0_24px_70px_rgba(15,23,42,0.08)];
+  }
+
+  .field-input,
+  .field-select,
+  .field-textarea {
+    @apply w-full rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-300 focus:bg-white;
+  }
+
+  .field-textarea {
+    @apply min-h-[160px];
   }
 
   .dot-pattern {

@@ -1,0 +1,98 @@
+---
+const categories = [
+  {
+    title: 'PISTOLAS DE PINTURA',
+    text: 'Somos los distribuidores exclusivos de SATA el Líder mundial en tecnología de pistolas de pintura',
+    href: '#linea-producto',
+    image: '/images/category-pistolas.jpg'
+  },
+  {
+    title: 'SOLDADORAS DE PLÁSTICO',
+    text: 'Contamos con una amplia gama de equipo para soldar, con la más alta tecnología a nivel mundial.',
+    href: '#linea-producto',
+    image: '/images/category-soldadoras.jpg'
+  },
+  {
+    title: 'LAMPARAS INFRARROJO',
+    text: 'Instalación en la que se produce un ambiente presurizado, idóneo para el pintado y secado de automóviles',
+    href: '#linea-producto',
+    image: '/images/category-infrarrojo.jpg'
+  }
+];
+
+const productLines = [
+  'Pistolas para pintar',
+  'Sistemas de lijado',
+  'Cabinas para pintura',
+  'Soldadoras',
+  'Bancos de enderezado',
+  'Lámparas de infrarrojo',
+  'Mecánica',
+  'Aire comprimido',
+  'Consumibles',
+  'Pintura y otros productos PPG',
+  'Tubería para Aire comprimido',
+  'Otros servicios'
+];
+---
+
+<section id="linea-producto" class="relative overflow-hidden bg-[#07111d] py-20 text-white sm:py-24">
+  <div class="absolute inset-0 dot-pattern opacity-40"></div>
+  <div class="shell relative">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="section-kicker text-slate-200">Líneas de producto</span>
+      <h2 class="section-title mt-4 text-white">NUESTRA TECNOLOGÍA ES EXTRAORDINARIA</h2>
+      <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-300">
+        Ofrecemos las mejores marcas a nivel global en equipo mayor, equipo menor, consumibles, pintura y herramientas.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-6 lg:grid-cols-3">
+      {
+        categories.map((category) => (
+          <article class="group relative overflow-hidden rounded-[30px] border border-white/10">
+            <div
+              class="absolute inset-0 scale-100 bg-cover bg-center transition duration-700 group-hover:scale-105"
+              style={`background-image:
+                linear-gradient(180deg, rgba(2, 6, 23, 0.14), rgba(2, 6, 23, 0.9)),
+                url('${category.image}')`}
+            ></div>
+            <div class="relative flex min-h-[440px] flex-col justify-end p-7 sm:p-8">
+              <h3 class="max-w-xs text-2xl font-bold tracking-[-0.03em] text-white">
+                {category.title}
+              </h3>
+              <p class="mt-4 max-w-md text-sm leading-7 text-slate-300">
+                {category.text}
+              </p>
+              <div class="mt-7">
+                <a href={category.href} class="btn-secondary">SABER MÁS</a>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="panel mt-12 rounded-[34px] p-8 sm:p-10">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <h3 class="text-2xl font-bold tracking-[-0.03em] text-white">Líneas de Producto</h3>
+          <p class="mt-3 max-w-2xl text-sm leading-7 text-slate-300">
+            Dejamos visible el mismo enfoque comercial del sitio actual y una base clara para continuar el resto del catálogo.
+          </p>
+        </div>
+        <a href="#contacto" class="btn-primary">Explorar con asesoría</a>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        {
+          productLines.map((line) => (
+            <span class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-slate-200">
+              {line}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

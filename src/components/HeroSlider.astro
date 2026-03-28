@@ -1,0 +1,157 @@
+---
+const slides = [
+  {
+    title: 'Pistolas de Pintura',
+    text: 'Las mejores pistolas a nivel mundial.',
+    image: '/images/slide-pistolas.jpg'
+  },
+  {
+    title: 'Industria',
+    text: 'Pintura, consumibles, herramientas y equipos.',
+    image: '/images/slide-industria.jpg'
+  },
+  {
+    title: 'Taller Automotriz',
+    text: 'Todo lo que necesitas para tu taller en un mismo lugar.',
+    image: '/images/slide-taller.jpg'
+  }
+];
+---
+
+<section
+  id="top"
+  class="relative isolate overflow-hidden border-b border-white/10 bg-[linear-gradient(180deg,#07111a_0%,#0b1622_100%)]"
+  data-slider
+  tabindex="0"
+  aria-roledescription="carousel"
+  aria-label="Slider principal de Etapel"
+>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.14),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.12),transparent_24%)]"></div>
+  <div class="absolute inset-0 opacity-20">
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:52px_52px]"></div>
+  </div>
+
+  <div class="shell relative px-5 pb-8 pt-28 sm:px-6 lg:px-8 lg:pb-10 lg:pt-32">
+    <div class="relative overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.04] shadow-2xl shadow-cyan-950/20">
+      <div class="relative min-h-[72svh] sm:min-h-[760px]">
+    {
+      slides.map((slide, index) => (
+        <article
+          class={`absolute inset-0 transition-opacity duration-700 ease-out ${index === 0 ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+          data-slide
+          aria-hidden={index === 0 ? 'false' : 'true'}
+          style={`background-image:
+            linear-gradient(180deg, rgba(3,10,18,0.58) 0%, rgba(4,12,20,0.52) 35%, rgba(4,12,20,0.60) 100%),
+            radial-gradient(circle at center, rgba(10,18,28,0.10), rgba(4,10,18,0.36) 70%),
+            url('${slide.image}'); background-size: cover; background-position: center;`}
+        >
+          <div class="absolute inset-0 bg-[linear-gradient(115deg,rgba(5,11,18,0.72),rgba(5,11,18,0.28)_45%,rgba(5,11,18,0.86))]"></div>
+          <div class="relative flex min-h-[72svh] items-center justify-center px-8 py-14 text-center sm:min-h-[760px] lg:px-14 lg:py-16">
+            <div class="max-w-4xl">
+              <span class="mx-auto inline-flex w-fit items-center gap-3 rounded-full border border-white/15 bg-black/20 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-cyan-100 backdrop-blur">
+                <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
+                Etapel
+              </span>
+              <h1 class="mt-8 text-5xl font-bold leading-[1.02] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+                {slide.title}
+              </h1>
+              <p class="mx-auto mt-7 max-w-2xl text-xl leading-8 text-white/90 sm:text-2xl">
+                {slide.text}
+              </p>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#07111d] to-transparent"></div>
+      </div>
+
+      <div class="absolute inset-x-0 bottom-6 z-10 flex justify-center px-6">
+        <div class="flex items-center gap-3">
+        {
+          slides.map((slide, index) => (
+            <button
+              type="button"
+              class={`h-3 rounded-full transition-all duration-300 ${index === 0 ? 'w-10 bg-cyan-300' : 'w-3 bg-white/30 hover:bg-white/50'}`}
+              data-dot
+              aria-label={`Ir al slide ${index + 1}: ${slide.title}`}
+              aria-current={index === 0 ? 'true' : 'false'}
+            ></button>
+          ))
+        }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const sliders = document.querySelectorAll('[data-slider]');
+
+  sliders.forEach((slider) => {
+    const slides = Array.from(slider.querySelectorAll('[data-slide]'));
+    const dots = Array.from(slider.querySelectorAll('[data-dot]'));
+    let index = 0;
+    let autoplayId;
+
+    const render = (nextIndex) => {
+      index = nextIndex;
+
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === index;
+        slide.classList.toggle('opacity-100', isActive);
+        slide.classList.toggle('opacity-0', !isActive);
+        slide.classList.toggle('pointer-events-none', !isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === index;
+        dot.classList.toggle('w-10', isActive);
+        dot.classList.toggle('w-3', !isActive);
+        dot.classList.toggle('bg-cyan-300', isActive);
+        dot.classList.toggle('bg-white/30', !isActive);
+        dot.setAttribute('aria-current', String(isActive));
+      });
+    };
+
+    const next = () => render((index + 1) % slides.length);
+
+    const startAutoplay = () => {
+      window.clearInterval(autoplayId);
+      autoplayId = window.setInterval(next, 5500);
+    };
+
+    const stopAutoplay = () => {
+      window.clearInterval(autoplayId);
+    };
+
+    dots.forEach((dot, dotIndex) => {
+      dot.addEventListener('click', () => {
+        render(dotIndex);
+        startAutoplay();
+      });
+    });
+
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+    slider.addEventListener('focusin', stopAutoplay);
+    slider.addEventListener('focusout', startAutoplay);
+    slider.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        render((index + 1) % slides.length);
+        startAutoplay();
+      }
+
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        render((index - 1 + slides.length) % slides.length);
+        startAutoplay();
+      }
+    });
+
+    startAutoplay();
+  });
+</script>

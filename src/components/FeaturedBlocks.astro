@@ -1,0 +1,101 @@
+---
+const cards = [
+  {
+    title: 'Contamos con lineas que contienen homologaciones',
+    text: '¡Contamos con líneas con mas de 15 homologaciones, identifícalas aquí...',
+    href: 'https://www.gys.fr/spip.php?page=accueil&lang=es',
+    image: '/images/featured-homologaciones.jpg',
+    tag: 'Homologaciones / GYS'
+  },
+  {
+    title: 'Líneas líderes a nivel mundial',
+    text: 'Traemos para ti, en exclusiva 48 líneas de productos líderes en el mercado a nivel mundial. Para potencializar tu rendimiento.',
+    href: '#linea-producto',
+    image: '/images/featured-lineas.jpg',
+    tag: 'Portafolio'
+  },
+  {
+    title: 'Centro de Capacitación',
+    text: 'Ofrecemos capacitación en pintura y carrocería. Aprende el uso adecuado de equipos, procesos homologados y actualización de productos. ¡Maximiza tu éxito!',
+    href: '#capacitacion',
+    image: '/images/featured-capacitacion.png',
+    tag: 'Capacitación'
+  }
+];
+
+const logos = [
+  { src: '/logos/logo-sata.png', alt: 'SATA' },
+  { src: '/logos/logo-farecla.png', alt: 'Farecla' },
+  { src: '/logos/logo-rupes.png', alt: 'Rupes' },
+  { src: '/logos/logo-ppg.png', alt: 'PPG' },
+  { src: '/logos/logo-gys.png', alt: 'GYS' },
+  { src: '/logos/logo-3m.png', alt: '3M' },
+  { src: '/logos/logo-polyvance.png', alt: 'Polyvance' },
+  { src: '/logos/logo-drester.png', alt: 'Drester' },
+  { src: '/logos/logo-prevost.png', alt: 'Prevost' },
+  { src: '/logos/logo-hedson.png', alt: 'Hedson' }
+];
+---
+
+<section id="quienes-somos" class="relative overflow-hidden bg-[#050b12] py-20 sm:py-24">
+  <div class="shell">
+    <div class="grid gap-5 lg:grid-cols-3">
+      {
+        cards.map((card, index) => (
+          <article
+            class={`group relative min-h-[380px] overflow-hidden rounded-[30px] border border-white/10 ${index === 1 ? 'lg:-mt-8' : ''}`}
+          >
+            <div
+              class="absolute inset-0 scale-100 bg-cover bg-center transition duration-700 group-hover:scale-105"
+              style={`background-image:
+                linear-gradient(180deg, rgba(2, 6, 23, 0.16), rgba(2, 6, 23, 0.78)),
+                url('${card.image}')`}
+            ></div>
+            <div class="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(5,11,18,0.88))]"></div>
+            <div class="relative flex h-full flex-col justify-end p-7 sm:p-8">
+              <span class="section-kicker text-slate-200">{card.tag}</span>
+              <h2 class="mt-5 text-2xl font-bold tracking-[-0.03em] text-white sm:text-[2rem]">
+                {card.title}
+              </h2>
+              <p class="mt-4 max-w-md text-base leading-7 text-slate-200">
+                {card.text}
+              </p>
+              <div class="mt-7">
+                <a
+                  href={card.href}
+                  class="btn-secondary"
+                  target={card.href.startsWith('http') ? '_blank' : undefined}
+                  rel={card.href.startsWith('http') ? 'noreferrer' : undefined}
+                >
+                  Me interesa
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="panel mt-16 rounded-[34px] p-8 sm:p-10">
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div class="max-w-2xl">
+          <span class="section-kicker">Líneas líderes a nivel mundial</span>
+          <h3 class="section-title mt-4 text-white">Marcas globales con respaldo técnico y comercial</h3>
+        </div>
+        <p class="max-w-xl text-sm leading-7 text-slate-300">
+          La home actual ya comunica variedad y exclusividad. Aquí la convertimos en una vitrina más clara, premium y mucho más sólida visualmente.
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        {
+          logos.map((logo) => (
+            <div class="flex min-h-28 items-center justify-center rounded-[24px] border border-white/10 bg-white/[0.04] px-6 py-5 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07]">
+              <img src={logo.src} alt={logo.alt} class="max-h-10 w-auto object-contain opacity-90" loading="lazy" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,113 @@
+---
+const navItems = [
+  { label: 'Home', href: '#top' },
+  { label: '¿Quiénes Somos?', href: '#quienes-somos' },
+  { label: 'Línea de Producto', href: '#linea-producto' },
+  { label: 'Capacitación', href: '#capacitacion' },
+  { label: 'PostVenta', href: '#postventa' },
+  { label: 'Contacto', href: '#contacto' }
+];
+---
+
+<header class="fixed inset-x-0 top-0 z-50">
+  <div class="shell pt-4">
+    <div class="rounded-full border border-white/10 bg-[#061018]/80 px-4 py-3 shadow-[0_22px_70px_rgba(0,0,0,0.38)] backdrop-blur-xl">
+      <div class="flex items-center justify-between gap-4">
+        <a href="#top" class="shrink-0 transition-opacity hover:opacity-80" aria-label="Ir al inicio">
+          <img
+            src="/images/logo-etapel-white.png"
+            alt="Etapel"
+            class="h-10 w-auto sm:h-11"
+            loading="eager"
+          />
+        </a>
+
+        <nav class="hidden lg:block" aria-label="Navegación principal">
+          <ul class="flex items-center gap-6 text-sm font-semibold text-slate-100">
+            {
+              navItems.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                  class="relative py-2 text-slate-200 transition duration-300 hover:text-cyan-300 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-cyan-300 after:transition-transform after:duration-300 hover:after:scale-x-100"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="#contacto"
+            class="hidden rounded-full border border-cyan-300/30 bg-cyan-300/10 px-5 py-3 text-sm font-semibold text-cyan-100 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300/20 sm:inline-flex"
+          >
+            Solicitar información
+          </a>
+
+          <button
+            type="button"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/5 text-white transition hover:bg-white/10 lg:hidden"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Abrir menú"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden pt-4 lg:hidden" data-menu-panel>
+        <nav aria-label="Navegación móvil">
+          <ul class="grid gap-2 rounded-[24px] border border-white/10 bg-white/5 p-3 text-sm font-semibold text-slate-100">
+            {
+              navItems.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    class="block rounded-2xl px-4 py-3 transition hover:bg-white/10"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+            <li>
+              <a
+                href="#contacto"
+                class="mt-2 inline-flex w-full justify-center rounded-full border border-cyan-300/30 bg-cyan-300/10 px-5 py-3 text-sm font-semibold text-cyan-100 transition duration-300 hover:bg-cyan-300/20"
+              >
+                Solicitar información
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const panel = document.querySelector('[data-menu-panel]');
+
+  if (toggle instanceof HTMLButtonElement && panel instanceof HTMLElement) {
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      panel.classList.toggle('hidden', isOpen);
+    });
+
+    panel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        panel.classList.add('hidden');
+      });
+    });
+  }
+</script>

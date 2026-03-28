@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import FeaturedBlocks from '../components/FeaturedBlocks.astro';
+import CertificationSection from '../components/CertificationSection.astro';
+import ProductHighlight from '../components/ProductHighlight.astro';
+import ProductCategories from '../components/ProductCategories.astro';
+import CTASection from '../components/CTASection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Etapel | Tecnología premium para taller automotriz e industria"
+  description="Homepage de Etapel en Astro, manteniendo la estructura comercial del sitio actual con una presentación premium, moderna y limpia."
+>
+  <Header />
+
+  <main>
+    <HeroSlider />
+    <FeaturedBlocks />
+    <CertificationSection />
+    <ProductHighlight />
+    <ProductCategories />
+    <CTASection />
+  </main>
+
+  <Footer />
+</Layout>

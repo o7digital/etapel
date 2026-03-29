@@ -171,6 +171,8 @@ const pageKeywords = keywords && keywords.length > 0
   ? keywords
   : selectKeywords(Astro.url.pathname, lang);
 
+const siteName = lang === 'en' ? 'Etapel | Official Site' : 'Etapel | Sitio Oficial';
+
 const webpageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -200,7 +202,7 @@ const webpageSchema = {
     <link rel="canonical" href={canonical} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Etapel" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:locale" content={ogLocale} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

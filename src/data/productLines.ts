@@ -19,7 +19,7 @@ export const productFamilies: ProductFamily[] = [
     menuDescription: 'Pistolas, consumibles y sistemas para procesos de pintura y acabado.',
     pageDescription:
       'Soluciones para pintura automotriz y repintado con equipos, consumibles y sistemas diseñados para mejorar el acabado, la productividad y la consistencia del taller.',
-    image: '/images/category-pistolas.jpg',
+    image: '/images/category-pistolas.webp',
     accent: 'from-sky-500/18 to-cyan-500/8',
     items: [
       'Pistolas de pintura',
@@ -37,7 +37,7 @@ export const productFamilies: ProductFamily[] = [
     menuDescription: 'Cabinas, cuartos de mezclado y espacios de preparación para repintado.',
     pageDescription:
       'Equipamiento para áreas de pintura y preparación con soluciones de cabinas, cuartos de mezclado y zonas de trabajo orientadas a la eficiencia y al control del proceso.',
-    image: '/images/cabinas-preparacion.png',
+    image: '/images/cabinas-preparacion.webp',
     accent: 'from-blue-500/16 to-slate-500/8',
     items: [
       'Cabinas USI',
@@ -55,7 +55,7 @@ export const productFamilies: ProductFamily[] = [
     menuDescription: 'Soldadoras, bancos y soluciones para reparación estructural y de carrocería.',
     pageDescription:
       'Tecnología para reparación y enderezado con equipos de soldadura, bancos y soluciones especializadas para trabajos de carrocería y estructura.',
-    image: '/images/category-soldadoras.jpg',
+    image: '/images/category-soldadoras.webp',
     accent: 'from-amber-500/16 to-orange-500/8',
     items: [
       'Soldadoras',
@@ -72,7 +72,7 @@ export const productFamilies: ProductFamily[] = [
     menuDescription: 'Mecánica, aire comprimido, infrarrojo y equipos complementarios.',
     pageDescription:
       'Líneas de apoyo para operación de taller con soluciones de mecánica, aire comprimido, secado, equipos de repintado y productos PPG.',
-    image: '/images/mecanica-aire.jpg',
+    image: '/images/mecanica-aire.webp',
     accent: 'from-cyan-500/16 to-slate-500/8',
     items: [
       'Mecánica',

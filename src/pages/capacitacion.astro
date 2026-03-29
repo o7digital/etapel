@@ -7,32 +7,32 @@ const services = [
   {
     title: '1. Formación Especializada',
     text: 'Nuestro equipo de expertos se encarga de capacitar a tu personal en el uso adecuado de los equipos, garantizando que aprovechen al máximo su potencial. Saber cómo utilizar eficazmente los equipos no solo aumenta la productividad, sino que también garantiza la seguridad en el lugar de trabajo.',
-    image: '/images/capacitacion-1.jpg'
+    image: '/images/capacitacion-1.webp'
   },
   {
     title: '2. Limpieza Eficiente',
     text: 'Enseñamos a tu personal las mejores prácticas de limpieza y mantenimiento de los equipos. Una limpieza adecuada prolonga la vida útil de los equipos y garantiza un rendimiento óptimo.',
-    image: '/images/capacitacion-2.jpg'
+    image: '/images/capacitacion-2.webp'
   },
   {
     title: '3. Diseño de Espacios Eficientes',
     text: 'Si es necesario, creamos diseños de layout personalizados para tu negocio. Estos diseños optimizan el flujo de trabajo y maximizan la eficiencia operativa.',
-    image: '/images/capacitacion-3.jpg'
+    image: '/images/capacitacion-3.webp'
   },
   {
     title: '4. Procesos Homologados',
     text: 'Nos aseguramos de que tus procesos cumplan con los estándares más altos de calidad y seguridad. Esto puede ayudarte a cumplir con regulaciones específicas de tu industria y mejorar la confiabilidad de tus operaciones.',
-    image: '/images/capacitacion-4.jpg'
+    image: '/images/capacitacion-4.webp'
   },
   {
     title: '5. Seguridad del Personal',
     text: 'La seguridad es primordial. Evaluamos y mejoramos las condiciones de trabajo para garantizar un entorno seguro para tu personal.',
-    image: '/images/capacitacion-5.jpg'
+    image: '/images/capacitacion-5.webp'
   },
   {
     title: '6. Identificación de Oportunidades',
     text: 'Realizamos un análisis detallado para identificar áreas de oportunidad en tus operaciones. Esto te permite tomar decisiones informadas para el crecimiento y la eficiencia de tu negocio.',
-    image: '/images/capacitacion-6.jpg'
+    image: '/images/capacitacion-6.webp'
   }
 ];
 ---
@@ -61,11 +61,11 @@ const services = [
             </div>
           </div>
 
-          <div class="surface-card overflow-hidden">
+          <div class="media-frame">
             <img
-              src="/images/capacitacion-1.jpg"
+                src="/images/capacitacion-1.webp"
               alt="Capacitación Etapel"
-              class="h-[320px] w-full object-cover sm:h-[420px] lg:h-[520px]"
+              class="media-cover h-[320px] object-[center_35%] sm:h-[420px] lg:h-[520px]"
               loading="eager"
             />
           </div>
@@ -80,11 +80,11 @@ const services = [
             services.map((service) => (
               <article class="surface-card overflow-hidden">
                 <div class="grid gap-0 sm:grid-cols-[0.85fr_1.15fr]">
-                  <div class="h-full min-h-[240px] overflow-hidden bg-slate-100">
+                  <div class="media-frame-soft min-h-[240px] rounded-none border-y-0 border-l-0 shadow-none">
                     <img
                       src={service.image}
                       alt={service.title}
-                      class="h-full w-full object-cover"
+                      class="media-cover"
                       loading="lazy"
                     />
                   </div>

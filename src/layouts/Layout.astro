@@ -8,6 +8,7 @@ interface Props {
   noindex?: boolean;
   lang?: string;
   ogLocale?: string;
+  keywords?: string[];
 }
 
 const {
@@ -16,11 +17,174 @@ const {
   image = '/images/featured-lineas.webp',
   noindex = false,
   lang = 'es',
-  ogLocale = 'es_MX'
+  ogLocale = 'es_MX',
+  keywords
 } = Astro.props as Props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const socialImage = new URL(image, Astro.site).toString();
+const siteUrl = Astro.site ? new URL('/', Astro.site).toString() : `${Astro.url.origin}/`;
+
+const keywordsEs = [
+  'pintura automotriz CDMX',
+  'repintado automotriz CDMX',
+  'taller automotriz CDMX',
+  'equipo para taller CDMX',
+  'cabina de pintura CDMX',
+  'pistola de pintura CDMX',
+  'consumibles de pintura CDMX',
+  'soldadura automotriz CDMX',
+  'aire comprimido CDMX',
+  'capacitación automotriz CDMX',
+  'procesos homologados CDMX',
+  'postventa automotriz CDMX',
+  'mantenimiento de equipos CDMX',
+  'soporte técnico CDMX',
+  'tecnología para taller CDMX',
+  'soluciones para carrocería CDMX',
+  'servicio técnico especializado CDMX',
+  'centro de capacitación CDMX',
+  'soluciones certificadas CDMX',
+  'cotización de equipos automotrices CDMX'
+];
+
+const keywordsEn = [
+  'automotive paint CDMX',
+  'automotive refinishing CDMX',
+  'automotive workshop CDMX',
+  'workshop equipment CDMX',
+  'paint booth CDMX',
+  'spray gun CDMX',
+  'paint consumables CDMX',
+  'automotive welding CDMX',
+  'compressed air CDMX',
+  'automotive training CDMX',
+  'homologated processes CDMX',
+  'automotive after-sales CDMX',
+  'equipment maintenance CDMX',
+  'technical support CDMX',
+  'workshop technology CDMX',
+  'body shop solutions CDMX',
+  'specialized technical service CDMX',
+  'training center CDMX',
+  'certified solutions CDMX',
+  'automotive equipment quote CDMX'
+];
+
+const selectKeywords = (pathname: string, currentLang: string) => {
+  if (currentLang === 'en') {
+    if (pathname.startsWith('/en/contact')) {
+      return [
+        'automotive commercial contact CDMX',
+        'technical consulting CDMX',
+        'commercial consulting CDMX',
+        'automotive supplier CDMX',
+        'automotive equipment quote CDMX',
+        'technical support CDMX'
+      ];
+    }
+
+    if (pathname.startsWith('/en/training')) {
+      return [
+        'automotive training CDMX',
+        'paint training CDMX',
+        'training center CDMX',
+        'homologated processes CDMX',
+        'workshop safety CDMX',
+        'operational efficiency CDMX'
+      ];
+    }
+
+    if (pathname.startsWith('/en/after-sales')) {
+      return [
+        'automotive after-sales CDMX',
+        'equipment maintenance CDMX',
+        'equipment repair CDMX',
+        'equipment installation CDMX',
+        'specialized technical service CDMX',
+        'technical support CDMX'
+      ];
+    }
+
+    if (pathname.startsWith('/en/product-line/')) {
+      return [
+        'workshop equipment CDMX',
+        'body shop solutions CDMX',
+        'professional paint equipment CDMX',
+        'automotive tools CDMX',
+        'industrial solutions CDMX',
+        'automotive equipment distribution CDMX'
+      ];
+    }
+
+    return keywordsEn;
+  }
+
+  if (pathname.startsWith('/contacto')) {
+    return [
+      'contacto comercial automotriz CDMX',
+      'asesoría técnica CDMX',
+      'asesoría comercial CDMX',
+      'proveedor automotriz CDMX',
+      'cotización de equipos automotrices CDMX',
+      'soporte técnico CDMX'
+    ];
+  }
+
+  if (pathname.startsWith('/capacitacion')) {
+    return [
+      'capacitación automotriz CDMX',
+      'capacitación en pintura CDMX',
+      'centro de capacitación CDMX',
+      'procesos homologados CDMX',
+      'seguridad en taller CDMX',
+      'eficiencia operativa CDMX'
+    ];
+  }
+
+  if (pathname.startsWith('/postventa')) {
+    return [
+      'postventa automotriz CDMX',
+      'mantenimiento de equipos CDMX',
+      'reparación de equipos CDMX',
+      'instalación de equipos CDMX',
+      'servicio técnico especializado CDMX',
+      'soporte técnico CDMX'
+    ];
+  }
+
+  if (pathname.startsWith('/linea-de-producto/')) {
+    return [
+      'equipo para taller CDMX',
+      'soluciones para carrocería CDMX',
+      'equipo de pintura profesional CDMX',
+      'herramientas automotrices CDMX',
+      'soluciones industriales CDMX',
+      'distribución de equipos automotrices CDMX'
+    ];
+  }
+
+  return keywordsEs;
+};
+
+const pageKeywords = keywords && keywords.length > 0
+  ? keywords
+  : selectKeywords(Astro.url.pathname, lang);
+
+const webpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  url: canonical,
+  inLanguage: lang,
+  keywords: pageKeywords,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Etapel',
+    url: siteUrl
+  }
+};
 ---
 
 <!doctype html>
@@ -30,6 +194,7 @@ const socialImage = new URL(image, Astro.site).toString();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={pageKeywords.join(', ')} />
     <meta name="theme-color" content="#050b12" />
     <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
     <link rel="canonical" href={canonical} />
@@ -55,6 +220,7 @@ const socialImage = new URL(image, Astro.site).toString();
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json" set:html={JSON.stringify(webpageSchema)}></script>
     <title>{title}</title>
   </head>
   <body>

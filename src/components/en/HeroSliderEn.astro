@@ -1,0 +1,146 @@
+---
+const slides = [
+  {
+    title: 'Spray Guns',
+    text: 'World-class spray gun technology.',
+    image: '/images/slide-pistolas.webp'
+  },
+  {
+    title: 'Industry',
+    text: 'Paint, consumables, tools, and equipment.',
+    image: '/images/slide-industria.webp'
+  },
+  {
+    title: 'Automotive Workshop',
+    text: 'Everything your workshop needs in one place.',
+    image: '/images/slide-taller.webp'
+  }
+];
+---
+
+<section
+  id="top"
+  class="relative isolate overflow-hidden bg-[#07111d]"
+  data-slider
+  tabindex="0"
+  aria-roledescription="carousel"
+  aria-label="Etapel main slider"
+>
+  <div class="relative min-h-[88svh] pt-24 sm:min-h-[920px] sm:pt-28">
+    {
+      slides.map((slide, index) => (
+        <article
+          class={`absolute inset-0 transition-opacity duration-700 ease-out ${index === 0 ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+          data-slide
+          aria-hidden={index === 0 ? 'false' : 'true'}
+          style={`background-image:
+            linear-gradient(180deg, rgba(5,11,18,0.06) 0%, rgba(5,11,18,0.02) 40%, rgba(5,11,18,0.10) 100%),
+            url('${slide.image}'); background-size: cover; background-position: center;`}
+        >
+          <div class="relative flex min-h-[88svh] items-center justify-center px-8 py-14 text-center sm:min-h-[920px] lg:px-14 lg:py-16">
+            <div class="max-w-4xl">
+              <span class="mx-auto inline-flex w-fit items-center gap-3 rounded-full border border-white/20 bg-black/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-white backdrop-blur-sm">
+                <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
+                Etapel
+              </span>
+              <h2 class="mt-8 text-5xl font-bold leading-[1.02] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-8xl [text-shadow:0_8px_30px_rgba(0,0,0,0.28)]">
+                {slide.title}
+              </h2>
+              <p class="mx-auto mt-7 max-w-2xl text-xl leading-8 text-white sm:text-2xl [text-shadow:0_6px_24px_rgba(0,0,0,0.22)]">
+                {slide.text}
+              </p>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#07111d]/25 to-transparent"></div>
+
+    <div class="absolute inset-x-0 bottom-8 z-10 flex justify-center px-6">
+      <div class="flex items-center gap-3">
+        {
+          slides.map((slide, index) => (
+            <button
+              type="button"
+              class={`h-3 rounded-full transition-all duration-300 ${index === 0 ? 'w-10 bg-cyan-300' : 'w-3 bg-white/30 hover:bg-white/50'}`}
+              data-dot
+              aria-label={`Go to slide ${index + 1}: ${slide.title}`}
+              aria-current={index === 0 ? 'true' : 'false'}
+            ></button>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const sliders = document.querySelectorAll('[data-slider]');
+
+  sliders.forEach((slider) => {
+    const slides = Array.from(slider.querySelectorAll('[data-slide]'));
+    const dots = Array.from(slider.querySelectorAll('[data-dot]'));
+    let index = 0;
+    let autoplayId;
+
+    const render = (nextIndex) => {
+      index = nextIndex;
+
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === index;
+        slide.classList.toggle('opacity-100', isActive);
+        slide.classList.toggle('opacity-0', !isActive);
+        slide.classList.toggle('pointer-events-none', !isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === index;
+        dot.classList.toggle('w-10', isActive);
+        dot.classList.toggle('w-3', !isActive);
+        dot.classList.toggle('bg-cyan-300', isActive);
+        dot.classList.toggle('bg-white/30', !isActive);
+        dot.setAttribute('aria-current', String(isActive));
+      });
+    };
+
+    const next = () => render((index + 1) % slides.length);
+
+    const startAutoplay = () => {
+      window.clearInterval(autoplayId);
+      autoplayId = window.setInterval(next, 5500);
+    };
+
+    const stopAutoplay = () => {
+      window.clearInterval(autoplayId);
+    };
+
+    dots.forEach((dot, dotIndex) => {
+      dot.addEventListener('click', () => {
+        render(dotIndex);
+        startAutoplay();
+      });
+    });
+
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+    slider.addEventListener('focusin', stopAutoplay);
+    slider.addEventListener('focusout', startAutoplay);
+    slider.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        render((index + 1) % slides.length);
+        startAutoplay();
+      }
+
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        render((index - 1 + slides.length) % slides.length);
+        startAutoplay();
+      }
+    });
+
+    startAutoplay();
+  });
+</script>

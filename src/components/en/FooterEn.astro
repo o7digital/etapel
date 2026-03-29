@@ -1,14 +1,14 @@
 ---
-import { productFamilies } from '../data/productLines';
+import { productFamiliesEn } from '../../data/productLinesEn';
 
 const services = [
-  { label: 'Capacitación', href: '/capacitacion' },
-  { label: 'PostVenta', href: '/postventa' }
+  { label: 'Training', href: '/en/training' },
+  { label: 'After-Sales', href: '/en/after-sales' }
 ];
 
 const contactLinks = [
   { label: 'ventas@etapel.com.mx', href: 'mailto:ventas@etapel.com.mx' },
-  { label: '55 5689 5055', href: 'tel:+525556895055' },
+  { label: '+52 55 5689 5055', href: 'tel:+525556895055' },
   { label: 'WhatsApp', href: 'https://wa.link/oowyzu' }
 ];
 ---
@@ -19,18 +19,18 @@ const contactLinks = [
       <div>
         <img src="/images/logo-etapel.webp" alt="Etapel" class="h-12 w-auto" loading="lazy" />
         <p class="mt-6 max-w-md text-base leading-8 text-slate-800">
-          En Etapel, no somos solo proveedores, somos socios en el crecimiento de tu negocio.
+          At Etapel, we are more than suppliers, we are growth partners for your business.
         </p>
         <p class="mt-4 max-w-md text-sm leading-7 text-slate-700">
-          Descubre cómo podemos ayudarte a alcanzar nuevos niveles de éxito.
+          Discover how we can help you reach new performance levels.
         </p>
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Línea de producto</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Product line</h3>
         <ul class="mt-5 space-y-3">
           {
-            productFamilies.map((family) => (
+            productFamiliesEn.map((family) => (
               <li>
                 <a href={family.href} class="text-sm text-slate-800 transition hover:text-sky-700">
                   {family.title}
@@ -42,7 +42,7 @@ const contactLinks = [
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Servicios</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Services</h3>
         <ul class="mt-5 space-y-3">
           {
             services.map((item) => (
@@ -57,7 +57,7 @@ const contactLinks = [
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Contacto</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.26em] text-slate-900">Contact</h3>
         <ul class="mt-5 space-y-3">
           {
             contactLinks.map((item) => (
@@ -78,11 +78,11 @@ const contactLinks = [
     </div>
 
     <div class="mt-10 flex flex-col gap-4 border-t border-slate-300/80 pt-6 text-sm text-slate-700 sm:flex-row sm:items-center sm:justify-between">
-      <p>Copyright © 2026 Etapel. Todos los derechos reservados.</p>
+      <p>Copyright © 2026 Etapel. All rights reserved.</p>
       <div class="flex items-center gap-4">
-        <a href="/contacto" class="transition hover:text-sky-700">¿Necesitas ayuda? ¡Contáctanos!</a>
-        <a href="/aviso-de-privacidad" class="transition hover:text-sky-700">Aviso de Privacidad</a>
-        <a href="/en" class="transition hover:text-sky-700">English version</a>
+        <a href="/en/contact" class="transition hover:text-sky-700">Need help? Contact us</a>
+        <a href="/en/privacy-notice" class="transition hover:text-sky-700">Privacy Notice</a>
+        <a href="/" class="transition hover:text-sky-700">Versión en Español</a>
       </div>
     </div>
   </div>

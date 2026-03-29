@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Aviso de Privacidad | Etapel"
+  description="Aviso de Privacidad de Etapel conforme al tratamiento de datos personales y medios de contacto."
+>
+  <Header />
+
+  <main class="bg-white">
+    <section class="bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] pb-16 pt-32 sm:pb-20 sm:pt-36">
+      <div class="shell">
+        <div class="max-w-4xl">
+          <span class="section-kicker text-slate-700">Legal</span>
+          <h1 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
+            Aviso de Privacidad
+          </h1>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+            Información sobre el tratamiento de datos personales recabados por Etapel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 sm:py-20">
+      <div class="shell">
+        <article class="surface-card max-w-5xl p-8 sm:p-10 lg:p-12">
+          <div class="max-w-4xl space-y-6 text-base leading-8 text-slate-700 sm:text-lg">
+            <p>
+              Etapel, con domicilio en California 167, Col. Parque San Andrés, CDMX C.P. 04040 México, Ciudad de
+              México, es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su
+              protección.
+            </p>
+
+            <p>
+              Su información personal será utilizada para proveer los servicios y productos que ha solicitado,
+              informarle sobre cambios en los mismos y evaluar la calidad del servicio que le brindamos.
+            </p>
+
+            <p>
+              Para las finalidades antes mencionadas, requerimos obtener los siguientes datos personales: nombre,
+              teléfono local, teléfono móvil y correo electrónico; en caso de requerir facturación, también
+              solicitaremos los siguientes datos: denominación social, RFC, domicilio fiscal, teléfono de contacto y
+              correo electrónico al que se enviará dicha información. Sin considerar como sensible ninguno de los
+              anteriores según la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
+            </p>
+
+            <p>
+              Usted tiene derecho de acceder, rectificar y cancelar sus datos personales, así como de oponerse al
+              tratamiento de los mismos o revocar el consentimiento que para tal fin nos haya otorgado.
+            </p>
+
+            <div class="surface-card-soft p-6 sm:p-7">
+              <h2 class="text-2xl font-bold tracking-[-0.03em] text-slate-950">Medios de contacto</h2>
+              <p class="mt-4 text-base leading-8 text-slate-700">
+                Para ejercer estos derechos, le pedimos ponerse en contacto al teléfono
+                <a href="tel:+525556895055" class="font-semibold text-sky-700 transition hover:text-sky-800">
+                  55 5689 5055
+                </a>
+                o escribirnos a
+                <a href="mailto:ventas@etapel.com.mx" class="font-semibold text-sky-700 transition hover:text-sky-800">
+                  ventas@etapel.com.mx
+                </a>
+                .
+              </p>
+              <p class="mt-4 text-base leading-8 text-slate-700">
+                También puede acudir a California 167, Col. Parque San Andrés, CDMX C.P. 04040 México, Ciudad de
+                México.
+              </p>
+            </div>
+
+            <p>
+              Asimismo, le informamos que sus datos personales pueden ser tratados solo dentro del país, por personas
+              autorizadas de esta empresa. En ese sentido, su información no puede ser compartida con ninguna otra
+              institución, por ningún motivo.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

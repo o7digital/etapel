@@ -1,0 +1,59 @@
+---
+const resources = [
+  '/images/recurso-7.webp',
+  '/images/recurso-6.webp',
+  '/images/recurso-5.webp',
+  '/images/recurso-4.webp',
+  '/images/recurso-3.webp',
+  '/images/recurso-2.webp',
+  '/images/recurso-1.webp'
+];
+---
+
+<section class="relative overflow-hidden bg-white py-18 sm:py-22">
+  <div class="shell relative">
+    <div class="grid items-center gap-12 lg:grid-cols-[1fr_0.8fr]">
+      <div>
+        <span class="section-kicker text-slate-700">SATA Spray Gun</span>
+        <h2 class="section-title mt-4 text-slate-950">Have you seen the SATAjet X 5500?</h2>
+        <p class="mt-6 text-lg font-bold text-slate-900">Engineered for professionals.</p>
+        <p class="section-copy mt-4 text-slate-600">
+          With the X-nozzle system, painters are prepared for all paint systems and application recommendations.
+          The quiet nozzle significantly reduces noise and provides a smoother, more comfortable spray feel while reducing material consumption.
+        </p>
+
+        <div class="mt-8 grid max-w-2xl grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+          {
+            resources.map((resource, index) => (
+              <div class="surface-card-soft flex aspect-square items-center justify-center p-3">
+                <img src={resource} alt={`SATA resource ${index + 1}`} class="h-12 w-12 object-contain" loading="lazy" />
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="mt-8">
+          <a href="#product-line" class="btn-primary">I want to learn more</a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute inset-6 rounded-[32px] bg-[radial-gradient(circle_at_top,rgba(96,165,250,0.16),transparent_60%)] blur-3xl"></div>
+        <div class="surface-panel relative p-6 sm:p-8">
+          <div class="rounded-[24px] border border-sky-100 bg-white px-6 py-4">
+            <p class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">X Nozzle</p>
+            <p class="mt-2 text-sm leading-7 text-slate-600">
+              Lower noise and a smoother spray experience for better comfort and control.
+            </p>
+          </div>
+          <img
+            src="/images/satajet-x5500.webp"
+            alt="SATAjet X 5500"
+            class="mx-auto mt-6 max-h-[620px] w-full object-contain"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

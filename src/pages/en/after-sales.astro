@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeaderEn from '../../components/en/HeaderEn.astro';
+import FooterEn from '../../components/en/FooterEn.astro';
+
+const services = [
+  'Site surveys',
+  'Maintenance',
+  'Repairs',
+  'Installations',
+  'Uninstallations',
+  'Training',
+  'Demonstrations'
+];
+---
+
+<Layout
+  title="After-Sales | Etapel"
+  description="Etapel after-sales services: surveys, maintenance, repairs, installations, training, and demos."
+  lang="en"
+  ogLocale="en_US"
+>
+  <HeaderEn />
+
+  <main class="bg-white">
+    <section class="bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] pb-18 pt-32 sm:pb-22 sm:pt-36">
+      <div class="shell">
+        <div class="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <span class="section-kicker text-slate-700">Service</span>
+            <h1 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
+              After-Sales
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+              Technical support and close follow-up to keep your equipment and processes running.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="https://wa.me/525570111515?text=Hello%2C%20I%20want%20After-Sales%20information" class="btn-primary" target="_blank" rel="noreferrer">Talk to an expert</a>
+              <a href="#after-sales-form" class="btn-outline">Go to form</a>
+            </div>
+          </div>
+
+          <div class="media-frame">
+            <img
+              src="/images/postventa.webp"
+              alt="Etapel after-sales service"
+              class="media-cover h-[320px] object-[center_38%] sm:h-[420px] lg:h-[520px]"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 sm:py-20">
+      <div class="shell">
+        <div class="max-w-3xl">
+          <span class="section-kicker text-slate-700">After-Sales</span>
+          <h2 class="section-title mt-4 text-slate-950">Services</h2>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          {
+            services.map((service, index) => (
+              <article class="surface-card-soft p-6">
+                <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-sm font-bold text-cyan-700 shadow-[0_10px_20px_rgba(15,23,42,0.06)]">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <h3 class="mt-5 text-xl font-bold tracking-[-0.03em] text-slate-950">{service}</h3>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="after-sales-form" class="bg-[#f4f8fc] py-18 sm:py-22">
+      <div class="shell">
+        <div class="surface-card grid gap-8 p-8 sm:p-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <span class="section-kicker text-slate-700">CONTACT AN EXPERT</span>
+            <h2 class="section-title mt-4 text-slate-950">We are here to help</h2>
+            <p class="mt-5 text-base leading-8 text-slate-600">
+              Share your request and our team will follow up with the service you need.
+            </p>
+            <a
+              href="https://wa.me/525570111515?text=Hello%2C%20I%20want%20After-Sales%20information"
+              class="mt-8 inline-flex text-sm font-semibold text-cyan-700 transition hover:text-cyan-800"
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp
+            </a>
+          </div>
+
+          <form class="grid gap-4">
+            <input class="field-input" type="text" name="name" placeholder="Name *" />
+            <input class="field-input" type="text" name="company" placeholder="Company *" />
+            <input class="field-input" type="tel" name="phone" placeholder="Phone" />
+            <input class="field-input" type="email" name="email" placeholder="Email *" />
+            <select class="field-select" name="topic">
+              <option value="">Select the topic you need information about *</option>
+              {services.map((service) => <option value={service}>{service}</option>)}
+            </select>
+            <textarea class="field-textarea" name="message" placeholder="Optional message"></textarea>
+            <button type="submit" class="btn-primary w-full sm:w-auto">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <FooterEn />
+</Layout>

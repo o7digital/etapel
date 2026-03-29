@@ -1,0 +1,135 @@
+---
+const logos = [
+  { src: '/logos/logo-sata.png', alt: 'SATA' },
+  { src: '/logos/logo-farecla.png', alt: 'Farecla' },
+  { src: '/logos/logo-rupes.png', alt: 'Rupes' },
+  { src: '/logos/logo-ppg.png', alt: 'PPG' },
+  { src: '/logos/logo-gys.png', alt: 'GYS' },
+  { src: '/logos/logo-3m.png', alt: '3M' },
+  { src: '/logos/logo-polyvance.png', alt: 'Polyvance' },
+  { src: '/logos/logo-drester.png', alt: 'Drester' },
+  { src: '/logos/logo-prevost.png', alt: 'Prevost' },
+  { src: '/logos/logo-hedson.png', alt: 'Hedson' }
+];
+---
+
+<section id="who-we-are" class="bg-white py-16 sm:py-20">
+  <div class="shell space-y-8">
+    <article class="grid items-center gap-8 rounded-[32px] border border-slate-200 bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-10 lg:grid-cols-[1.02fr_0.98fr]">
+      <div class="order-2 lg:order-1">
+        <span class="section-kicker text-slate-700">Homologations / GYS</span>
+        <h2 class="section-title mt-4 text-slate-950">Certified solutions by international manufacturers</h2>
+        <p class="section-copy mt-5 text-slate-600">
+          We work with homologated equipment and processes from leading automotive brands, ensuring quality, compliance, and professional results.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
+            International standards
+          </span>
+          <span class="rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
+            Homologated processes
+          </span>
+        </div>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href="/en/contact"
+            class="btn-primary"
+          >
+            View certified solutions
+          </a>
+          <div class="flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2">
+            <img src="/logos/logo-gys.png" alt="GYS" class="h-6 w-auto object-contain" loading="lazy" />
+            <span class="text-sm font-semibold text-slate-700">Partner technology integrated into each solution</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <div class="media-frame">
+          <img
+            src="/images/featured-homologaciones.webp"
+            alt="Etapel homologated solutions"
+            class="media-cover h-[320px] sm:h-[380px] lg:h-[430px]"
+            loading="lazy"
+          />
+          <div class="absolute inset-x-5 bottom-5 rounded-[24px] border border-white/60 bg-white/88 p-5 shadow-[0_18px_50px_rgba(15,23,42,0.14)] backdrop-blur">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
+                Quality
+              </span>
+              <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
+                Compliance
+              </span>
+              <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
+                Professional results
+              </span>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-slate-600">
+              Etapel integrates homologated solutions aligned with globally recognized manufacturer standards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="grid items-center gap-8 rounded-[32px] border border-slate-200 bg-[#f5f8fc] p-8 shadow-[0_24px_70px_rgba(15,23,42,0.06)] sm:p-10 lg:grid-cols-[0.95fr_1.05fr]">
+      <div>
+        <span class="section-kicker text-slate-700">Global leading lines</span>
+        <h2 class="section-title mt-4 text-slate-950">Global leading product lines</h2>
+        <p class="section-copy mt-5 text-slate-600">
+          We bring you 48 leading product lines in the global market to maximize your operational performance.
+        </p>
+        <div class="mt-8">
+          <a href="#product-line" class="btn-outline">I’m interested</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="media-frame-soft">
+          <img
+            src="/images/featured-lineas.webp"
+            alt="Global leading product lines"
+            class="media-cover h-[320px] sm:h-[380px] lg:h-[430px]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="lg:col-span-2">
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {
+            logos.map((logo) => (
+              <div class="flex min-h-28 items-center justify-center rounded-[22px] border border-slate-200 bg-white px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-0.5">
+                <img src={logo.src} alt={logo.alt} class="max-h-10 w-auto object-contain opacity-90" loading="lazy" />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+
+    <article class="grid items-center gap-8 rounded-[32px] border border-slate-200 bg-[#eef6fb] p-8 shadow-[0_24px_70px_rgba(15,23,42,0.06)] sm:p-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <div class="order-2 lg:order-1">
+        <span class="section-kicker text-slate-700">Training</span>
+        <h2 class="section-title mt-4 text-slate-950">Training Center</h2>
+        <p class="section-copy mt-5 text-slate-600">
+          We provide training in painting and body repair. Learn proper equipment use, homologated processes, and product updates.
+        </p>
+        <div class="mt-8">
+          <a href="/en/training" class="btn-outline">I’m interested</a>
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <div class="media-frame-soft">
+          <img
+            src="/images/capacitacion-1.webp"
+            alt="Hands-on training at Etapel"
+            class="media-cover h-[320px] object-[center_35%] sm:h-[380px] lg:h-[430px]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

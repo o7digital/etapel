@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
 import { productFamilies } from '../../data/productLines';
 ---
 
@@ -33,6 +34,7 @@ import { productFamilies } from '../../data/productLines';
             <div class="mt-8 flex flex-wrap gap-4">
               <a href="/contacto" class="btn-primary">Solicitar información</a>
               <a href="#familias" class="btn-outline">Ver familias</a>
+              <a href="#catalogo-productos" class="btn-outline">Ver productos</a>
             </div>
           </div>
 
@@ -97,6 +99,8 @@ import { productFamilies } from '../../data/productLines';
         </div>
       </div>
     </section>
+
+    <ProductCatalog />
 
     <section class="bg-[#f4f8fc] py-16 sm:py-20">
       <div class="shell">

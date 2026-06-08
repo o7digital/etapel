@@ -18,6 +18,12 @@ export interface ProductOptionGroup {
   }[];
 }
 
+export interface ProductDownload {
+  label: string;
+  url: string;
+  fileName?: string;
+}
+
 export interface CatalogProduct {
   slug: string;
   brand: string;
@@ -43,6 +49,7 @@ export interface CatalogProduct {
     title: string;
     body: string;
   }[];
-  downloads?: string[];
+  downloads?: (string | ProductDownload)[];
   spareParts?: string[];
+  sourceUrl?: string;
 }

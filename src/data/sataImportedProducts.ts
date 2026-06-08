@@ -15,14 +15,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "jet X - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/jet-x.webp",
-    gallery: ["/images/products/sata/imported/jet-x.webp"],
+    gallery: ["/images/products/sata/imported/jet-x.webp", "/images/products/sata/imported/jet-x-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "0.5 - 2.4 bar"}, {"label": "Consumo de aire", "value": "330 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Forma del abanico", "value": "I (Control)"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "QCC", "value": "Sí"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "con articulación giratoria"}, {"label": "Tamaño de la boquilla", "value": "1,2"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Versión de unidad digital", "value": "DIGITAL pro"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/jet-x/CF1931336"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/ce/71/64/1777973033/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1777973033", "fileName": "MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/e5/98/ef/1777973033/MULTILINGUAL-SATA-DECLARATION-OF-CONFORMITY-JET-X-4390-240925-3.PDF.PDF?ts=1777973033", "fileName": "MULTILINGUAL-SATA-DECLARATION-OF-CONFORMITY-JET-X-4390-240925-3.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/jet-x/CF1931336"
   },
   {
     slug: "satajet-x-5500",
@@ -38,14 +39,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet X 5500 - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-x-5500.webp",
-    gallery: ["/images/products/sata/imported/satajet-x-5500.webp"],
+    gallery: ["/images/products/sata/imported/satajet-x-5500.webp", "/images/products/sata/imported/satajet-x-5500-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "0.5 - 2.4 bar"}, {"label": "Consumo de aire", "value": "290 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Forma del abanico", "value": "I"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "QCC", "value": "Sí"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "con articulación giratoria"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Unidad de la indicación de presión", "value": "bar"}, {"label": "Variante de boquilla", "value": "Standard"}, {"label": "Versión de unidad digital", "value": "Integrado"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-x-5500/CF1931072"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/9e/72/f3/1777973034/BETRIEBSANLEITUNG-SATAJET-X-5500.PDF.PDF?ts=1777973034", "fileName": "BETRIEBSANLEITUNG-SATAJET-X-5500.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/36/be/6f/1777973034/KONFORMIT_TSERKL_RUNG-SATAJET-X-5500.PDF.PDF?ts=1777973034", "fileName": "KONFORMIT_TSERKL_RUNG-SATAJET-X-5500.PDF"}, {"label": "Folletos", "url": "https://www.sata.com/media/70/b4/3c/1776086100/IT-OPUSCOLO-SATA-JET-X-5500.PDF.PDF?ts=1776086100", "fileName": "IT-OPUSCOLO-SATA-JET-X-5500.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-x-5500/CF1931072"
   },
   {
     slug: "satajet-1000-b",
@@ -61,14 +63,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 1000 B - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-1000-b.webp",
-    gallery: ["/images/products/sata/imported/satajet-1000-b.webp"],
+    gallery: ["/images/products/sata/imported/satajet-1000-b.webp", "/images/products/sata/imported/satajet-1000-b-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "1.5 - 2 bar"}, {"label": "Consumo de aire", "value": "275 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "QCC", "value": "Sí"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-1000-b/CF1931080"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/42/c5/1c/1777973035/BAL-SATAJET-1000-B.PDF.PDF?ts=1777973035", "fileName": "BAL-SATAJET-1000-B.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/42/0e/2b/1777973035/KONFORMIT_TSERKL_RUNG-SATAJET-1000-B.PDF.PDF?ts=1777973035", "fileName": "KONFORMIT_TSERKL_RUNG-SATAJET-1000-B.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-1000-b/CF1931080"
   },
   {
     slug: "satajet-100-b",
@@ -84,14 +87,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 100 B - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-100-b.webp",
-    gallery: ["/images/products/sata/imported/satajet-100-b.webp"],
+    gallery: ["/images/products/sata/imported/satajet-100-b.webp", "/images/products/sata/imported/satajet-100-b-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "1.5 - 2 bar"}, {"label": "Consumo de aire", "value": "290 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "QCC", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,6"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-100-b/CF1931082"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/e4/79/23/1777973035/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1777973035", "fileName": "BETRIEBSANLEITUNG-SATAJET-100-B.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/6b/44/10/1777973035/EG-KONFORMITATSERKLARUNG-SATAJET-100-B.PDF.PDF?ts=1777973035", "fileName": "EG-KONFORMITATSERKLARUNG-SATAJET-100-B.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-100-b/CF1931082"
   },
   {
     slug: "sataminijet-4400-b",
@@ -107,14 +111,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAminijet 4400 B - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sataminijet-4400-b.webp",
-    gallery: ["/images/products/sata/imported/sataminijet-4400-b.webp"],
+    gallery: ["/images/products/sata/imported/sataminijet-4400-b.webp", "/images/products/sata/imported/sataminijet-4400-b-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "0.5 - 2.5 bar"}, {"label": "Consumo de aire", "value": "200 l/min"}, {"label": "Distancia de pintura recomendada", "value": "12 - 19 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2.5 bar"}, {"label": "QCC", "value": "Sí"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,2"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "SR"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sataminijet-4400-b/CF1931085"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/4a/4a/41/1777973035/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1777973035", "fileName": "BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/29/c2/95/1777973035/KONFORMIT_TSERKL_RUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1777973035", "fileName": "KONFORMIT_TSERKL_RUNG-SATAMINIJET-4400-B.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sataminijet-4400-b/CF1931085"
   },
   {
     slug: "satajet-x-5500-phaser",
@@ -130,14 +135,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet X 5500 PHASER - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-x-5500-phaser.webp",
-    gallery: ["/images/products/sata/imported/satajet-x-5500-phaser.webp"],
+    gallery: ["/images/products/sata/imported/satajet-x-5500-phaser.webp", "/images/products/sata/imported/satajet-x-5500-phaser-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "0.5 - 2.4 bar"}, {"label": "Consumo de aire", "value": "290 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Forma del abanico", "value": "O"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "QCC", "value": "Sí"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-x-5500-phaser/CF1931282"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/b1/b6/03/1777973033/BETRIEBSANLEITUNG-SATAJET-X5500-PHASER.PDF.PDF?ts=1777973033", "fileName": "BETRIEBSANLEITUNG-SATAJET-X5500-PHASER.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/0f/0c/f6/1777973033/EG-KONFORMITATSERKLARUNG-SATAJET-X-5500-PHASER.PDF.PDF?ts=1777973033", "fileName": "EG-KONFORMITATSERKLARUNG-SATAJET-X-5500-PHASER.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-x-5500-phaser/CF1931282"
   },
   {
     slug: "satajet-5000-b",
@@ -153,14 +159,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 5000 B - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-5000-b.webp",
-    gallery: ["/images/products/sata/imported/satajet-5000-b.webp"],
+    gallery: ["/images/products/sata/imported/satajet-5000-b.webp", "/images/products/sata/imported/satajet-5000-b-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "0.5 - 2.4 bar"}, {"label": "Consumo de aire", "value": "290 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "QCC", "value": "Sí"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "con articulación giratoria"}, {"label": "Tamaño de la boquilla", "value": "1,0"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-5000-b/CF1931074"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/8e/41/76/1777973034/EG-KONFORMITATSERKLARUNG-SATAJET-5000-B.PDF.PDF?ts=1777973034", "fileName": "EG-KONFORMITATSERKLARUNG-SATAJET-5000-B.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/ba/d6/90/1777973034/BAL-SATAJET-5000-B.PDF.PDF?ts=1777973034", "fileName": "BAL-SATAJET-5000-B.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-5000-b/CF1931074"
   },
   {
     slug: "satajet-20-b",
@@ -176,14 +183,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 20 B - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-20-b.webp",
-    gallery: ["/images/products/sata/imported/satajet-20-b.webp"],
+    gallery: ["/images/products/sata/imported/satajet-20-b.webp", "/images/products/sata/imported/satajet-20-b-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "1 - 1.5 bar"}, {"label": "Consumo de aire", "value": "40 l/min"}, {"label": "Distancia de pintura recomendada", "value": "variabel cm"}, {"label": "Forma del abanico", "value": "Omnidireccional"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "1 bar"}, {"label": "QCC", "value": "0"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,0"}, {"label": "Tecnología de boquillas", "value": "ND"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de conexión de la taza", "value": "M10x1 Innengewinde"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-20-b/CF1931083"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/cc/89/d6/1777973035/BAL-SATAJET-20-B.PDF.PDF?ts=1777973035", "fileName": "BAL-SATAJET-20-B.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-20-b/CF1931083"
   },
   {
     slug: "satajet-1000-b-lignum-3",
@@ -199,14 +207,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 1000 B Lignum 3 - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-1000-b-lignum-3.webp",
-    gallery: ["/images/products/sata/imported/satajet-1000-b-lignum-3.webp"],
+    gallery: ["/images/products/sata/imported/satajet-1000-b-lignum-3.webp", "/images/products/sata/imported/satajet-1000-b-lignum-3-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "1.5 - 2 bar"}, {"label": "Consumo de aire", "value": "275 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "QCC", "value": "Sí"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "con articulación giratoria"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-1000-b-lignum-3/CF1931319"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Folletos", "url": "https://www.sata.com/media/94/4c/71/1776086101/SATAJET-1000-B-LIGNUM-3-BROCHURE-FR.PDF.PDF?ts=1776086101", "fileName": "SATAJET-1000-B-LIGNUM-3-BROCHURE-FR.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/42/c5/1c/1777973035/BAL-SATAJET-1000-B.PDF.PDF?ts=1777973035", "fileName": "BAL-SATAJET-1000-B.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/42/0e/2b/1777973035/KONFORMIT_TSERKL_RUNG-SATAJET-1000-B.PDF.PDF?ts=1777973035", "fileName": "KONFORMIT_TSERKL_RUNG-SATAJET-1000-B.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-1000-b-lignum-3/CF1931319"
   },
   {
     slug: "sata-spray-master-rp",
@@ -222,14 +231,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATA spray master RP - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sata-spray-master-rp.webp",
-    gallery: ["/images/products/sata/imported/sata-spray-master-rp.webp"],
+    gallery: ["/images/products/sata/imported/sata-spray-master-rp.webp", "/images/products/sata/imported/sata-spray-master-rp-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "1 - 2 bar"}, {"label": "Consumo de aire", "value": "230 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "SM"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "W"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-spray-master-rp/CF1931087"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/sata-spray-master-rp/CF1931087", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-spray-master-rp/CF1931087"
   },
   {
     slug: "satajet-1500-b",
@@ -245,14 +255,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 1500 B - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/catalog/jet-x.webp",
-    gallery: ["/images/products/sata/catalog/jet-x.webp"],
+    gallery: ["/images/products/sata/catalog/jet-x.webp", "/images/products/sata/imported/satajet-1500-b-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "0.5 - 2.4 bar"}, {"label": "Consumo de aire", "value": "290 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "1.8 bar"}, {"label": "QCC", "value": "Sí"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-1500-b/CF1931079"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/73/aa/77/1777973034/KONFORMIT_TSERKL_RUNG-SATAJET-1500-B.PDF.PDF?ts=1777973034", "fileName": "KONFORMIT_TSERKL_RUNG-SATAJET-1500-B.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/b9/e5/a1/1777973034/BETRIEBSANLEITUNG-SATAJET-1500-B.PDF.PDF?ts=1777973034", "fileName": "BETRIEBSANLEITUNG-SATAJET-1500-B.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-1500-b/CF1931079"
   },
   {
     slug: "satajet-3000-b",
@@ -268,14 +279,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 3000 B - producto SATA para pistolas con vaso de gravedad.",
     description: "Producto SATA dentro de la categoria Pistolas con vaso de gravedad. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/catalog/jet-x.webp",
-    gallery: ["/images/products/sata/catalog/jet-x.webp"],
+    gallery: ["/images/products/sata/catalog/jet-x.webp", "/images/products/sata/imported/satajet-3000-b-detail.webp"],
     badges: ["Pistolas con vaso de gravedad", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con vaso de gravedad"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "Pieza"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con vaso de gravedad"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-3000-b/CF1931078"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/satajet-3000-b/CF1931078", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-3000-b/CF1931078"
   },
   {
     slug: "jet-k",
@@ -291,14 +303,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "jet K - producto SATA para pistolas con calderin.",
     description: "Producto SATA dentro de la categoria Pistolas con calderin. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/jet-k.webp",
-    gallery: ["/images/products/sata/imported/jet-k.webp"],
+    gallery: ["/images/products/sata/imported/jet-k.webp", "/images/products/sata/imported/jet-k-detail.webp"],
     badges: ["Pistolas con calderin", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con calderin"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "con articulación giratoria"}, {"label": "Tamaño de la boquilla", "value": "1,1"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "0.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con calderin"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/jet-k/CF1931356"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/jet-k/CF1931356", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/jet-k/CF1931356"
   },
   {
     slug: "satajet-1000-k",
@@ -314,14 +327,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 1000 K - producto SATA para pistolas con calderin.",
     description: "Producto SATA dentro de la categoria Pistolas con calderin. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-1000-k.webp",
-    gallery: ["/images/products/sata/imported/satajet-1000-k.webp"],
+    gallery: ["/images/products/sata/imported/satajet-1000-k.webp", "/images/products/sata/imported/satajet-1000-k-detail.webp"],
     badges: ["Pistolas con calderin", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con calderin"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2,5 bar"}, {"label": "Consumo de aire", "value": "410 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10,0 bar"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2.5 bar"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con calderin"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-1000-k/CF1931098"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/f4/c6/46/1777973036/KONFORMIT_TSERKL_RUNG-SATAJET-1000-K-H.PDF.PDF?ts=1777973036", "fileName": "KONFORMIT_TSERKL_RUNG-SATAJET-1000-K-H.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/79/85/3d/1777973036/BAL-SATAJET-1000-K-H.PDF.PDF?ts=1777973036", "fileName": "BAL-SATAJET-1000-K-H.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-1000-k/CF1931098"
   },
   {
     slug: "satajet-3000-k",
@@ -337,14 +351,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 3000 K - producto SATA para pistolas con calderin.",
     description: "Producto SATA dentro de la categoria Pistolas con calderin. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-3000-k.webp",
-    gallery: ["/images/products/sata/imported/satajet-3000-k.webp"],
+    gallery: ["/images/products/sata/imported/satajet-3000-k.webp", "/images/products/sata/imported/satajet-3000-k-detail.webp"],
     badges: ["Pistolas con calderin", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con calderin"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2.5 - 3 bar"}, {"label": "Consumo de aire", "value": "430 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10,0 bar"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2.5 bar"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con calderin"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-3000-k/CF1931096"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/b4/78/37/1777973036/KONFORMIT_TSERKL_RUNG-SATAJET-3000-K.PDF.PDF?ts=1777973036", "fileName": "KONFORMIT_TSERKL_RUNG-SATAJET-3000-K.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/b4/17/41/1777973036/BAL-SATAJET-3000-K.PDF.PDF?ts=1777973036", "fileName": "BAL-SATAJET-3000-K.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-3000-k/CF1931096"
   },
   {
     slug: "sataminijet-1000-k",
@@ -360,14 +375,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAminijet 1000 K - producto SATA para pistolas con calderin.",
     description: "Producto SATA dentro de la categoria Pistolas con calderin. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sataminijet-1000-k.webp",
-    gallery: ["/images/products/sata/imported/sataminijet-1000-k.webp"],
+    gallery: ["/images/products/sata/imported/sataminijet-1000-k.webp", "/images/products/sata/imported/sataminijet-1000-k-detail.webp"],
     badges: ["Pistolas con calderin", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con calderin"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2,5 bar"}, {"label": "Consumo de aire", "value": "200 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10,0 bar"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2.5 bar"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,0"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con calderin"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sataminijet-1000-k/CF1931099"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/00/26/16/1777973036/KONFORMIT_TSERKL_RUNG-SATAMINIJET-1000.PDF.PDF?ts=1777973036", "fileName": "KONFORMIT_TSERKL_RUNG-SATAMINIJET-1000.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sataminijet-1000-k/CF1931099"
   },
   {
     slug: "satajet-k-1800-spray-mix",
@@ -383,14 +399,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet K 1800 spray mix - producto SATA para pistolas con calderin.",
     description: "Producto SATA dentro de la categoria Pistolas con calderin. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-k-1800-spray-mix.webp",
-    gallery: ["/images/products/sata/imported/satajet-k-1800-spray-mix.webp"],
+    gallery: ["/images/products/sata/imported/satajet-k-1800-spray-mix.webp", "/images/products/sata/imported/satajet-k-1800-spray-mix-detail.webp"],
     badges: ["Pistolas con calderin", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con calderin"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Consumo de aire", "value": "120 l/min"}, {"label": "Designación", "value": "SATAjet K 1800 spray mix sin tubo de material y filtro de material, sin boquilla de material"}, {"label": "Distancia de pintura recomendada", "value": "18 - 25 cm"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "k.A."}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con calderin"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-k-1800-spray-mix/CF1931315"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/c7/98/72/1777973036/BAL_-_SATAJET_K_1800_SPRAY_MIX.PDF.PDF?ts=1777973036", "fileName": "BAL_-_SATAJET_K_1800_SPRAY_MIX.PDF"}, {"label": "Folletos", "url": "https://www.sata.com/media/d1/27/a8/1776086102/DE_-_PROSPEKT_-_SATAJET_K_1800_SPRAY_MIX.PDF.PDF?ts=1776086102", "fileName": "DE_-_PROSPEKT_-_SATAJET_K_1800_SPRAY_MIX.PDF"}, {"label": "ES - Declaración de conformidad CE - SATAjet K 1800 spray mix", "url": "https://www.sata.com/media/c9/8c/3d/1777973036/EG-KONFORMITATSERKLARUNG-SATAJET-K-1800-SPRAY-MIX.PDF.PDF?ts=1777973036", "fileName": "EG-KONFORMITATSERKLARUNG-SATAJET-K-1800-SPRAY-MIX.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-k-1800-spray-mix/CF1931315"
   },
   {
     slug: "satajet-3000-k-spray-mix",
@@ -406,14 +423,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 3000 K spray mix - producto SATA para pistolas con calderin.",
     description: "Producto SATA dentro de la categoria Pistolas con calderin. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-3000-k-spray-mix.webp",
-    gallery: ["/images/products/sata/imported/satajet-3000-k-spray-mix.webp"],
+    gallery: ["/images/products/sata/imported/satajet-3000-k-spray-mix.webp", "/images/products/sata/imported/satajet-3000-k-spray-mix-detail.webp"],
     badges: ["Pistolas con calderin", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con calderin"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Consumo de aire", "value": "variabel Nl/min"}, {"label": "Designación", "value": "SATAjet 3000 K spray mix con tubo de pintura, filtro de material 100 msh, sin boquilla de material"}, {"label": "Distancia de pintura recomendada", "value": "variabel cm"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "250 bar"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "k.A."}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con calderin"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-3000-k-spray-mix/CF1931095"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/65/18/ed/1777973036/BAL-SATAJET-3000-K-SPRAY-MIX.PDF.PDF?ts=1777973036", "fileName": "BAL-SATAJET-3000-K-SPRAY-MIX.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/0e/1c/f4/1777973036/EG-KONFORMITATSERKLARUNG-SATAJET-3000-K-SPRAY-MIX.PDF.PDF?ts=1777973036", "fileName": "EG-KONFORMITATSERKLARUNG-SATAJET-3000-K-SPRAY-MIX.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-3000-k-spray-mix/CF1931095"
   },
   {
     slug: "satajet-1000-kk",
@@ -429,14 +447,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 1000 KK - producto SATA para pistolas con calderin.",
     description: "Producto SATA dentro de la categoria Pistolas con calderin. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-1000-kk.webp",
-    gallery: ["/images/products/sata/imported/satajet-1000-kk.webp"],
+    gallery: ["/images/products/sata/imported/satajet-1000-kk.webp", "/images/products/sata/imported/satajet-1000-kk-detail.webp"],
     badges: ["Pistolas con calderin", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas con calderin"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2,5 bar"}, {"label": "Consumo de aire", "value": "410 l/min"}, {"label": "Designación", "value": "SATAjet 1000 KK boquilla 1,5 con tubo de material, 1/4\" (rosca exterior) con acoplamiento (ref. 8359)"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10,0 bar"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2.5 bar"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,5"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas con calderin"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-1000-kk/CF1931097"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/satajet-1000-kk/CF1931097", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-1000-kk/CF1931097"
   },
   {
     slug: "satagraph-4",
@@ -452,14 +471,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAgraph 4 - producto SATA para pistolas aerograficas.",
     description: "Producto SATA dentro de la categoria Pistolas aerograficas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satagraph-4.webp",
-    gallery: ["/images/products/sata/imported/satagraph-4.webp"],
+    gallery: ["/images/products/sata/imported/satagraph-4.webp", "/images/products/sata/imported/satagraph-4-detail.webp"],
     badges: ["Pistolas aerograficas", "Aerografica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas aerograficas"}, {"label": "Tecnologia", "value": "Aerografica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "1 - 3 bar"}, {"label": "Consumo de aire", "value": "10 l/min"}, {"label": "Distancia de pintura recomendada", "value": "variabel cm"}, {"label": "Forma del abanico", "value": "Omnidireccional"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "variabel bar"}, {"label": "QCC", "value": "0"}, {"label": "Rosca de conexión de aire", "value": "1/8\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "0,5"}, {"label": "Tecnología de boquillas", "value": "ND"}, {"label": "Temperatura máxima de almacenamiento", "value": "70 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de conexión de la taza", "value": "fest verbunden"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}],
     variants: [{"name": "Aerografica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas aerograficas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satagraph-4/CF1931100"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "!Betriebsanleitung Manual - SATAgraph 4!", "url": "https://www.sata.com/media/8f/39/2a/1777973037/BETRIEBSANLEITUNG_MANUAL_-_SATAGRAPH_4.PDF.PDF?ts=1777973037", "fileName": "BETRIEBSANLEITUNG_MANUAL_-_SATAGRAPH_4.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satagraph-4/CF1931100"
   },
   {
     slug: "satajet-h",
@@ -475,14 +495,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet H - producto SATA para pistolas de vaso inferior.",
     description: "Producto SATA dentro de la categoria Pistolas de vaso inferior. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-h.webp",
-    gallery: ["/images/products/sata/imported/satajet-h.webp"],
+    gallery: ["/images/products/sata/imported/satajet-h.webp", "/images/products/sata/imported/satajet-h-detail.webp"],
     badges: ["Pistolas de vaso inferior", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas de vaso inferior"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "4,0 bar"}, {"label": "Consumo de aire", "value": "380 l/min"}, {"label": "Distancia de pintura recomendada", "value": "18 - 23 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "4 bar"}, {"label": "Quick Change", "value": "0"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,5"}, {"label": "Tecnología de boquillas", "value": "HD"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "E"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas de vaso inferior"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-h/CF1931091"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/3e/92/9c/1777973036/BAL-SATAJET-H.PDF.PDF?ts=1777973036", "fileName": "BAL-SATAJET-H.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-h/CF1931091"
   },
   {
     slug: "satajet-1000-h",
@@ -498,14 +519,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 1000 H - producto SATA para pistolas de vaso inferior.",
     description: "Producto SATA dentro de la categoria Pistolas de vaso inferior. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-1000-h.webp",
-    gallery: ["/images/products/sata/imported/satajet-1000-h.webp"],
+    gallery: ["/images/products/sata/imported/satajet-1000-h.webp", "/images/products/sata/imported/satajet-1000-h-detail.webp"],
     badges: ["Pistolas de vaso inferior", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas de vaso inferior"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2 - 2.5 bar"}, {"label": "Consumo de aire", "value": "275 l/min"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "QCC", "value": "0"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas de vaso inferior"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-1000-h/CF1931090"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/f4/c6/46/1777973036/KONFORMIT_TSERKL_RUNG-SATAJET-1000-K-H.PDF.PDF?ts=1777973036", "fileName": "KONFORMIT_TSERKL_RUNG-SATAJET-1000-K-H.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/79/85/3d/1777973036/BAL-SATAJET-1000-K-H.PDF.PDF?ts=1777973036", "fileName": "BAL-SATAJET-1000-K-H.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-1000-h/CF1931090"
   },
   {
     slug: "sataminijet-1000-h",
@@ -521,14 +543,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAminijet 1000 H - producto SATA para pistolas de vaso inferior.",
     description: "Producto SATA dentro de la categoria Pistolas de vaso inferior. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/catalog/jet-x.webp",
-    gallery: ["/images/products/sata/catalog/jet-x.webp"],
+    gallery: ["/images/products/sata/catalog/jet-x.webp", "/images/products/sata/imported/sataminijet-1000-h-detail.webp"],
     badges: ["Pistolas de vaso inferior", "HVLP / RP"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas de vaso inferior"}, {"label": "Tecnologia", "value": "HVLP / RP"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2 - 2.5 bar"}, {"label": "Consumo de aire", "value": "275 l/min"}, {"label": "Designación", "value": "SATAminijet 1000 H RP boquilla 1,4 sin depósito, conexión de material 1/4\" (rosca exterior)"}, {"label": "Distancia de pintura recomendada", "value": "17 - 21 cm"}, {"label": "Presión recomendada del flujo de entrada de aire (conforme / HVLP)", "value": "2 bar"}, {"label": "QCC", "value": "0"}, {"label": "Quick Change", "value": "Sí"}, {"label": "Rosca de conexión de aire", "value": "1/4\" (rosca exterior)"}, {"label": "Rosca de conexión de aire", "value": "ohne Drehgelenk"}, {"label": "Tamaño de la boquilla", "value": "1,4"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "HVLP / RP", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas de vaso inferior"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sataminijet-1000-h/CF1931092"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/00/26/16/1777973036/KONFORMIT_TSERKL_RUNG-SATAMINIJET-1000.PDF.PDF?ts=1777973036", "fileName": "KONFORMIT_TSERKL_RUNG-SATAMINIJET-1000.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sataminijet-1000-h/CF1931092"
   },
   {
     slug: "satajet-3000-a",
@@ -544,14 +567,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 3000 A - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-3000-a.webp",
-    gallery: ["/images/products/sata/imported/satajet-3000-a.webp"],
+    gallery: ["/images/products/sata/imported/satajet-3000-a.webp", "/images/products/sata/imported/satajet-3000-a-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2.5 - 4 bar"}, {"label": "Consumo de aire", "value": "400 l/min"}, {"label": "Control", "value": "Control interno"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10,0 bar"}, {"label": "Tamaño de la boquilla", "value": "0,5"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-3000-a/CF1931104"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/71/7a/9d/1777973037/BAL-SATA-AUTOMATIKPISTOLEN.PDF.PDF?ts=1777973037", "fileName": "BAL-SATA-AUTOMATIKPISTOLEN.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-3000-a/CF1931104"
   },
   {
     slug: "satajet-3000-rob",
@@ -567,14 +591,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 3000 ROB - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-3000-rob.webp",
-    gallery: ["/images/products/sata/imported/satajet-3000-rob.webp"],
+    gallery: ["/images/products/sata/imported/satajet-3000-rob.webp", "/images/products/sata/imported/satajet-3000-rob-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2.5 - 3.3 bar"}, {"label": "Consumo de aire", "value": "450 l/min"}, {"label": "Control", "value": "Control externo"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10 bar"}, {"label": "Tamaño de la boquilla", "value": "0,5"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-3000-rob/CF1931107"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/f3/90/5f/1777973037/BAL-SATA-ROB-PISTOLEN.PDF.PDF?ts=1777973037", "fileName": "BAL-SATA-ROB-PISTOLEN.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-3000-rob/CF1931107"
   },
   {
     slug: "satajet-5000-lab",
@@ -590,14 +615,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 5000 LAB - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-5000-lab.webp",
-    gallery: ["/images/products/sata/imported/satajet-5000-lab.webp"],
+    gallery: ["/images/products/sata/imported/satajet-5000-lab.webp", "/images/products/sata/imported/satajet-5000-lab-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Control", "value": "Control interno"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "HVLP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-5000-lab/CF1931111"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/26/a8/10/1777973037/BAL-SATA-AUTOMATIKPISTOLEN-LAB.PDF.PDF?ts=1777973037", "fileName": "BAL-SATA-AUTOMATIKPISTOLEN-LAB.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-5000-lab/CF1931111"
   },
   {
     slug: "sataminijet-1000-a-s",
@@ -613,14 +639,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAminijet 1000 A S - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sataminijet-1000-a-s.webp",
-    gallery: ["/images/products/sata/imported/sataminijet-1000-a-s.webp"],
+    gallery: ["/images/products/sata/imported/sataminijet-1000-a-s.webp", "/images/products/sata/imported/sataminijet-1000-a-s-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2.5 - 3 bar"}, {"label": "Consumo de aire", "value": "200 l/min"}, {"label": "Control", "value": "Control interno"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10,0 bar"}, {"label": "Tamaño de la boquilla", "value": "0,3"}, {"label": "Tecnología de boquillas", "value": "HVLP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sataminijet-1000-a-s/CF1931117"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/ce/7b/71/1777973037/EG-KONFORMITATSERKLARUNG-SATA-LPS-MINIJET-1000-A-S.PDF.PDF?ts=1777973037", "fileName": "EG-KONFORMITATSERKLARUNG-SATA-LPS-MINIJET-1000-A-S.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/93/c2/f6/1777973037/BAL-SATA-LPS-MINIJET-1000-A-S.PDF.PDF?ts=1777973037", "fileName": "BAL-SATA-LPS-MINIJET-1000-A-S.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sataminijet-1000-a-s/CF1931117"
   },
   {
     slug: "satajet-1000-a",
@@ -636,14 +663,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 1000 A - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-1000-a.webp",
-    gallery: ["/images/products/sata/imported/satajet-1000-a.webp"],
+    gallery: ["/images/products/sata/imported/satajet-1000-a.webp", "/images/products/sata/imported/satajet-1000-a-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2.5 - 4 bar"}, {"label": "Consumo de aire", "value": "440 l/min"}, {"label": "Control", "value": "Control interno"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10,0 bar"}, {"label": "Tamaño de la boquilla", "value": "0,8"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-1000-a/CF1931105"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/71/7a/9d/1777973037/BAL-SATA-AUTOMATIKPISTOLEN.PDF.PDF?ts=1777973037", "fileName": "BAL-SATA-AUTOMATIKPISTOLEN.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-1000-a/CF1931105"
   },
   {
     slug: "sataminijet-1000-rob",
@@ -659,14 +687,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAminijet 1000 ROB - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sataminijet-1000-rob.webp",
-    gallery: ["/images/products/sata/imported/sataminijet-1000-rob.webp"],
+    gallery: ["/images/products/sata/imported/sataminijet-1000-rob.webp", "/images/products/sata/imported/sataminijet-1000-rob-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2.5 - 3 bar"}, {"label": "Consumo de aire", "value": "220 l/min"}, {"label": "Control", "value": "Control externo"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10 bar"}, {"label": "Tamaño de la boquilla", "value": "0,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sataminijet-1000-rob/CF1931110"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/f3/90/5f/1777973037/BAL-SATA-ROB-PISTOLEN.PDF.PDF?ts=1777973037", "fileName": "BAL-SATA-ROB-PISTOLEN.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sataminijet-1000-rob/CF1931110"
   },
   {
     slug: "sataminijet-1000-a",
@@ -682,14 +711,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAminijet 1000 A - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sataminijet-1000-a.webp",
-    gallery: ["/images/products/sata/imported/sataminijet-1000-a.webp"],
+    gallery: ["/images/products/sata/imported/sataminijet-1000-a.webp", "/images/products/sata/imported/sataminijet-1000-a-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "2.5 - 3 bar"}, {"label": "Consumo de aire", "value": "195 l/min"}, {"label": "Control", "value": "Control interno"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "10,0 bar"}, {"label": "Tamaño de la boquilla", "value": "0,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sataminijet-1000-a/CF1931131"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/sataminijet-1000-a/CF1931131", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sataminijet-1000-a/CF1931131"
   },
   {
     slug: "d-sensatz-satajet-3000-lab-rob",
@@ -705,14 +735,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Düsensatz SATAjet 3000 LAB ROB - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/d-sensatz-satajet-3000-lab-rob.webp",
-    gallery: ["/images/products/sata/imported/d-sensatz-satajet-3000-lab-rob.webp"],
+    gallery: ["/images/products/sata/imported/d-sensatz-satajet-3000-lab-rob.webp", "/images/products/sata/imported/d-sensatz-satajet-3000-lab-rob-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Quick Change", "value": "Sí"}, {"label": "Tamaño de la boquilla", "value": "1,3"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/duesensatz-satajet-3000-lab-rob/CF1931236"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/duesensatz-satajet-3000-lab-rob/CF1931236", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/duesensatz-satajet-3000-lab-rob/CF1931236"
   },
   {
     slug: "satajet-1000-rob",
@@ -728,14 +759,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 1000 ROB - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-1000-rob.webp",
-    gallery: ["/images/products/sata/imported/satajet-1000-rob.webp"],
+    gallery: ["/images/products/sata/imported/satajet-1000-rob.webp", "/images/products/sata/imported/satajet-1000-rob-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Control", "value": "Control externo"}, {"label": "Tamaño de la boquilla", "value": "0,8"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-1000-rob/CF1931108"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/satajet-1000-rob/CF1931108", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-1000-rob/CF1931108"
   },
   {
     slug: "sataminijet-3000-lab",
@@ -751,14 +783,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAminijet 3000 LAB - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sataminijet-3000-lab.webp",
-    gallery: ["/images/products/sata/imported/sataminijet-3000-lab.webp"],
+    gallery: ["/images/products/sata/imported/sataminijet-3000-lab.webp", "/images/products/sata/imported/sataminijet-3000-lab-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Control", "value": "Control interno"}, {"label": "Tamaño de la boquilla", "value": "1,2"}, {"label": "Tecnología de boquillas", "value": "HVLP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "SR"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sataminijet-3000-lab/CF1931115"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/sataminijet-3000-lab/CF1931115", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sataminijet-3000-lab/CF1931115"
   },
   {
     slug: "satajet-4000-lab",
@@ -774,14 +807,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATAjet 4000 LAB - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/satajet-4000-lab.webp",
-    gallery: ["/images/products/sata/imported/satajet-4000-lab.webp"],
+    gallery: ["/images/products/sata/imported/satajet-4000-lab.webp", "/images/products/sata/imported/satajet-4000-lab-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Control", "value": "Control interno"}, {"label": "Tamaño de la boquilla", "value": "1,2"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-4000-lab/CF1931112"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/satajet-4000-lab/CF1931112", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-4000-lab/CF1931112"
   },
   {
     slug: "sata-lp-s-2000",
@@ -797,14 +831,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATA LP-S 2000 - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sata-lp-s-2000.webp",
-    gallery: ["/images/products/sata/imported/sata-lp-s-2000.webp"],
+    gallery: ["/images/products/sata/imported/sata-lp-s-2000.webp", "/images/products/sata/imported/sata-lp-s-2000-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Aire - presión de flujo de entrada Campo de aplicación", "value": "k.A. bar"}, {"label": "Consumo de aire", "value": "200 l/min"}, {"label": "Control", "value": "Control interno"}, {"label": "Presión máx. de entrada de material recomendada (estática)", "value": "5,0 bar"}, {"label": "Tamaño de la boquilla", "value": "0,5"}, {"label": "Tecnología de boquillas", "value": "RP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-lp-s-2000/CF1931118"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/93/c2/f6/1777973037/BAL-SATA-LPS-MINIJET-1000-A-S.PDF.PDF?ts=1777973037", "fileName": "BAL-SATA-LPS-MINIJET-1000-A-S.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/ce/7b/71/1777973037/EG-KONFORMITATSERKLARUNG-SATA-LPS-MINIJET-1000-A-S.PDF.PDF?ts=1777973037", "fileName": "EG-KONFORMITATSERKLARUNG-SATA-LPS-MINIJET-1000-A-S.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-lp-s-2000/CF1931118"
   },
   {
     slug: "satajet-3000-lab",
@@ -826,8 +861,9 @@ export const sataImportedProducts: CatalogProduct[] = [
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/satajet-3000-lab/CF1931113"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/satajet-3000-lab/CF1931113", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/satajet-3000-lab/CF1931113"
   },
   {
     slug: "sata-lp90",
@@ -843,14 +879,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATA LP90 - producto SATA para pistolas roboticas.",
     description: "Producto SATA dentro de la categoria Pistolas roboticas. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sata-lp90.webp",
-    gallery: ["/images/products/sata/imported/sata-lp90.webp"],
+    gallery: ["/images/products/sata/imported/sata-lp90.webp", "/images/products/sata/imported/sata-lp90-detail.webp"],
     badges: ["Pistolas roboticas", "Automatica / Robotica"],
-    specs: [{"label": "Categoria", "value": "Pistolas de pintura"}, {"label": "Linea", "value": "Pistolas roboticas"}, {"label": "Tecnologia", "value": "Automatica / Robotica"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Control", "value": "Control interno"}, {"label": "Designación", "value": "SATA LP90 boquilla MSB 1,35 pistola de laboratorio, depósito de plástico 0,6 l todas las partes que conducen el material en acero inoxidable"}, {"label": "Tamaño de la boquilla", "value": "MSB"}, {"label": "Tecnología de boquillas", "value": "HP"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de boquilla", "value": "Standard"}],
     variants: [{"name": "Automatica / Robotica", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Pistolas roboticas"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-lp90/CF1931116"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/sata-lp90/CF1931116", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-lp90/CF1931116"
   },
   {
     slug: "rps-the-original",
@@ -866,14 +903,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "RPS - the Original - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/rps-the-original.webp",
-    gallery: ["/images/products/sata/imported/rps-the-original.webp"],
+    gallery: ["/images/products/sata/imported/rps-the-original.webp", "/images/products/sata/imported/rps-the-original-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Apto para revestimiento UV", "value": "No"}, {"label": "Capacidad", "value": "0,6 l"}, {"label": "Finura del filtro", "value": "125 µm"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de conexión de la taza", "value": "QCC"}, {"label": "Unidad de embalaje", "value": "50.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Plástico"}, {"label": "Variante de vaso", "value": "Plástico"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/rps-the-original/CF1931348"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Folletos", "url": "https://www.sata.com/media/65/54/30/1776086104/IT-PROSPETTI-SATA-RPS.PDF.PDF?ts=1776086104", "fileName": "IT-PROSPETTI-SATA-RPS.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/75/26/db/1777973037/BETRIEBSANLEITUNG-SATA-RPS.PDF.PDF?ts=1777973037", "fileName": "BETRIEBSANLEITUNG-SATA-RPS.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/rps-the-original/CF1931348"
   },
   {
     slug: "lcs-the-liner",
@@ -889,14 +927,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "LCS - the Liner - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/lcs-the-liner.webp",
-    gallery: ["/images/products/sata/imported/lcs-the-liner.webp"],
+    gallery: ["/images/products/sata/imported/lcs-the-liner.webp", "/images/products/sata/imported/lcs-the-liner-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Apto para revestimiento UV", "value": "No"}, {"label": "Capacidad", "value": "0,65 l"}, {"label": "Finura del filtro", "value": "125 µm"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de conexión de la taza", "value": "QCC"}, {"label": "Unidad de embalaje", "value": "50.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Plástico"}, {"label": "Variante de vaso", "value": "Plástico"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/lcs-the-liner/CF1931338"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/lcs-the-liner/CF1931338", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/lcs-the-liner/CF1931338"
   },
   {
     slug: "vaso-de-flujo-de-plastico-reutilizable",
@@ -912,14 +951,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Vaso de flujo de plástico reutilizable - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/vaso-de-flujo-de-plastico-reutilizable.webp",
-    gallery: ["/images/products/sata/imported/vaso-de-flujo-de-plastico-reutilizable.webp"],
+    gallery: ["/images/products/sata/imported/vaso-de-flujo-de-plastico-reutilizable.webp", "/images/products/sata/imported/vaso-de-flujo-de-plastico-reutilizable-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Capacidad", "value": "0,6 l"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de conexión de la taza", "value": "QCC"}, {"label": "Tipo de vaso", "value": "Depósito reutilizable"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Plástico"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/vaso-de-flujo-de-plastico-reutilizable/CF1931303"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/vaso-de-flujo-de-plastico-reutilizable/CF1931303", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/vaso-de-flujo-de-plastico-reutilizable/CF1931303"
   },
   {
     slug: "vaso-de-flujo-de-aluminio-reutilizable",
@@ -935,14 +975,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Vaso de flujo de aluminio reutilizable - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/vaso-de-flujo-de-aluminio-reutilizable.webp",
-    gallery: ["/images/products/sata/imported/vaso-de-flujo-de-aluminio-reutilizable.webp"],
+    gallery: ["/images/products/sata/imported/vaso-de-flujo-de-aluminio-reutilizable.webp", "/images/products/sata/imported/vaso-de-flujo-de-aluminio-reutilizable-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Capacidad", "value": "0,15 l"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de conexión de la taza", "value": "QCC"}, {"label": "Tipo de vaso", "value": "Depósito reutilizable"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Plástico"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/vaso-de-flujo-de-aluminio-reutilizable/CF1931304"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/vaso-de-flujo-de-aluminio-reutilizable/CF1931304", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/vaso-de-flujo-de-aluminio-reutilizable/CF1931304"
   },
   {
     slug: "sata-bvd",
@@ -958,14 +999,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATA BVD - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sata-bvd.webp",
-    gallery: ["/images/products/sata/imported/sata-bvd.webp"],
+    gallery: ["/images/products/sata/imported/sata-bvd.webp", "/images/products/sata/imported/sata-bvd-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Capacidad", "value": "0,7 l"}, {"label": "Max. la sobrepresión operativa", "value": "1.7 bar"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de conexión de la taza", "value": "QCC"}, {"label": "Tipo de vaso", "value": "Depósito de presión"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Aluminio"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-bvd/CF1931178"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/31/d6/8a/1777973038/BAL-SATA-BVD.PDF.PDF?ts=1777973038", "fileName": "BAL-SATA-BVD.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/b4/8b/3c/1777973038/EG-KONFORMITATSERKLARUNG-SATA-BVD.PDF.PDF?ts=1777973038", "fileName": "EG-KONFORMITATSERKLARUNG-SATA-BVD.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-bvd/CF1931178"
   },
   {
     slug: "deposito-agitador-sata",
@@ -981,14 +1023,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Depósito agitador SATA - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/deposito-agitador-sata.webp",
-    gallery: ["/images/products/sata/imported/deposito-agitador-sata.webp"],
+    gallery: ["/images/products/sata/imported/deposito-agitador-sata.webp", "/images/products/sata/imported/deposito-agitador-sata-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Capacidad", "value": "0,7 l"}, {"label": "Max. la sobrepresión operativa", "value": "10 bar"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de conexión de la taza", "value": "M16x1,5 Innengewinde"}, {"label": "Tipo de vaso", "value": "Rührwerksbecher"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Aluminio"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/deposito-agitador-sata/CF1931179"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/9d/fb/38/1777973038/BAL-SATA-RUEHRWERKSBECHER.PDF.PDF?ts=1777973038", "fileName": "BAL-SATA-RUEHRWERKSBECHER.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/deposito-agitador-sata/CF1931179"
   },
   {
     slug: "vasos-colgantes-de-vidrio-reutilizables",
@@ -1004,14 +1047,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Vasos colgantes de vidrio reutilizables - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/vasos-colgantes-de-vidrio-reutilizables.webp",
-    gallery: ["/images/products/sata/imported/vasos-colgantes-de-vidrio-reutilizables.webp"],
+    gallery: ["/images/products/sata/imported/vasos-colgantes-de-vidrio-reutilizables.webp", "/images/products/sata/imported/vasos-colgantes-de-vidrio-reutilizables-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Capacidad", "value": "0,025 l"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de vaso", "value": "Depósito reutilizable"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Plástico"}, {"label": "Variante de vaso", "value": "Glas"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/vasos-colgantes-de-vidrio-reutilizables/conf-00039"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/vasos-colgantes-de-vidrio-reutilizables/conf-00039", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/vasos-colgantes-de-vidrio-reutilizables/conf-00039"
   },
   {
     slug: "airbrushbecher",
@@ -1027,14 +1071,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Airbrushbecher - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/airbrushbecher.webp",
-    gallery: ["/images/products/sata/imported/airbrushbecher.webp"],
+    gallery: ["/images/products/sata/imported/airbrushbecher.webp", "/images/products/sata/imported/airbrushbecher-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Capacidad", "value": "0,023 l"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de vaso", "value": "Depósito reutilizable"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Plástico"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/airbrushbecher/conf-00063"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/airbrushbecher/conf-00063", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/airbrushbecher/conf-00063"
   },
   {
     slug: "tazas-colgantes-de-aluminio-reutilizables",
@@ -1050,14 +1095,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Tazas colgantes de aluminio reutilizables - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/tazas-colgantes-de-aluminio-reutilizables.webp",
-    gallery: ["/images/products/sata/imported/tazas-colgantes-de-aluminio-reutilizables.webp"],
+    gallery: ["/images/products/sata/imported/tazas-colgantes-de-aluminio-reutilizables.webp", "/images/products/sata/imported/tazas-colgantes-de-aluminio-reutilizables-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Capacidad", "value": "1,0 l"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de vaso", "value": "Depósito reutilizable"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Aluminio"}, {"label": "Variante de vaso", "value": "Aluminio"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/tazas-colgantes-de-aluminio-reutilizables/CF1931306"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/tazas-colgantes-de-aluminio-reutilizables/CF1931306", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/tazas-colgantes-de-aluminio-reutilizables/CF1931306"
   },
   {
     slug: "vasos-colgantes-de-plastico-reutilizables",
@@ -1073,14 +1119,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Vasos colgantes de plástico reutilizables - producto SATA para sistemas de deposito.",
     description: "Producto SATA dentro de la categoria Sistemas de deposito. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/vasos-colgantes-de-plastico-reutilizables.webp",
-    gallery: ["/images/products/sata/imported/vasos-colgantes-de-plastico-reutilizables.webp"],
+    gallery: ["/images/products/sata/imported/vasos-colgantes-de-plastico-reutilizables.webp", "/images/products/sata/imported/vasos-colgantes-de-plastico-reutilizables-detail.webp"],
     badges: ["Sistemas de deposito", "Deposito"],
-    specs: [{"label": "Categoria", "value": "Sistemas de deposito"}, {"label": "Linea", "value": "Sistemas de deposito"}, {"label": "Tecnologia", "value": "Deposito"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Capacidad", "value": "0,6 l"}, {"label": "Designación", "value": "Depósito colgante de plástico de 0,6 l sin tapa para SATA UBE"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Tipo de vaso", "value": "Depósito reutilizable"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de tapa", "value": "Plástico"}],
     variants: [{"name": "Deposito", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Sistemas de deposito"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/vasos-colgantes-de-plastico-reutilizables/CF1931305"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Documentación SATA", "url": "https://www.sata.com/es/vasos-colgantes-de-plastico-reutilizables/CF1931305", "fileName": "Ver página SATA"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/vasos-colgantes-de-plastico-reutilizables/CF1931305"
   },
   {
     slug: "sata-filter-serie-400",
@@ -1096,14 +1143,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATA filter serie 400 - producto SATA para tecnologia de filtros.",
     description: "Producto SATA dentro de la categoria Tecnologia de filtros. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sata-filter-serie-400.webp",
-    gallery: ["/images/products/sata/imported/sata-filter-serie-400.webp"],
+    gallery: ["/images/products/sata/imported/sata-filter-serie-400.webp", "/images/products/sata/imported/sata-filter-serie-400-detail.webp"],
     badges: ["Tecnologia de filtros", "Filtracion"],
-    specs: [{"label": "Categoria", "value": "Aire comprimido"}, {"label": "Linea", "value": "Tecnologia de filtros"}, {"label": "Tecnologia", "value": "Filtracion"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Caudal de aire máx.", "value": "3600 Nl/min"}, {"label": "Conexión rosca lado de entrada", "value": "G 1/2\" (rosca interior)"}, {"label": "Conexión rosca lado de salida", "value": "1/4\" (rosca exterior)"}, {"label": "Idoneidad para la protección respiratoria", "value": "Sí"}, {"label": "Idoneidad para sistemas de base acuosa", "value": "Sí"}, {"label": "Max. Aire - presión de salida", "value": "10,0 bar"}, {"label": "Número de niveles de filtración", "value": "3"}, {"label": "Presión de aire de entrada max.", "value": "15,0 bar"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de montaje", "value": "Standard Wandmontage"}],
     variants: [{"name": "Filtracion", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Tecnologia de filtros"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-filter-serie-400/CF1931129"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/3f/cc/6f/1777973039/BAL-SATA-FILTER-400.PDF.PDF?ts=1777973039", "fileName": "BAL-SATA-FILTER-400.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/32/3b/8b/1777973039/KONFORMIT_TSERKL_RUNG-SATA-FILTER-400.PDF.PDF?ts=1777973039", "fileName": "KONFORMIT_TSERKL_RUNG-SATA-FILTER-400.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-filter-serie-400/CF1931129"
   },
   {
     slug: "sata-filter-serie-100",
@@ -1119,14 +1167,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATA filter serie 100 - producto SATA para tecnologia de filtros.",
     description: "Producto SATA dentro de la categoria Tecnologia de filtros. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sata-filter-serie-100.webp",
-    gallery: ["/images/products/sata/imported/sata-filter-serie-100.webp"],
+    gallery: ["/images/products/sata/imported/sata-filter-serie-100.webp", "/images/products/sata/imported/sata-filter-serie-100-detail.webp"],
     badges: ["Tecnologia de filtros", "Filtracion"],
-    specs: [{"label": "Categoria", "value": "Aire comprimido"}, {"label": "Linea", "value": "Tecnologia de filtros"}, {"label": "Tecnologia", "value": "Filtracion"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Caudal de aire máx.", "value": "800 Nl/min"}, {"label": "Conexión rosca lado de entrada", "value": "G 1/2\" (rosca interior)"}, {"label": "Conexión rosca lado de salida", "value": "1/4\" (rosca exterior)"}, {"label": "Idoneidad para la protección respiratoria", "value": "Sí"}, {"label": "Idoneidad para sistemas de base acuosa", "value": "Sí"}, {"label": "Max. Aire - presión de salida", "value": "10,0 bar"}, {"label": "Número de niveles de filtración", "value": "3"}, {"label": "Presión de aire de entrada max.", "value": "10,0 bar"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de montaje", "value": "Standard Wandmontage"}],
     variants: [{"name": "Filtracion", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Tecnologia de filtros"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-filter-serie-100/CF1931127"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/a5/9d/bf/1777973039/EG-KONFORMITATSERKLARUNG-SATA-FILTER-100-PREP.PDF.PDF?ts=1777973039", "fileName": "EG-KONFORMITATSERKLARUNG-SATA-FILTER-100-PREP.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/c3/b3/77/1777973039/BAL-SATA-FILTER-100-PREP.PDF.PDF?ts=1777973039", "fileName": "BAL-SATA-FILTER-100-PREP.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-filter-serie-100/CF1931127"
   },
   {
     slug: "filtro-sata-serie-500",
@@ -1142,14 +1191,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Filtro SATA serie 500 - producto SATA para tecnologia de filtros.",
     description: "Producto SATA dentro de la categoria Tecnologia de filtros. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/filtro-sata-serie-500.webp",
-    gallery: ["/images/products/sata/imported/filtro-sata-serie-500.webp"],
+    gallery: ["/images/products/sata/imported/filtro-sata-serie-500.webp", "/images/products/sata/imported/filtro-sata-serie-500-detail.webp"],
     badges: ["Tecnologia de filtros", "Filtracion"],
-    specs: [{"label": "Categoria", "value": "Aire comprimido"}, {"label": "Linea", "value": "Tecnologia de filtros"}, {"label": "Tecnologia", "value": "Filtracion"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Caudal de aire máx.", "value": "3800 Nl/min"}, {"label": "Conexión rosca lado de entrada", "value": "G 1/2\" (rosca interior)"}, {"label": "Conexión rosca lado de salida", "value": "1/4\" (rosca exterior)"}, {"label": "Idoneidad para la protección respiratoria", "value": "Sí"}, {"label": "Idoneidad para sistemas de base acuosa", "value": "Sí"}, {"label": "Max. Aire - presión de salida", "value": "15,0 bar"}, {"label": "Número de niveles de filtración", "value": "3"}, {"label": "Presión de aire de entrada max.", "value": "15,0 bar"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de montaje", "value": "Standard Wandmontage"}],
     variants: [{"name": "Filtracion", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Tecnologia de filtros"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/filtro-sata-serie-500/CF1931293"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/9b/41/99/1777973039/KONFORMIT_TSERKL_RUNG-SATA-FILTER-500.PDF.PDF?ts=1777973039", "fileName": "KONFORMIT_TSERKL_RUNG-SATA-FILTER-500.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/c6/eb/cd/1777973039/BETRIEBSANLEITUNG-SATA-FILTER-500.PDF.PDF?ts=1777973039", "fileName": "BETRIEBSANLEITUNG-SATA-FILTER-500.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/filtro-sata-serie-500/CF1931293"
   },
   {
     slug: "sata-filter-serie-200",
@@ -1165,14 +1215,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATA filter serie 200 - producto SATA para tecnologia de filtros.",
     description: "Producto SATA dentro de la categoria Tecnologia de filtros. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso, material y operacion del taller.",
     image: "/images/products/sata/imported/sata-filter-serie-200.webp",
-    gallery: ["/images/products/sata/imported/sata-filter-serie-200.webp"],
+    gallery: ["/images/products/sata/imported/sata-filter-serie-200.webp", "/images/products/sata/imported/sata-filter-serie-200-detail.webp"],
     badges: ["Tecnologia de filtros", "Filtracion"],
-    specs: [{"label": "Categoria", "value": "Aire comprimido"}, {"label": "Linea", "value": "Tecnologia de filtros"}, {"label": "Tecnologia", "value": "Filtracion"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Caudal de aire máx.", "value": "2000 Nl/min"}, {"label": "Conexión rosca lado de entrada", "value": "G 1/2\" (rosca interior)"}, {"label": "Conexión rosca lado de salida", "value": "G 1/4\" (rosca interior)"}, {"label": "Idoneidad para la protección respiratoria", "value": "Sí"}, {"label": "Idoneidad para sistemas de base acuosa", "value": "Sí"}, {"label": "Max. Aire - presión de salida", "value": "10,0 bar"}, {"label": "Número de niveles de filtración", "value": "3"}, {"label": "Presión de aire de entrada max.", "value": "10,0 bar"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Variante de montaje", "value": "Standard Wandmontage"}],
     variants: [{"name": "Filtracion", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Tecnologia de filtros"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-filter-serie-200/CF1931128"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/30/d2/01/1777973039/KONFORMIT_TSERKL_RUNG-SATA-FILTER-200.PDF.PDF?ts=1777973039", "fileName": "KONFORMIT_TSERKL_RUNG-SATA-FILTER-200.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/8f/98/3a/1777973039/BETRIEBSANLEITUNG-SATA-FILTER-200.PDF.PDF?ts=1777973039", "fileName": "BETRIEBSANLEITUNG-SATA-FILTER-200.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-filter-serie-200/CF1931128"
   },
   {
     slug: "sata-air-vision-5000",
@@ -1188,14 +1239,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Casco SATA air vision 5000 n | Casco SATA air vision 5000 n | 1000249",
     description: "Producto SATA dentro de la categoria Proteccion respiratoria. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso y operacion del taller.",
     image: "/images/products/sata/imported/sata-air-vision-5000.webp",
-    gallery: ["/images/products/sata/imported/sata-air-vision-5000.webp"],
+    gallery: ["/images/products/sata/imported/sata-air-vision-5000.webp", "/images/products/sata/imported/sata-air-vision-5000-detail.webp"],
     badges: ["Proteccion respiratoria", "Seguridad"],
-    specs: [{"label": "Categoria", "value": "Proteccion respiratoria"}, {"label": "Linea", "value": "Proteccion respiratoria"}, {"label": "Tecnologia", "value": "Seguridad"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Designación", "value": "Casco SATA air vision 5000 n"}, {"label": "Max. la sobrepresión operativa", "value": "10 bar"}, {"label": "Rosca de conexión de aire", "value": "Niple"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}, {"label": "Volumen", "value": "64 dB"}],
     variants: [{"name": "Seguridad", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Proteccion respiratoria"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-air-vision-5000/CF1931121"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Folletos", "url": "https://www.sata.com/media/5d/19/28/1776086104/IT-OPUSCOLO-SATA-AIR-VISION-5000.PDF.PDF?ts=1776086104", "fileName": "IT-OPUSCOLO-SATA-AIR-VISION-5000.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/9d/97/cd/1777973038/BETRIEBSANLEITUNG-SATA-AIR-VISION-5000.PDF.PDF?ts=1777973038", "fileName": "BETRIEBSANLEITUNG-SATA-AIR-VISION-5000.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/ae/38/c8/1777973038/MULTILINGUAL-DECLARATION-OF-CONFORMITY-SATA-AIR-VISION-5000-3389-230327-1.PDF.PDF?ts=1777973038", "fileName": "MULTILINGUAL-DECLARATION-OF-CONFORMITY-SATA-AIR-VISION-5000-3389-230327-1.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-air-vision-5000/CF1931121"
   },
   {
     slug: "sata-air-star-f-2-0",
@@ -1211,14 +1263,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Mascarilla ergonómica y ligera SATA air star F 2.0 con filtro especial A2:P3 RD para trabajos de pintura de corta duración. | 1173252",
     description: "Producto SATA dentro de la categoria Proteccion respiratoria. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso y operacion del taller.",
     image: "/images/products/sata/imported/sata-air-star-f-2-0.webp",
-    gallery: ["/images/products/sata/imported/sata-air-star-f-2-0.webp"],
+    gallery: ["/images/products/sata/imported/sata-air-star-f-2-0.webp", "/images/products/sata/imported/sata-air-star-f-2-0-detail.webp"],
     badges: ["Proteccion respiratoria", "Seguridad"],
-    specs: [{"label": "Categoria", "value": "Proteccion respiratoria"}, {"label": "Linea", "value": "Proteccion respiratoria"}, {"label": "Tecnologia", "value": "Seguridad"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Designación", "value": "air star F 2.0 inclusive caja de almacenamiento higiénico con filtro especial A2P3 R D"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "1.0 Pieza"}, {"label": "Unidad de embalaje", "value": "Pieza"}],
     variants: [{"name": "Seguridad", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Proteccion respiratoria"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/air-star-f-2.0/CF1931339"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/1c/85/31/1777973038/MULTILINGUAL-SATA-OPERATING-MANUAL-AIR-STAR-F-2-4372-241112-1.PDF.PDF?ts=1777973038", "fileName": "MULTILINGUAL-SATA-OPERATING-MANUAL-AIR-STAR-F-2-4372-241112-1.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/1f/7b/5d/1777973039/MULTILINGUAL-SATA-DECLARATION-OF-CONFORMITY-AIR-STAR-F-2-4379-240913-2.PDF.PDF?ts=1777973039", "fileName": "MULTILINGUAL-SATA-DECLARATION-OF-CONFORMITY-AIR-STAR-F-2-4379-240913-2.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/air-star-f-2.0/CF1931339"
   },
   {
     slug: "sata-air-star-c",
@@ -1234,14 +1287,15 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "Juego de protección respiratoria SATA: SATA air star C n y cinturón con pieza T y válvula reguladora de aire, versión sin unidad de cinturón de carbón activado | Juego de protección respiratoria SATA: SATA air star C n y cinturón con pieza T y válvula reguladora de aire, versión sin unidad de cinturón de carbón activado | 137570",
     description: "Producto SATA dentro de la categoria Proteccion respiratoria. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso y operacion del taller.",
     image: "/images/products/sata/imported/sata-air-star-c.webp",
-    gallery: ["/images/products/sata/imported/sata-air-star-c.webp"],
+    gallery: ["/images/products/sata/imported/sata-air-star-c.webp", "/images/products/sata/imported/sata-air-star-c-detail.webp"],
     badges: ["Proteccion respiratoria", "Seguridad"],
-    specs: [{"label": "Categoria", "value": "Proteccion respiratoria"}, {"label": "Linea", "value": "Proteccion respiratoria"}, {"label": "Tecnologia", "value": "Seguridad"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Designación", "value": "Juego de protección respiratoria SATA: SATA air star C n y cinturón con pieza T y válvula reguladora de aire, versión sin unidad de cinturón de carbón activado"}, {"label": "Max. la sobrepresión operativa", "value": "4 bar"}, {"label": "Rosca de conexión de aire", "value": "Niple"}, {"label": "Temperatura máxima de almacenamiento", "value": "60 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-20 °C"}, {"label": "Unidad de embalaje", "value": "Set"}, {"label": "Unidad de embalaje", "value": "1.0 Set"}, {"label": "Volumen", "value": "70 dB"}],
     variants: [{"name": "Seguridad", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Proteccion respiratoria"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-air-star-c/CF1931124"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Manual de instrucciones", "url": "https://www.sata.com/media/a7/46/8b/1777973038/BAL-SATA-AIRSTAR-C.PDF.PDF?ts=1777973038", "fileName": "BAL-SATA-AIRSTAR-C.PDF"}, {"label": "Declaración de conformidad", "url": "https://www.sata.com/media/a2/f5/73/1777973038/MULTILINGUAL---SATA-AIR-STAR-C-N---EG-KONFORMITTSERKLRUNG--EC-DECLARATION-OF-CONFORMITY_UID_6835B5C09786D.PDF.PDF?ts=1777973038", "fileName": "MULTILINGUAL---SATA-AIR-STAR-C-N---EG-KONFORMITTSERKLRUNG--EC-DECLARATION-OF-CONFORMITY_UID_6835B5C09786D.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-air-star-c/CF1931124"
   },
   {
     slug: "sata-air-star-f",
@@ -1257,13 +1311,14 @@ export const sataImportedProducts: CatalogProduct[] = [
     summary: "SATA air star F con filtro especial A2:P3 R D, 2 soportes para prefiltros y 10 prefiltros | SATA air star F con filtro especial A2:P3 R D, 2 soportes para prefiltros y 10 prefiltros | 134353",
     description: "Producto SATA dentro de la categoria Proteccion respiratoria. Etapel puede cotizar, asesorar y orientar la seleccion segun proceso y operacion del taller.",
     image: "/images/products/sata/catalog/jet-x.webp",
-    gallery: ["/images/products/sata/catalog/jet-x.webp"],
+    gallery: ["/images/products/sata/catalog/jet-x.webp", "/images/products/sata/imported/sata-air-star-f-detail.webp"],
     badges: ["Proteccion respiratoria", "Seguridad"],
-    specs: [{"label": "Categoria", "value": "Proteccion respiratoria"}, {"label": "Linea", "value": "Proteccion respiratoria"}, {"label": "Tecnologia", "value": "Seguridad"}, {"label": "Origen", "value": "Catalogo SATA"}],
+    specs: [{"label": "Designación", "value": "SATA air star F con filtro especial A2:P3 R D, 2 soportes para prefiltros y 10 prefiltros"}, {"label": "Temperatura máxima de almacenamiento", "value": "55 °C"}, {"label": "Temperatura mínima de almacenamiento", "value": "-10 °C"}, {"label": "Unidad de embalaje", "value": "Set"}, {"label": "Unidad de embalaje", "value": "1.0 Set"}],
     variants: [{"name": "Seguridad", "note": "Configuracion segun disponibilidad SATA y necesidad del proceso."}],
     highlights: ["Producto SATA incluido en el catalogo de Etapel.", "Disponible para cotizacion y asesoria tecnica.", "Seleccion recomendada segun proceso, material y operacion del taller."],
     detailBlocks: [{"title": "Uso recomendado", "body": "Proteccion respiratoria"}, {"title": "Asesoria Etapel", "body": "Etapel puede orientar la seleccion, accesorios, consumibles y refacciones compatibles."}, {"title": "Fuente", "body": "https://www.sata.com/es/sata-air-star-f/CF1931125"}],
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: [{"label": "Declaración de conformidad", "url": "https://www.sata.com/media/97/1e/eb/1777973039/KONFORMIT_TSERKL_RUNG-SATA-AIR-STAR-F.PDF.PDF?ts=1777973039", "fileName": "KONFORMIT_TSERKL_RUNG-SATA-AIR-STAR-F.PDF"}, {"label": "Manual de instrucciones", "url": "https://www.sata.com/media/07/f7/04/1777973039/BETRIEBSANLEITUNG-SATA-AIR-STAR-F.PDF.PDF?ts=1777973039", "fileName": "BETRIEBSANLEITUNG-SATA-AIR-STAR-F.PDF"}],
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: "https://www.sata.com/es/sata-air-star-f/CF1931125"
   }
 ];

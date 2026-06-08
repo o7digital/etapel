@@ -6,7 +6,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -124,6 +124,12 @@ def fetch(url: str) -> str:
     )
 
 
+def clean_text(value: str) -> str:
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = html.unescape(value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
 def slugify(value: str) -> str:
     value = value.lower()
     value = value.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u").replace("ñ", "n")
@@ -137,7 +143,79 @@ def first_image(fragment: str) -> str:
 
 def first_href(fragment: str) -> str:
     hrefs = re.findall(r'href="([^"]+)"', fragment)
-    return next((item for item in hrefs if "/es/" in item and "wishlist" not in item), "")
+    href = next((item for item in hrefs if "/es/" in item and "wishlist" not in item), "")
+    return urljoin("https://www.sata.com", href) if href else ""
+
+
+def detail_image(page: str) -> str:
+    meta = re.search(r'<meta property="og:image"\s+content="([^"]+)"', page)
+    if meta:
+        return html.unescape(meta.group(1))
+    match = re.search(r'<img[^>]+(?:src|data-src)="(https://www\.sata\.com/[^"]+)"[^>]+class="[^"]*(?:gallery|product)[^"]*"', page)
+    return html.unescape(match.group(1)) if match else ""
+
+
+def parse_specs(page: str, fallback: list[dict[str, str]]) -> list[dict[str, str]]:
+    specs: list[dict[str, str]] = []
+    for row in re.findall(r'<li class="properties-row\b[^"]*"[^>]*>(.*?)</li>', page, flags=re.S):
+        label_match = re.search(r'<span class="properties-label[^"]*"[^>]*>(.*?)</span>', row, flags=re.S)
+        label = clean_text(label_match.group(1)) if label_match else ""
+        metric_match = re.search(r'<span class="unit-metric[^"]*"[^>]*>(.*?)</span>', row, flags=re.S)
+        value_match = re.search(r'<span class="properties-value"[^>]*>(.*?)</span>', row, flags=re.S)
+        value = clean_text(metric_match.group(1)) if metric_match else clean_text(value_match.group(1)) if value_match else ""
+        if not value and "ix-icon-check" in row:
+            value = "Sí"
+        if label and value:
+            specs.append({"label": label, "value": value})
+    return specs[:18] if specs else fallback
+
+
+def parse_downloads(page: str, source_url: str) -> list[dict[str, str]]:
+    downloads: list[dict[str, str]] = []
+    for item in re.findall(r'<li class="downloads-item">(.*?)</li>', page, flags=re.S):
+        href_match = re.search(r'href="([^"]+)"', item)
+        if not href_match:
+            continue
+        label_match = re.search(r'<div class="downloads-item-label">\s*(.*?)\s*</div>', item, flags=re.S)
+        file_match = re.search(r'<div class="downloads-items-meta-file-name">\s*(.*?)\s*</div>', item, flags=re.S)
+        url = urljoin(source_url, html.unescape(href_match.group(1)))
+        label = clean_text(label_match.group(1)) if label_match else "Documento SATA"
+        file_name = clean_text(file_match.group(1)) if file_match else Path(urlparse(url).path).name
+        downloads.append({"label": label, "url": url, "fileName": file_name})
+    return downloads
+
+
+def enrich_from_detail(product: dict[str, str]) -> dict[str, object]:
+    source_url = str(product.get("sourceUrl") or "")
+    if not source_url.startswith("http"):
+        return {
+            "specs": [],
+            "downloads": [],
+            "galleryImage": "",
+            "sourceUrl": source_url,
+        }
+    try:
+        page = fetch(source_url)
+    except subprocess.CalledProcessError:
+        return {
+            "specs": [],
+            "downloads": [],
+            "galleryImage": "",
+            "sourceUrl": source_url,
+        }
+
+    fallback_specs = [
+        {"label": "Categoria", "value": str(product["category"])},
+        {"label": "Linea", "value": str(product["interest"])},
+        {"label": "Tecnologia", "value": str(product["technology"])},
+        {"label": "Origen", "value": "Catalogo SATA"},
+    ]
+    return {
+        "specs": parse_specs(page, fallback_specs),
+        "downloads": parse_downloads(page, source_url),
+        "galleryImage": detail_image(page),
+        "sourceUrl": source_url,
+    }
 
 
 def download(url: str, slug: str) -> str:
@@ -220,13 +298,18 @@ def as_ts_string(value: str) -> str:
 
 
 def product_to_ts(product: dict[str, str]) -> str:
+    enrichment = enrich_from_detail(product)
     image = product["image"] or "/images/products/sata/catalog/jet-x.webp"
-    gallery = [image]
-    specs = [
+    detail_image_path = download(str(enrichment.get("galleryImage") or ""), f"{product['slug']}-detail")
+    gallery = [item for item in [image, detail_image_path] if item]
+    specs = enrichment.get("specs") or [
         {"label": "Categoria", "value": product["category"]},
         {"label": "Linea", "value": product["interest"]},
         {"label": "Tecnologia", "value": product["technology"]},
         {"label": "Origen", "value": "Catalogo SATA"},
+    ]
+    downloads = enrichment.get("downloads") or [
+        {"label": "Documentación SATA", "url": product["sourceUrl"], "fileName": "Ver página SATA"}
     ]
     highlights = [
         "Producto SATA incluido en el catalogo de Etapel.",
@@ -259,8 +342,9 @@ def product_to_ts(product: dict[str, str]) -> str:
     variants: {json.dumps(variants, ensure_ascii=False)},
     highlights: {json.dumps(highlights, ensure_ascii=False)},
     detailBlocks: {json.dumps(detail_blocks, ensure_ascii=False)},
-    downloads: ["Ficha técnica", "Manual de operación", "Consultar documentación SATA"],
-    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"]
+    downloads: {json.dumps(downloads, ensure_ascii=False)},
+    spareParts: ["Refacciones SATA disponibles bajo consulta", "Consumibles compatibles", "Accesorios de mantenimiento"],
+    sourceUrl: {as_ts_string(product['sourceUrl'])}
   }}"""
 
 
@@ -282,7 +366,7 @@ def main() -> None:
 
     body = ",\n".join(product_to_ts(product) for product in products)
     OUT.write_text(
-        """import type { CatalogProduct } from './products';
+        """import type { CatalogProduct } from './productTypes';
 
 export const sataImportedProducts: CatalogProduct[] = [
 """

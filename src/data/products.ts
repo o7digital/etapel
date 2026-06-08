@@ -635,7 +635,10 @@ export const catalogProducts: CatalogProduct[] = [
       slug: 'sata-jet-x',
       name: 'SATA jet X',
       image: sataJetXMain,
-      gallery: sataJetXGallery
+      gallery: sataJetXGallery,
+      specs: product.specs.length > 0 ? product.specs : jetXProduct.specs,
+      downloads: product.downloads && product.downloads.length > 0 ? product.downloads : jetXProduct.downloads,
+      sourceUrl: product.sourceUrl
     };
   }),
   ...nonSataProducts

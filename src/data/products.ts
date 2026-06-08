@@ -53,7 +53,14 @@ export const productDetailPath = (product: CatalogProduct) =>
 const sataJetXDigitalPro = '/images/products/sata/product-jetx-digitalpro-es.png';
 const sataJetXDigital = '/images/products/sata/product-jetx-digital-es.png';
 const sataJetXDigitalReady = '/images/products/sata/product-jetx-digitalready-es.png';
-const sataJetXGallery = [sataJetXDigitalPro, sataJetXDigital, sataJetXDigitalReady, sataJetXDigitalPro, sataJetXDigital];
+const sataJetXMain = '/images/products/sata/jet-x/1200394-main.webp';
+const sataJetXPt01 = '/images/products/sata/jet-x/1200394-pt01.webp';
+const sataJetXPt02 = '/images/products/sata/jet-x/1200394-pt02.webp';
+const sataJetXPt03 = '/images/products/sata/jet-x/1200394-pt03.webp';
+const sataJetXPt04 = '/images/products/sata/jet-x/1200394-pt04.webp';
+const sataJetXPt05 = '/images/products/sata/jet-x/1200394-pt05.webp';
+const sataJetXGallery = [sataJetXMain, sataJetXPt01, sataJetXPt02, sataJetXPt03, sataJetXPt04, sataJetXPt05];
+const sataCatalogImage = (slug: string) => `/images/products/sata/catalog/${slug}.webp`;
 
 const jetXOptions: ProductOptionGroup[] = [
   {
@@ -106,7 +113,7 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola premium para repintado automotriz con tecnología de boquilla X.',
     description:
       'Solución profesional para talleres que buscan acabado controlado, aplicación repetible y una selección clara entre configuraciones HVLP o RP. Etapel la presenta como parte de su oferta SATA para procesos de repintado de alto nivel.',
-    image: sataJetXDigitalPro,
+    image: sataCatalogImage('jet-x'),
     gallery: sataJetXGallery,
     badges: ['HVLP / RP', 'Digital', 'Premium'],
     specs: [
@@ -158,8 +165,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola para procesos de repintado que prioriza transferencia, ergonomía y consistencia.',
     description:
       'Equipo para aplicación profesional de pintura en talleres que necesitan control del acabado, comodidad en uso continuo y compatibilidad con flujos modernos de repintado.',
-    image: sataJetXDigital,
-    gallery: [sataJetXDigital, sataJetXDigitalPro, sataJetXDigitalReady],
+    image: sataCatalogImage('satajet-x-5500'),
+    gallery: [sataCatalogImage('satajet-x-5500')],
     badges: ['Pintura', 'Repintado', 'Ergonomía'],
     specs: [
       { label: 'Uso', value: 'Base color y transparente' },
@@ -202,7 +209,7 @@ export const catalogProducts: CatalogProduct[] = [
     description:
       'Consumible pensado para simplificar el flujo de pintura y reducir pasos entre mezcla, aplicación y almacenamiento temporal del material.',
     image: sataJetXDigitalReady,
-    gallery: [sataJetXDigitalReady, sataJetXDigital, sataJetXDigitalPro],
+    gallery: [sataJetXDigitalReady],
     badges: ['Consumible', 'RPS', 'Proceso'],
     specs: [
       { label: 'Formato', value: 'Sistema de vaso multiuso' },
@@ -244,8 +251,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola versátil para aplicaciones de pintura, barniz y materiales de acabado.',
     description:
       'Equipo orientado a talleres que necesitan una pistola flexible para diferentes materiales y procesos de acabado.',
-    image: sataJetXDigitalPro,
-    gallery: [sataJetXDigitalPro, sataJetXDigital, sataJetXDigitalReady],
+    image: sataCatalogImage('satajet-1000-b'),
+    gallery: [sataCatalogImage('satajet-1000-b')],
     badges: ['Gravedad', 'HVLP / RP', 'Versátil'],
     specs: [
       { label: 'Aplicación', value: 'Acabados y materiales diversos' },
@@ -277,8 +284,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola con vaso de gravedad para procesos de acabado eficientes.',
     description:
       'Opción para trabajos que requieren una aplicación directa y controlada dentro del flujo de repintado.',
-    image: sataJetXDigital,
-    gallery: [sataJetXDigital, sataJetXDigitalPro, sataJetXDigitalReady],
+    image: sataCatalogImage('satajet-100-b'),
+    gallery: [sataCatalogImage('satajet-100-b')],
     badges: ['Gravedad', 'RP', 'Acabado'],
     specs: [
       { label: 'Aplicación', value: 'Acabado general' },
@@ -307,8 +314,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola compacta para reparaciones puntuales, piezas pequeñas y trabajos de precisión.',
     description:
       'Herramienta compacta para aplicaciones donde el control en áreas pequeñas es más importante que el volumen de material.',
-    image: sataJetXDigitalReady,
-    gallery: [sataJetXDigitalReady, sataJetXDigital, sataJetXDigitalPro],
+    image: sataCatalogImage('sataminijet-4400-b'),
+    gallery: [sataCatalogImage('sataminijet-4400-b')],
     badges: ['Compacta', 'HVLP', 'Spot repair'],
     specs: [
       { label: 'Aplicación', value: 'Spot repair' },
@@ -337,8 +344,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola para trabajos de diseño, efectos y aplicaciones especiales.',
     description:
       'Pensada para aplicaciones creativas y procesos donde la precisión visual y el control del patrón son relevantes.',
-    image: sataJetXDigital,
-    gallery: [sataJetXDigital, sataJetXDigitalReady, sataJetXDigitalPro],
+    image: sataCatalogImage('satajet-20-b'),
+    gallery: [sataCatalogImage('satajet-20-b')],
     badges: ['Diseño', 'RP', 'Especial'],
     specs: [
       { label: 'Aplicación', value: 'Diseño y efectos' },
@@ -351,6 +358,180 @@ export const catalogProducts: CatalogProduct[] = [
     detailBlocks: [
       { title: 'Uso recomendado', body: 'Aplicaciones de diseño, personalización y efectos.' },
       { title: 'Asesoría', body: 'Etapel puede orientar según material y acabado esperado.' }
+    ]
+  },
+  {
+    slug: 'satajet-x-5500-phaser',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'HVLP / RP',
+    sprayPattern: 'I (Control)',
+    nozzleTechnology: 'RP',
+    interest: 'Pistolas con vaso de gravedad',
+    application: 'Acabado premium',
+    name: 'SATAjet X 5500 PHASER',
+    summary: 'Pistola de edición premium para acabados profesionales de alta exigencia.',
+    description: 'Producto SATA de la línea de pistolas con vaso de gravedad disponible dentro del catálogo Etapel.',
+    image: sataCatalogImage('satajet-x-5500-phaser'),
+    gallery: [sataCatalogImage('satajet-x-5500-phaser')],
+    badges: ['Gravedad', 'Premium', 'HVLP / RP'],
+    specs: [
+      { label: 'Aplicación', value: 'Acabado automotriz' },
+      { label: 'Familia', value: 'Pistolas con vaso de gravedad' },
+      { label: 'Tecnología', value: 'HVLP / RP' },
+      { label: 'Origen', value: 'Catálogo SATA' }
+    ],
+    variants: [{ name: 'Configuración SATA', note: 'Selección según boquilla, tecnología y proceso.' }],
+    highlights: ['Producto SATA para acabados profesionales.', 'Disponible para cotización con Etapel.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Aplicaciones de pintura automotriz con alto requerimiento de acabado.' },
+      { title: 'Asesoría Etapel', body: 'Etapel orienta la selección según proceso, material y cabina.' }
+    ]
+  },
+  {
+    slug: 'satajet-5000-b',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'HVLP / RP',
+    sprayPattern: 'I (Control)',
+    nozzleTechnology: 'HVLP',
+    interest: 'Pistolas con vaso de gravedad',
+    application: 'Repintado automotriz',
+    name: 'SATAjet 5000 B',
+    summary: 'Pistola SATA para aplicaciones profesionales de repintado automotriz.',
+    description: 'Producto SATA de la línea de pistolas con vaso de gravedad disponible dentro del catálogo Etapel.',
+    image: sataCatalogImage('satajet-5000-b'),
+    gallery: [sataCatalogImage('satajet-5000-b')],
+    badges: ['Gravedad', 'HVLP / RP', 'Repintado'],
+    specs: [
+      { label: 'Aplicación', value: 'Repintado automotriz' },
+      { label: 'Familia', value: 'Pistolas con vaso de gravedad' },
+      { label: 'Tecnología', value: 'HVLP / RP' },
+      { label: 'Origen', value: 'Catálogo SATA' }
+    ],
+    variants: [{ name: 'HVLP / RP', note: 'Configuración según flujo del taller.' }],
+    highlights: ['Aplicación profesional.', 'Producto SATA para procesos de pintura.', 'Cotizable con Etapel.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Aplicaciones profesionales de base y barniz.' },
+      { title: 'Asesoría Etapel', body: 'Selección de configuración y accesorios compatibles.' }
+    ]
+  },
+  {
+    slug: 'satajet-1000-b-lignum-3',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'HVLP / RP',
+    sprayPattern: 'Standard',
+    nozzleTechnology: 'HVLP',
+    interest: 'Pistolas con vaso de gravedad',
+    application: 'Aplicación en madera y acabados',
+    name: 'SATAjet 1000 B Lignum 3',
+    summary: 'Pistola SATA orientada a aplicaciones de acabado en madera y superficies especiales.',
+    description: 'Producto SATA de la línea de pistolas con vaso de gravedad disponible dentro del catálogo Etapel.',
+    image: sataCatalogImage('satajet-1000-b-lignum-3'),
+    gallery: [sataCatalogImage('satajet-1000-b-lignum-3')],
+    badges: ['Gravedad', 'Lignum', 'Acabado'],
+    specs: [
+      { label: 'Aplicación', value: 'Madera y acabados' },
+      { label: 'Familia', value: 'Pistolas con vaso de gravedad' },
+      { label: 'Tecnología', value: 'HVLP / RP' },
+      { label: 'Origen', value: 'Catálogo SATA' }
+    ],
+    variants: [{ name: 'Lignum', note: 'Configuración para acabados en madera.' }],
+    highlights: ['Orientada a acabados en madera.', 'Producto SATA para procesos especializados.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Aplicación de acabados en madera y superficies especiales.' },
+      { title: 'Asesoría Etapel', body: 'Etapel puede orientar la configuración según material.' }
+    ]
+  },
+  {
+    slug: 'sata-spray-master-rp',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'RP',
+    sprayPattern: 'Standard',
+    nozzleTechnology: 'RP',
+    interest: 'Pistolas con vaso de gravedad',
+    application: 'Aplicación de alto desempeño',
+    name: 'SATA spray master RP',
+    summary: 'Pistola SATA RP para aplicaciones profesionales de alto desempeño.',
+    description: 'Producto SATA de la línea de pistolas con vaso de gravedad disponible dentro del catálogo Etapel.',
+    image: sataCatalogImage('sata-spray-master-rp'),
+    gallery: [sataCatalogImage('sata-spray-master-rp')],
+    badges: ['RP', 'Pintura', 'SATA'],
+    specs: [
+      { label: 'Aplicación', value: 'Pintura profesional' },
+      { label: 'Familia', value: 'Pistolas con vaso de gravedad' },
+      { label: 'Tecnología', value: 'RP' },
+      { label: 'Origen', value: 'Catálogo SATA' }
+    ],
+    variants: [{ name: 'RP', note: 'Configuración para aplicación rápida.' }],
+    highlights: ['Tecnología RP.', 'Aplicación profesional.', 'Disponible para cotización Etapel.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Procesos donde se prioriza desempeño y rapidez de aplicación.' },
+      { title: 'Asesoría Etapel', body: 'Selección del sistema según flujo del taller.' }
+    ]
+  },
+  {
+    slug: 'satajet-1500-b',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'HVLP / RP',
+    sprayPattern: 'I (Control)',
+    nozzleTechnology: 'HVLP',
+    interest: 'Pistolas con vaso de gravedad',
+    application: 'Repintado y acabado',
+    name: 'SATAjet 1500 B',
+    summary: 'Pistola SATA con vaso de gravedad para repintado y aplicaciones de acabado.',
+    description: 'Producto SATA de la línea de pistolas con vaso de gravedad disponible dentro del catálogo Etapel.',
+    image: sataCatalogImage('satajet-1500-b'),
+    gallery: [sataCatalogImage('satajet-1500-b')],
+    badges: ['Gravedad', 'HVLP / RP', 'Acabado'],
+    specs: [
+      { label: 'Aplicación', value: 'Repintado y acabado' },
+      { label: 'Familia', value: 'Pistolas con vaso de gravedad' },
+      { label: 'Tecnología', value: 'HVLP / RP' },
+      { label: 'Origen', value: 'Catálogo SATA' }
+    ],
+    variants: [{ name: 'HVLP / RP', note: 'Configuración según necesidad del proceso.' }],
+    highlights: ['Pistola SATA de gravedad.', 'Aplicación profesional.', 'Cotizable con Etapel.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Aplicaciones de repintado y acabado general.' },
+      { title: 'Asesoría Etapel', body: 'Selección de boquilla, vaso y consumibles compatibles.' }
+    ]
+  },
+  {
+    slug: 'satajet-3000-b',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'HVLP / RP',
+    sprayPattern: 'O (Speed)',
+    nozzleTechnology: 'RP',
+    interest: 'Pistolas con vaso de gravedad',
+    application: 'Repintado y acabado',
+    name: 'SATAjet 3000 B',
+    summary: 'Pistola SATA con vaso de gravedad para procesos de repintado y acabado.',
+    description: 'Producto SATA de la línea de pistolas con vaso de gravedad disponible dentro del catálogo Etapel.',
+    image: sataCatalogImage('satajet-3000-b'),
+    gallery: [sataCatalogImage('satajet-3000-b')],
+    badges: ['Gravedad', 'HVLP / RP', 'Pintura'],
+    specs: [
+      { label: 'Aplicación', value: 'Repintado y acabado' },
+      { label: 'Familia', value: 'Pistolas con vaso de gravedad' },
+      { label: 'Tecnología', value: 'HVLP / RP' },
+      { label: 'Origen', value: 'Catálogo SATA' }
+    ],
+    variants: [{ name: 'HVLP / RP', note: 'Configuración según material y proceso.' }],
+    highlights: ['Pistola SATA de gravedad.', 'Producto para aplicación profesional.', 'Disponible para cotización Etapel.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Procesos de repintado y acabado en taller.' },
+      { title: 'Asesoría Etapel', body: 'Etapel puede orientar la selección de configuración y accesorios.' }
     ]
   },
   {

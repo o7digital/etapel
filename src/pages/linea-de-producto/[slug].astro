@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
 import { productFamilies, type ProductFamily } from '../../data/productLines';
 
 export function getStaticPaths() {
@@ -38,6 +39,7 @@ const { family } = Astro.props as { family: ProductFamily };
             <div class="mt-8 flex flex-wrap gap-4">
               <a href="/contacto" class="btn-primary">Solicitar información</a>
               <a href="/linea-de-producto" class="btn-outline">Ver todas las líneas</a>
+              <a href="#catalogo-productos" class="btn-outline">Ver productos</a>
             </div>
           </div>
 
@@ -75,6 +77,8 @@ const { family } = Astro.props as { family: ProductFamily };
         </div>
       </div>
     </section>
+
+    <ProductCatalog familySlug={family.slug} />
 
     <section class="bg-[#f3f7fb] py-16 sm:py-20">
       <div class="shell">

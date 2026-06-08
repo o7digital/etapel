@@ -1,51 +1,6 @@
-export interface ProductSpec {
-  label: string;
-  value: string;
-}
-
-export interface ProductVariant {
-  name: string;
-  note: string;
-}
-
-export interface ProductOptionGroup {
-  label: string;
-  help?: string;
-  options: {
-    label: string;
-    disabled?: boolean;
-    selected?: boolean;
-  }[];
-}
-
-export interface CatalogProduct {
-  slug: string;
-  brand: string;
-  familySlug: string;
-  category: string;
-  technology: string;
-  sprayPattern?: string;
-  nozzleTechnology?: string;
-  interest?: string;
-  application: string;
-  name: string;
-  summary: string;
-  description: string;
-  image: string;
-  gallery: string[];
-  badges: string[];
-  specs: ProductSpec[];
-  variants: ProductVariant[];
-  optionGroups?: ProductOptionGroup[];
-  highlights: string[];
-  highlightSlides?: string[];
-  detailBlocks: {
-    title: string;
-    body: string;
-  }[];
-  downloads?: string[];
-  spareParts?: string[];
-}
+import { sataImportedProducts } from './sataImportedProducts.ts';
+import type { CatalogProduct, ProductOptionGroup } from './productTypes';
+export type { CatalogProduct, ProductOptionGroup, ProductSpec, ProductVariant } from './productTypes';
 
 export const productDetailPath = (product: CatalogProduct) =>
   `/linea-de-producto/productos/${product.slug}`;
@@ -98,7 +53,7 @@ const jetXOptions: ProductOptionGroup[] = [
   }
 ];
 
-export const catalogProducts: CatalogProduct[] = [
+const curatedCatalogProducts: CatalogProduct[] = [
   {
     slug: 'sata-jet-x',
     brand: 'SATA',
@@ -663,4 +618,25 @@ export const catalogProducts: CatalogProduct[] = [
       }
     ]
   }
+];
+
+const jetXProduct = curatedCatalogProducts.find((product) => product.slug === 'sata-jet-x');
+const nonSataProducts = curatedCatalogProducts.filter((product) => product.brand !== 'SATA');
+
+export const catalogProducts: CatalogProduct[] = [
+  ...sataImportedProducts.map((product) => {
+    if (product.slug !== 'jet-x' || !jetXProduct) {
+      return product;
+    }
+
+    return {
+      ...product,
+      ...jetXProduct,
+      slug: 'sata-jet-x',
+      name: 'SATA jet X',
+      image: sataJetXMain,
+      gallery: sataJetXGallery
+    };
+  }),
+  ...nonSataProducts
 ];

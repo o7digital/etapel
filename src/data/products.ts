@@ -50,6 +50,11 @@ export interface CatalogProduct {
 export const productDetailPath = (product: CatalogProduct) =>
   `/linea-de-producto/productos/${product.slug}`;
 
+const sataJetXDigitalPro = '/images/products/sata/product-jetx-digitalpro-es.png';
+const sataJetXDigital = '/images/products/sata/product-jetx-digital-es.png';
+const sataJetXDigitalReady = '/images/products/sata/product-jetx-digitalready-es.png';
+const sataJetXGallery = [sataJetXDigitalPro, sataJetXDigital, sataJetXDigitalReady, sataJetXDigitalPro, sataJetXDigital];
+
 const jetXOptions: ProductOptionGroup[] = [
   {
     label: 'Forma del abanico',
@@ -101,14 +106,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola premium para repintado automotriz con tecnología de boquilla X.',
     description:
       'Solución profesional para talleres que buscan acabado controlado, aplicación repetible y una selección clara entre configuraciones HVLP o RP. Etapel la presenta como parte de su oferta SATA para procesos de repintado de alto nivel.',
-    image: '/images/satajet-x5500.webp',
-    gallery: [
-      '/images/satajet-x5500.webp',
-      '/images/category-pistolas.webp',
-      '/images/slide-pistolas.webp',
-      '/images/satajet-x5500.webp',
-      '/images/category-pistolas.webp'
-    ],
+    image: sataJetXDigitalPro,
+    gallery: sataJetXGallery,
     badges: ['HVLP / RP', 'Digital', 'Premium'],
     specs: [
       { label: 'Aplicación', value: 'Fondos, bases y barnices' },
@@ -159,8 +158,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola para procesos de repintado que prioriza transferencia, ergonomía y consistencia.',
     description:
       'Equipo para aplicación profesional de pintura en talleres que necesitan control del acabado, comodidad en uso continuo y compatibilidad con flujos modernos de repintado.',
-    image: '/images/satajet-x5500.webp',
-    gallery: ['/images/satajet-x5500.webp', '/images/slide-pistolas.webp'],
+    image: sataJetXDigital,
+    gallery: [sataJetXDigital, sataJetXDigitalPro, sataJetXDigitalReady],
     badges: ['Pintura', 'Repintado', 'Ergonomía'],
     specs: [
       { label: 'Uso', value: 'Base color y transparente' },
@@ -202,8 +201,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Sistema de vasos multiuso para mezclar, pintar, rellenar y almacenar.',
     description:
       'Consumible pensado para simplificar el flujo de pintura y reducir pasos entre mezcla, aplicación y almacenamiento temporal del material.',
-    image: '/images/category-pistolas.webp',
-    gallery: ['/images/category-pistolas.webp', '/images/satajet-x5500.webp'],
+    image: sataJetXDigitalReady,
+    gallery: [sataJetXDigitalReady, sataJetXDigital, sataJetXDigitalPro],
     badges: ['Consumible', 'RPS', 'Proceso'],
     specs: [
       { label: 'Formato', value: 'Sistema de vaso multiuso' },
@@ -245,8 +244,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola versátil para aplicaciones de pintura, barniz y materiales de acabado.',
     description:
       'Equipo orientado a talleres que necesitan una pistola flexible para diferentes materiales y procesos de acabado.',
-    image: '/images/satajet-x5500.webp',
-    gallery: ['/images/satajet-x5500.webp', '/images/category-pistolas.webp', '/images/slide-pistolas.webp'],
+    image: sataJetXDigitalPro,
+    gallery: [sataJetXDigitalPro, sataJetXDigital, sataJetXDigitalReady],
     badges: ['Gravedad', 'HVLP / RP', 'Versátil'],
     specs: [
       { label: 'Aplicación', value: 'Acabados y materiales diversos' },
@@ -278,8 +277,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola con vaso de gravedad para procesos de acabado eficientes.',
     description:
       'Opción para trabajos que requieren una aplicación directa y controlada dentro del flujo de repintado.',
-    image: '/images/category-pistolas.webp',
-    gallery: ['/images/category-pistolas.webp', '/images/satajet-x5500.webp', '/images/slide-pistolas.webp'],
+    image: sataJetXDigital,
+    gallery: [sataJetXDigital, sataJetXDigitalPro, sataJetXDigitalReady],
     badges: ['Gravedad', 'RP', 'Acabado'],
     specs: [
       { label: 'Aplicación', value: 'Acabado general' },
@@ -308,8 +307,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola compacta para reparaciones puntuales, piezas pequeñas y trabajos de precisión.',
     description:
       'Herramienta compacta para aplicaciones donde el control en áreas pequeñas es más importante que el volumen de material.',
-    image: '/images/category-pistolas.webp',
-    gallery: ['/images/category-pistolas.webp', '/images/slide-pistolas.webp', '/images/satajet-x5500.webp'],
+    image: sataJetXDigitalReady,
+    gallery: [sataJetXDigitalReady, sataJetXDigital, sataJetXDigitalPro],
     badges: ['Compacta', 'HVLP', 'Spot repair'],
     specs: [
       { label: 'Aplicación', value: 'Spot repair' },
@@ -338,8 +337,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Pistola para trabajos de diseño, efectos y aplicaciones especiales.',
     description:
       'Pensada para aplicaciones creativas y procesos donde la precisión visual y el control del patrón son relevantes.',
-    image: '/images/slide-pistolas.webp',
-    gallery: ['/images/slide-pistolas.webp', '/images/category-pistolas.webp', '/images/satajet-x5500.webp'],
+    image: sataJetXDigital,
+    gallery: [sataJetXDigital, sataJetXDigitalReady, sataJetXDigitalPro],
     badges: ['Diseño', 'RP', 'Especial'],
     specs: [
       { label: 'Aplicación', value: 'Diseño y efectos' },
@@ -368,8 +367,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Protección respiratoria para aplicaciones profesionales de pintura.',
     description:
       'Equipo de seguridad para procesos de repintado donde la protección del operador, comodidad y operación diaria tienen prioridad.',
-    image: '/images/category-pistolas.webp',
-    gallery: ['/images/category-pistolas.webp', '/images/certificacion.webp'],
+    image: sataJetXDigitalReady,
+    gallery: [sataJetXDigitalReady, sataJetXDigital, sataJetXDigitalPro],
     badges: ['Seguridad', 'Respiración', 'Pintura'],
     specs: [
       { label: 'Uso', value: 'Aplicación en cabina' },
@@ -411,8 +410,8 @@ export const catalogProducts: CatalogProduct[] = [
     summary: 'Sistema de filtración para preparar aire comprimido en procesos de pintura.',
     description:
       'Solución para controlar la calidad del aire antes de la aplicación. La filtración correcta ayuda a reducir defectos y retrabajos en acabados sensibles.',
-    image: '/images/mecanica-aire.webp',
-    gallery: ['/images/mecanica-aire.webp', '/images/category-infrarrojo.webp'],
+    image: sataJetXDigitalReady,
+    gallery: [sataJetXDigitalReady, sataJetXDigital, sataJetXDigitalPro],
     badges: ['Aire', 'Filtración', 'Calidad'],
     specs: [
       { label: 'Área', value: 'Red de aire comprimido' },

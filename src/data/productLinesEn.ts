@@ -19,7 +19,7 @@ export const productFamiliesEn: ProductFamilyEn[] = [
     menuDescription: 'Spray guns, consumables, and systems for paint and finishing workflows.',
     pageDescription:
       'Solutions for automotive painting and refinishing with equipment, consumables, and systems designed to improve finish quality, productivity, and process consistency.',
-    image: '/images/category-pistolas.webp',
+    image: '/images/products/sata/jet-x/1200394-main.webp',
     accent: 'from-sky-500/18 to-cyan-500/8',
     items: [
       'Spray guns',

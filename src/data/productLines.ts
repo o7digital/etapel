@@ -19,7 +19,7 @@ export const productFamilies: ProductFamily[] = [
     menuDescription: 'Pistolas, consumibles y sistemas para procesos de pintura y acabado.',
     pageDescription:
       'Soluciones para pintura automotriz y repintado con equipos, consumibles y sistemas diseñados para mejorar el acabado, la productividad y la consistencia del taller.',
-    image: '/images/category-pistolas.webp',
+    image: '/images/products/sata/jet-x/1200394-main.webp',
     accent: 'from-sky-500/18 to-cyan-500/8',
     items: [
       'Pistolas de pintura',

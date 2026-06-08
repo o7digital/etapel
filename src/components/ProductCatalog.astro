@@ -11,241 +11,217 @@ const initialProducts = familySlug
   ? catalogProducts.filter((product) => product.familySlug === familySlug)
   : catalogProducts;
 const activeFamily = familySlug ? productFamilies.find((family) => family.slug === familySlug) : undefined;
-const familyOptions = productFamilies.filter((family) =>
-  catalogProducts.some((product) => product.familySlug === family.slug)
-);
-const categories = Array.from(new Set(initialProducts.map((product) => product.category))).sort();
-const technologies = Array.from(new Set(initialProducts.map((product) => product.technology))).sort();
-const brands = Array.from(new Set(initialProducts.map((product) => product.brand))).sort();
+const interests = Array.from(new Set(initialProducts.map((product) => product.interest || product.category))).sort();
+const patterns = Array.from(new Set(initialProducts.map((product) => product.sprayPattern || 'Standard'))).sort();
+const nozzleTechnologies = Array.from(new Set(initialProducts.map((product) => product.nozzleTechnology || product.technology))).sort();
+const defaultInterest = interests.includes('Pistolas con vaso de gravedad')
+  ? 'Pistolas con vaso de gravedad'
+  : interests[0];
 ---
 
-<section id="catalogo-productos" class="bg-[#f6f9fc] py-16 sm:py-20">
+<section id="catalogo-productos" class="bg-white py-16 sm:py-20">
   <div class="shell">
-    <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-      <div>
-        <span class="section-kicker text-slate-700">Catálogo de productos</span>
-        <h2 class="section-title mt-4 text-slate-950">
-          {activeFamily ? `Explorar productos de ${activeFamily.shortTitle}` : 'Explorar productos por marca, línea y aplicación'}
-        </h2>
-        <p class="mt-5 max-w-3xl text-base leading-8 text-slate-600">
-          Busca, filtra y abre fichas de detalle para revisar aplicaciones, variantes, datos clave y solicitar información comercial.
-        </p>
-      </div>
-
-      <div class="grid gap-3 rounded-[8px] border border-slate-200 bg-white p-4 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:grid-cols-3">
-        <div>
-          <p class="text-3xl font-bold tracking-[-0.04em] text-slate-950">{initialProducts.length}</p>
-          <p class="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Productos</p>
-        </div>
-        <div>
-          <p class="text-3xl font-bold tracking-[-0.04em] text-slate-950">{brands.length}</p>
-          <p class="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Marcas</p>
-        </div>
-        <div>
-          <p class="text-3xl font-bold tracking-[-0.04em] text-slate-950">{categories.length}</p>
-          <p class="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Categorías</p>
-        </div>
-      </div>
+    <div class="max-w-4xl">
+      <span class="section-kicker text-slate-700">Catálogo de productos</span>
+      <h2 class="section-title mt-4 text-slate-950">
+        {activeFamily ? activeFamily.shortTitle : 'Productos Etapel'}
+      </h2>
+      <p class="mt-5 text-base leading-8 text-slate-600">
+        Filtra por tipo de producto, forma del abanico y tecnología. Cada tarjeta abre una ficha con opciones, galería, datos técnicos y recursos.
+      </p>
     </div>
 
-    <div class="mt-8 rounded-[8px] border border-slate-200 bg-white p-4 shadow-[0_18px_50px_rgba(15,23,42,0.05)]" data-product-catalog>
-      <div class="grid gap-3 lg:grid-cols-[1.15fr_0.8fr_0.8fr_0.8fr_0.7fr]">
-        <label class="block">
-          <span class="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Buscar producto</span>
-          <input
-            type="search"
-            data-catalog-search
-            class="field-input rounded-[8px]"
-            placeholder="Buscar por SATA, pistola, RPS, filtro..."
-          />
-        </label>
-
-        <label class="block">
-          <span class="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Marca</span>
-          <select data-catalog-brand class="field-select rounded-[8px]">
-            <option value="">Todas</option>
-            {brands.map((brand) => <option value={brand}>{brand}</option>)}
-          </select>
-        </label>
-
-        <label class="block">
-          <span class="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Categoría</span>
-          <select data-catalog-category class="field-select rounded-[8px]">
-            <option value="">Todas</option>
-            {categories.map((category) => <option value={category}>{category}</option>)}
-          </select>
-        </label>
-
-        <label class="block">
-          <span class="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Tecnología</span>
-          <select data-catalog-technology class="field-select rounded-[8px]">
-            <option value="">Todas</option>
-            {technologies.map((technology) => <option value={technology}>{technology}</option>)}
-          </select>
-        </label>
-
-        <label class="block">
-          <span class="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Orden</span>
-          <select data-catalog-sort class="field-select rounded-[8px]">
-            <option value="name">Nombre</option>
-            <option value="category">Categoría</option>
-            <option value="brand">Marca</option>
-          </select>
-        </label>
+    <div class="mt-10 bg-[#eaf6ff] p-6 sm:p-8" data-product-catalog>
+      <h3 class="text-2xl font-bold tracking-[-0.03em] text-slate-950">¿Qué te interesa?</h3>
+      <div class="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+        {interests.map((interest) => (
+          <button
+            type="button"
+            value={interest}
+            data-interest-filter
+            class={`min-h-[64px] border bg-white px-4 py-3 text-sm font-bold uppercase text-slate-950 transition hover:border-slate-950 ${interest === defaultInterest ? 'border-slate-950 ring-1 ring-slate-950' : 'border-slate-300'}`}
+          >
+            {interest}
+          </button>
+        ))}
       </div>
 
-      {
-        !activeFamily && (
-          <div class="mt-4 flex flex-wrap gap-2" aria-label="Filtros por línea de producto">
-            <button type="button" data-catalog-family value="" class="rounded-full border border-sky-700 bg-sky-700 px-4 py-2 text-sm font-semibold text-white">
-              Todas las líneas
-            </button>
-            {familyOptions.map((family) => (
-              <button type="button" data-catalog-family value={family.slug} class="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700">
-                {family.shortTitle}
-              </button>
-            ))}
+      <div class="mt-12 bg-white p-0">
+        <div class="flex flex-col gap-6 border-b border-slate-200 pb-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="text-3xl font-bold tracking-[-0.04em] text-slate-950">
+              <span data-catalog-count>{initialProducts.length}</span> Resultados
+            </p>
           </div>
-        )
-      }
 
-      <div class="mt-5 flex flex-col gap-3 border-t border-slate-200 pt-5 sm:flex-row sm:items-center sm:justify-between">
-        <p class="text-sm font-semibold text-slate-700">
-          <span data-catalog-count>{initialProducts.length}</span> producto(s) encontrados
-        </p>
-        <button type="button" data-catalog-reset class="w-fit rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700">
-          Limpiar filtros
-        </button>
-      </div>
+          <label class="block w-full max-w-sm">
+            <span class="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Buscar</span>
+            <input
+              type="search"
+              data-catalog-search
+              class="field-input rounded-none"
+              placeholder="Buscar por producto, uso o marca"
+            />
+          </label>
+        </div>
 
-      <div class="mt-6 grid gap-4 lg:grid-cols-2 xl:grid-cols-3" data-catalog-grid>
-        {
-          initialProducts.map((product) => (
+        <div class="mt-6 flex flex-wrap gap-3">
+          <label class="block min-w-[230px]">
+            <span class="sr-only">Forma del abanico</span>
+            <select data-pattern-filter class="field-select rounded-none">
+              <option value="">Forma del abanico</option>
+              {patterns.map((pattern) => <option value={pattern}>{pattern}</option>)}
+            </select>
+          </label>
+          <label class="block min-w-[250px]">
+            <span class="sr-only">Tecnología de boquillas</span>
+            <select data-nozzle-filter class="field-select rounded-none">
+              <option value="">Tecnología de boquillas</option>
+              {nozzleTechnologies.map((technology) => <option value={technology}>{technology}</option>)}
+            </select>
+          </label>
+        </div>
+
+        <div class="mt-5 flex flex-wrap gap-2" data-active-filters></div>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4" data-catalog-grid>
+          {initialProducts.map((product) => (
             <article
-              class="group flex min-h-[430px] flex-col overflow-hidden rounded-[8px] border border-slate-200 bg-white shadow-[0_14px_38px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-[0_22px_60px_rgba(14,116,144,0.10)]"
               data-catalog-card
               data-name={product.name.toLowerCase()}
-              data-brand={product.brand}
-              data-family={product.familySlug}
-              data-category={product.category}
-              data-technology={product.technology}
-              data-search={`${product.name} ${product.brand} ${product.category} ${product.technology} ${product.application} ${product.summary} ${product.badges.join(' ')}`.toLowerCase()}
+              data-interest={product.interest || product.category}
+              data-pattern={product.sprayPattern || 'Standard'}
+              data-nozzle={product.nozzleTechnology || product.technology}
+              data-search={`${product.name} ${product.brand} ${product.category} ${product.technology} ${product.application} ${product.summary}`.toLowerCase()}
+              class="group relative flex min-h-[430px] flex-col overflow-hidden border border-slate-200 bg-white transition hover:border-slate-950"
             >
               <a href={productDetailPath(product)} class="flex h-full flex-col">
-                <div class="flex h-56 items-center justify-center bg-slate-50 p-6">
+                <div class="flex h-64 items-center justify-center bg-[#f6f6f6] p-6">
                   <img src={product.image} alt={product.name} class="max-h-full w-full object-contain transition duration-500 group-hover:scale-[1.035]" loading="lazy" />
                 </div>
                 <div class="flex flex-1 flex-col p-5">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sky-700">{product.brand}</span>
-                    <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">{product.technology}</span>
-                  </div>
-                  <h3 class="mt-4 text-xl font-bold tracking-[-0.03em] text-slate-950">{product.name}</h3>
-                  <p class="mt-2 text-sm font-semibold text-slate-500">{product.category}</p>
-                  <p class="mt-3 flex-1 text-sm leading-7 text-slate-600">{product.summary}</p>
-                  <div class="mt-5 border-t border-slate-200 pt-4">
-                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Aplicación</p>
-                    <p class="mt-1 text-sm font-semibold text-slate-900">{product.application}</p>
-                  </div>
-                  <span class="mt-5 inline-flex w-fit items-center rounded-full border border-sky-300 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-800">
-                    Ver detalle
+                  <p class="text-sm leading-6 text-slate-500">{product.interest || product.category}</p>
+                  <h3 class="mt-2 text-xl font-semibold tracking-[-0.03em] text-slate-950">{product.name}</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-600">{product.summary}</p>
+                  <span class="mt-auto flex h-12 w-12 items-center justify-center self-end bg-black text-2xl font-bold text-white transition group-hover:bg-sky-700">
+                    →
                   </span>
                 </div>
               </a>
             </article>
-          ))
-        }
-      </div>
+          ))}
+        </div>
 
-      <p class="mt-8 hidden rounded-[8px] border border-slate-200 bg-slate-50 p-5 text-sm font-semibold text-slate-600" data-catalog-empty>
-        No hay productos con estos filtros.
-      </p>
+        <p class="mt-8 hidden border border-slate-200 bg-slate-50 p-5 text-sm font-semibold text-slate-600" data-catalog-empty>
+          No hay productos con estos filtros.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
 <script>
-  const catalogs = document.querySelectorAll('[data-product-catalog]');
+  const defaultInterest = 'Pistolas con vaso de gravedad';
 
-  catalogs.forEach((catalog) => {
+  document.querySelectorAll('[data-product-catalog]').forEach((catalog) => {
+    const interestButtons = Array.from(catalog.querySelectorAll('[data-interest-filter]'));
+    const patternSelect = catalog.querySelector('[data-pattern-filter]');
+    const nozzleSelect = catalog.querySelector('[data-nozzle-filter]');
     const searchInput = catalog.querySelector('[data-catalog-search]');
-    const brandSelect = catalog.querySelector('[data-catalog-brand]');
-    const categorySelect = catalog.querySelector('[data-catalog-category]');
-    const technologySelect = catalog.querySelector('[data-catalog-technology]');
-    const sortSelect = catalog.querySelector('[data-catalog-sort]');
-    const resetButton = catalog.querySelector('[data-catalog-reset]');
     const countNode = catalog.querySelector('[data-catalog-count]');
+    const activeFilters = catalog.querySelector('[data-active-filters]');
     const emptyNode = catalog.querySelector('[data-catalog-empty]');
-    const grid = catalog.querySelector('[data-catalog-grid]');
-    const familyButtons = Array.from(catalog.querySelectorAll('[data-catalog-family]'));
     const cards = Array.from(catalog.querySelectorAll('[data-catalog-card]'));
-    let selectedFamily = '';
+    let selectedInterest =
+      interestButtons.find((button) => button.value === defaultInterest)?.value ||
+      interestButtons[0]?.value ||
+      '';
 
-    const setActiveFamily = () => {
-      familyButtons.forEach((button) => {
-        const isActive = button.value === selectedFamily;
-        button.classList.toggle('border-sky-700', isActive);
-        button.classList.toggle('bg-sky-700', isActive);
-        button.classList.toggle('text-white', isActive);
-        button.classList.toggle('border-slate-300', !isActive);
-        button.classList.toggle('bg-white', !isActive);
-        button.classList.toggle('text-slate-700', !isActive);
+    const chip = (label, value, onClear) => {
+      if (!value) return null;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-200';
+      button.textContent = `${label} ×`;
+      button.addEventListener('click', onClear);
+      return button;
+    };
+
+    const renderChips = () => {
+      activeFilters.innerHTML = '';
+      const chips = [
+        chip(selectedInterest, selectedInterest, () => {
+          selectedInterest = '';
+          applyFilters();
+        }),
+        chip(patternSelect.value, patternSelect.value, () => {
+          patternSelect.value = '';
+          applyFilters();
+        }),
+        chip(nozzleSelect.value, nozzleSelect.value, () => {
+          nozzleSelect.value = '';
+          applyFilters();
+        })
+      ].filter(Boolean);
+
+      chips.forEach((item) => activeFilters.appendChild(item));
+
+      if (chips.length > 0) {
+        const reset = document.createElement('button');
+        reset.type = 'button';
+        reset.className = 'rounded-full bg-sky-50 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-sky-100';
+        reset.textContent = 'Reset all ×';
+        reset.addEventListener('click', () => {
+          selectedInterest = '';
+          patternSelect.value = '';
+          nozzleSelect.value = '';
+          searchInput.value = '';
+          applyFilters();
+        });
+        activeFilters.appendChild(reset);
+      }
+    };
+
+    const syncButtons = () => {
+      interestButtons.forEach((button) => {
+        const active = button.value === selectedInterest;
+        button.classList.toggle('border-slate-950', active);
+        button.classList.toggle('ring-1', active);
+        button.classList.toggle('ring-slate-950', active);
+        button.classList.toggle('border-slate-300', !active);
       });
     };
 
     const applyFilters = () => {
       const term = searchInput.value.trim().toLowerCase();
-      const brand = brandSelect.value;
-      const category = categorySelect.value;
-      const technology = technologySelect.value;
-      const sortKey = sortSelect.value;
-      let visibleCount = 0;
+      let count = 0;
 
-      cards
-        .sort((a, b) => {
-          const aValue = a.dataset[sortKey] || '';
-          const bValue = b.dataset[sortKey] || '';
-          return aValue.localeCompare(bValue, 'es');
-        })
-        .forEach((card) => {
-          grid.appendChild(card);
-          const matches =
-            (!term || card.dataset.search.includes(term)) &&
-            (!brand || card.dataset.brand === brand) &&
-            (!selectedFamily || card.dataset.family === selectedFamily) &&
-            (!category || card.dataset.category === category) &&
-            (!technology || card.dataset.technology === technology);
+      cards.forEach((card) => {
+        const matches =
+          (!selectedInterest || card.dataset.interest === selectedInterest) &&
+          (!patternSelect.value || card.dataset.pattern === patternSelect.value) &&
+          (!nozzleSelect.value || card.dataset.nozzle === nozzleSelect.value) &&
+          (!term || card.dataset.search.includes(term));
 
-          card.classList.toggle('hidden', !matches);
-          if (matches) visibleCount += 1;
-        });
+        card.classList.toggle('hidden', !matches);
+        if (matches) count += 1;
+      });
 
-      countNode.textContent = String(visibleCount);
-      emptyNode.classList.toggle('hidden', visibleCount > 0);
-      setActiveFamily();
+      countNode.textContent = String(count);
+      emptyNode.classList.toggle('hidden', count > 0);
+      syncButtons();
+      renderChips();
     };
 
-    searchInput.addEventListener('input', applyFilters);
-    brandSelect.addEventListener('change', applyFilters);
-    categorySelect.addEventListener('change', applyFilters);
-    technologySelect.addEventListener('change', applyFilters);
-    sortSelect.addEventListener('change', applyFilters);
-    resetButton.addEventListener('click', () => {
-      searchInput.value = '';
-      brandSelect.value = '';
-      categorySelect.value = '';
-      technologySelect.value = '';
-      sortSelect.value = 'name';
-      selectedFamily = '';
-      applyFilters();
-    });
-    familyButtons.forEach((button) => {
+    interestButtons.forEach((button) => {
       button.addEventListener('click', () => {
-        selectedFamily = button.value;
+        selectedInterest = selectedInterest === button.value ? '' : button.value;
         applyFilters();
       });
     });
-
+    patternSelect.addEventListener('change', applyFilters);
+    nozzleSelect.addEventListener('change', applyFilters);
+    searchInput.addEventListener('input', applyFilters);
     applyFilters();
   });
 </script>

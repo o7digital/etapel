@@ -8,12 +8,25 @@ export interface ProductVariant {
   note: string;
 }
 
+export interface ProductOptionGroup {
+  label: string;
+  help?: string;
+  options: {
+    label: string;
+    disabled?: boolean;
+    selected?: boolean;
+  }[];
+}
+
 export interface CatalogProduct {
   slug: string;
   brand: string;
   familySlug: string;
   category: string;
   technology: string;
+  sprayPattern?: string;
+  nozzleTechnology?: string;
+  interest?: string;
   application: string;
   name: string;
   summary: string;
@@ -23,15 +36,55 @@ export interface CatalogProduct {
   badges: string[];
   specs: ProductSpec[];
   variants: ProductVariant[];
+  optionGroups?: ProductOptionGroup[];
   highlights: string[];
+  highlightSlides?: string[];
   detailBlocks: {
     title: string;
     body: string;
   }[];
+  downloads?: string[];
+  spareParts?: string[];
 }
 
 export const productDetailPath = (product: CatalogProduct) =>
   `/linea-de-producto/productos/${product.slug}`;
+
+const jetXOptions: ProductOptionGroup[] = [
+  {
+    label: 'Forma del abanico',
+    options: [
+      { label: '10X40', disabled: true },
+      { label: 'I (Control)', selected: true },
+      { label: 'O (Speed)' }
+    ]
+  },
+  {
+    label: 'Tamaño de la boquilla',
+    options: [
+      { label: '1,1' },
+      { label: '1,2', selected: true },
+      { label: '1,3' },
+      { label: '1,4' },
+      { label: '10X40', disabled: true }
+    ]
+  },
+  {
+    label: 'Tecnología de boquillas',
+    help: '¿Qué tecnología de boquilla es la adecuada para mí?',
+    options: [{ label: 'HVLP' }, { label: 'RP', selected: true }]
+  },
+  {
+    label: 'Versión de unidad digital',
+    help: '¿Qué unidad digital es la adecuada para mí?',
+    options: [
+      { label: 'BASIC' },
+      { label: 'DIGITAL' },
+      { label: 'DIGITAL pro', selected: true },
+      { label: 'DIGITAL ready' }
+    ]
+  }
+];
 
 export const catalogProducts: CatalogProduct[] = [
   {
@@ -40,13 +93,22 @@ export const catalogProducts: CatalogProduct[] = [
     familySlug: 'pintura',
     category: 'Pistolas de pintura',
     technology: 'HVLP / RP',
+    sprayPattern: 'I (Control)',
+    nozzleTechnology: 'RP',
+    interest: 'Pistolas con vaso de gravedad',
     application: 'Base color y transparente',
     name: 'SATA jet X',
     summary: 'Pistola premium para repintado automotriz con tecnología de boquilla X.',
     description:
       'Solución profesional para talleres que buscan acabado controlado, aplicación repetible y una selección clara entre configuraciones HVLP o RP. Etapel la presenta como parte de su oferta SATA para procesos de repintado de alto nivel.',
     image: '/images/satajet-x5500.webp',
-    gallery: ['/images/satajet-x5500.webp', '/images/category-pistolas.webp'],
+    gallery: [
+      '/images/satajet-x5500.webp',
+      '/images/category-pistolas.webp',
+      '/images/slide-pistolas.webp',
+      '/images/satajet-x5500.webp',
+      '/images/category-pistolas.webp'
+    ],
     badges: ['HVLP / RP', 'Digital', 'Premium'],
     specs: [
       { label: 'Aplicación', value: 'Fondos, bases y barnices' },
@@ -59,10 +121,16 @@ export const catalogProducts: CatalogProduct[] = [
       { name: 'RP', note: 'Orientada a velocidad de aplicación.' },
       { name: 'DIGITAL', note: 'Configuración con medición de presión.' }
     ],
+    optionGroups: jetXOptions,
     highlights: [
       'Configuración para trabajos de acabado exigente.',
       'Opciones para adaptar el equipo al proceso del taller.',
       'Acompañamiento Etapel para elegir boquilla, tecnología y accesorios.'
+    ],
+    highlightSlides: [
+      'Convence por un sistema de flujo de aire estable y una pulverización fina, homogénea y controlada.',
+      'Precisión digital para ajustar la presión y mejorar la reproducibilidad del trabajo.',
+      'Las opciones de abanico, boquilla, tecnología y unidad digital ayudan a configurar el equipo para cada proceso.'
     ],
     detailBlocks: [
       {
@@ -73,7 +141,9 @@ export const catalogProducts: CatalogProduct[] = [
         title: 'Cómo lo trabaja Etapel',
         body: 'El producto se puede cotizar junto con vasos, filtración de aire, protección respiratoria y consumibles para integrar la estación completa.'
       }
-    ]
+    ],
+    downloads: ['Ficha técnica', 'Manual de operación', 'Guía de selección de boquillas'],
+    spareParts: ['Kit de boquilla', 'Juntas', 'Vaso y accesorios', 'Repuestos de mantenimiento']
   },
   {
     slug: 'satajet-x-5500',
@@ -81,6 +151,9 @@ export const catalogProducts: CatalogProduct[] = [
     familySlug: 'pintura',
     category: 'Pistolas de pintura',
     technology: 'HVLP / RP',
+    sprayPattern: 'I (Control)',
+    nozzleTechnology: 'HVLP',
+    interest: 'Pistolas con vaso de gravedad',
     application: 'Repintado automotriz',
     name: 'SATAjet X 5500',
     summary: 'Pistola para procesos de repintado que prioriza transferencia, ergonomía y consistencia.',
@@ -121,6 +194,9 @@ export const catalogProducts: CatalogProduct[] = [
     familySlug: 'pintura',
     category: 'Vasos y consumibles',
     technology: 'Consumible',
+    sprayPattern: 'Standard',
+    nozzleTechnology: 'No aplica',
+    interest: 'Sistemas de depósitos',
     application: 'Preparación y aplicación',
     name: 'SATA RPS',
     summary: 'Sistema de vasos multiuso para mezclar, pintar, rellenar y almacenar.',
@@ -156,11 +232,137 @@ export const catalogProducts: CatalogProduct[] = [
     ]
   },
   {
+    slug: 'satajet-1000-b',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'HVLP / RP',
+    sprayPattern: 'I (Control)',
+    nozzleTechnology: 'HVLP',
+    interest: 'Pistolas con vaso de gravedad',
+    application: 'Acabados y aplicaciones versátiles',
+    name: 'SATAjet 1000 B',
+    summary: 'Pistola versátil para aplicaciones de pintura, barniz y materiales de acabado.',
+    description:
+      'Equipo orientado a talleres que necesitan una pistola flexible para diferentes materiales y procesos de acabado.',
+    image: '/images/satajet-x5500.webp',
+    gallery: ['/images/satajet-x5500.webp', '/images/category-pistolas.webp', '/images/slide-pistolas.webp'],
+    badges: ['Gravedad', 'HVLP / RP', 'Versátil'],
+    specs: [
+      { label: 'Aplicación', value: 'Acabados y materiales diversos' },
+      { label: 'Tecnología', value: 'HVLP / RP según configuración' },
+      { label: 'Forma del abanico', value: 'I (Control)' },
+      { label: 'Soporte', value: 'Cotización Etapel' }
+    ],
+    variants: [
+      { name: 'HVLP', note: 'Para mayor eficiencia de transferencia.' },
+      { name: 'RP', note: 'Para mayor velocidad de aplicación.' }
+    ],
+    highlights: ['Uso versátil en taller.', 'Configuraciones para varios materiales.', 'Compatible con asesoría técnica Etapel.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Aplicaciones de pintura y barniz donde se requiere flexibilidad.' },
+      { title: 'Asesoría', body: 'Etapel puede orientar la selección según material y proceso.' }
+    ]
+  },
+  {
+    slug: 'satajet-100-b',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'RP',
+    sprayPattern: 'I (Control)',
+    nozzleTechnology: 'RP',
+    interest: 'Pistolas con vaso de gravedad',
+    application: 'Aplicación rápida de acabado',
+    name: 'SATAjet 100 B',
+    summary: 'Pistola con vaso de gravedad para procesos de acabado eficientes.',
+    description:
+      'Opción para trabajos que requieren una aplicación directa y controlada dentro del flujo de repintado.',
+    image: '/images/category-pistolas.webp',
+    gallery: ['/images/category-pistolas.webp', '/images/satajet-x5500.webp', '/images/slide-pistolas.webp'],
+    badges: ['Gravedad', 'RP', 'Acabado'],
+    specs: [
+      { label: 'Aplicación', value: 'Acabado general' },
+      { label: 'Tecnología', value: 'RP' },
+      { label: 'Forma del abanico', value: 'O (Speed)' },
+      { label: 'Servicio', value: 'Etapel distribuidor' }
+    ],
+    variants: [{ name: 'RP', note: 'Configuración para aplicación rápida.' }],
+    highlights: ['Aplicación eficiente.', 'Formato con vaso de gravedad.', 'Integrable con consumibles SATA.'],
+    detailBlocks: [
+      { title: 'Proceso', body: 'Pensada para trabajos de acabado y reparación con buena velocidad de aplicación.' },
+      { title: 'Integración', body: 'Puede acompañarse con vaso, filtro y protección respiratoria.' }
+    ]
+  },
+  {
+    slug: 'sataminijet-4400-b',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'HVLP',
+    sprayPattern: 'Standard',
+    nozzleTechnology: 'HVLP',
+    interest: 'Pistolas aerográficas',
+    application: 'Spot repair y piezas pequeñas',
+    name: 'SATAminijet 4400 B',
+    summary: 'Pistola compacta para reparaciones puntuales, piezas pequeñas y trabajos de precisión.',
+    description:
+      'Herramienta compacta para aplicaciones donde el control en áreas pequeñas es más importante que el volumen de material.',
+    image: '/images/category-pistolas.webp',
+    gallery: ['/images/category-pistolas.webp', '/images/slide-pistolas.webp', '/images/satajet-x5500.webp'],
+    badges: ['Compacta', 'HVLP', 'Spot repair'],
+    specs: [
+      { label: 'Aplicación', value: 'Spot repair' },
+      { label: 'Tecnología', value: 'HVLP' },
+      { label: 'Formato', value: 'Compacto' },
+      { label: 'Uso', value: 'Piezas pequeñas' }
+    ],
+    variants: [{ name: 'HVLP', note: 'Configuración compacta para precisión.' }],
+    highlights: ['Control en áreas pequeñas.', 'Ideal para reparaciones puntuales.', 'Complementa pistolas de mayor formato.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Spot repair, detalles y piezas pequeñas.' },
+      { title: 'Selección', body: 'Etapel puede recomendarla como complemento de una línea de pintura principal.' }
+    ]
+  },
+  {
+    slug: 'satajet-20-b',
+    brand: 'SATA',
+    familySlug: 'pintura',
+    category: 'Pistolas de pintura',
+    technology: 'RP',
+    sprayPattern: 'Standard',
+    nozzleTechnology: 'RP',
+    interest: 'Pistolas aerográficas',
+    application: 'Diseño y aplicaciones especiales',
+    name: 'SATAjet 20 B',
+    summary: 'Pistola para trabajos de diseño, efectos y aplicaciones especiales.',
+    description:
+      'Pensada para aplicaciones creativas y procesos donde la precisión visual y el control del patrón son relevantes.',
+    image: '/images/slide-pistolas.webp',
+    gallery: ['/images/slide-pistolas.webp', '/images/category-pistolas.webp', '/images/satajet-x5500.webp'],
+    badges: ['Diseño', 'RP', 'Especial'],
+    specs: [
+      { label: 'Aplicación', value: 'Diseño y efectos' },
+      { label: 'Tecnología', value: 'RP' },
+      { label: 'Forma del abanico', value: 'Standard' },
+      { label: 'Proceso', value: 'Aplicaciones especiales' }
+    ],
+    variants: [{ name: 'RP', note: 'Orientada a control y respuesta rápida.' }],
+    highlights: ['Uso para diseño.', 'Control de aplicación.', 'Compatible con procesos especiales.'],
+    detailBlocks: [
+      { title: 'Uso recomendado', body: 'Aplicaciones de diseño, personalización y efectos.' },
+      { title: 'Asesoría', body: 'Etapel puede orientar según material y acabado esperado.' }
+    ]
+  },
+  {
     slug: 'sata-air-star-f2',
     brand: 'SATA',
     familySlug: 'pintura',
     category: 'Protección respiratoria',
     technology: 'Seguridad',
+    sprayPattern: 'No aplica',
+    nozzleTechnology: 'No aplica',
+    interest: 'Protección respiratoria',
     application: 'Aplicación en cabina',
     name: 'SATA air star F 2.0',
     summary: 'Protección respiratoria para aplicaciones profesionales de pintura.',
@@ -201,6 +403,9 @@ export const catalogProducts: CatalogProduct[] = [
     familySlug: 'mecanica-y-aire',
     category: 'Aire comprimido',
     technology: 'Filtración',
+    sprayPattern: 'No aplica',
+    nozzleTechnology: 'No aplica',
+    interest: 'Tecnología de filtros',
     application: 'Preparación de aire',
     name: 'SATA filter 500',
     summary: 'Sistema de filtración para preparar aire comprimido en procesos de pintura.',
@@ -241,6 +446,9 @@ export const catalogProducts: CatalogProduct[] = [
     familySlug: 'cabinas-y-preparacion',
     category: 'Cabinas y áreas',
     technology: 'Proyecto',
+    sprayPattern: 'No aplica',
+    nozzleTechnology: 'No aplica',
+    interest: 'Cabinas y preparación',
     application: 'Pintura y preparación',
     name: 'Cabinas y zonas de preparación',
     summary: 'Soluciones para ordenar áreas de pintura, mezcla y preparación.',

@@ -14,150 +14,240 @@ export function getStaticPaths() {
 
 const { product } = Astro.props as { product: CatalogProduct };
 const family = productFamilies.find((item) => item.slug === product.familySlug);
+const slides = product.highlightSlides || product.highlights;
 const relatedProducts = catalogProducts
   .filter((item) => item.familySlug === product.familySlug && item.slug !== product.slug)
-  .slice(0, 3);
+  .slice(0, 4);
 ---
 
-<Layout
-  title={`${product.name} | Catálogo Etapel`}
-  description={product.summary}
->
+<Layout title={`${product.name} | Catálogo Etapel`} description={product.summary}>
   <Header />
 
   <main class="bg-white">
-    <section class="bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] pb-14 pt-32 sm:pb-16 sm:pt-36">
+    <section class="pb-16 pt-32 sm:pt-36" data-product-detail>
       <div class="shell">
         <div class="mb-8 flex flex-wrap items-center gap-3 text-sm font-semibold">
           <a href="/linea-de-producto" class="text-sky-700 transition hover:text-sky-900">Línea de Producto</a>
           <span class="text-slate-400">/</span>
-          {family && <a href={family.href} class="text-sky-700 transition hover:text-sky-900">{family.shortTitle}</a>}
+          {family && <a href={`${family.href}#catalogo-productos`} class="text-sky-700 transition hover:text-sky-900">{family.shortTitle}</a>}
           <span class="text-slate-400">/</span>
           <span class="text-slate-600">{product.name}</span>
         </div>
 
-        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <div>
-            <div class="flex flex-wrap gap-2">
-              <span class="rounded-full bg-sky-700 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-white">{product.brand}</span>
-              <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-[0_8px_20px_rgba(15,23,42,0.06)]">{product.category}</span>
-              <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-[0_8px_20px_rgba(15,23,42,0.06)]">{product.technology}</span>
+        <div class="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
+          <div class="bg-[#f7f7f7] p-6">
+            <div class="relative flex min-h-[520px] items-center justify-center">
+              <img src={product.gallery[0] || product.image} alt={product.name} class="max-h-[500px] w-full object-contain" data-gallery-main />
             </div>
-            <h1 class="mt-5 text-4xl font-bold tracking-[-0.05em] text-slate-950 sm:text-5xl lg:text-6xl">
-              {product.name}
-            </h1>
-            <p class="mt-5 max-w-3xl text-xl font-semibold leading-8 tracking-[-0.03em] text-slate-800">
-              {product.summary}
-            </p>
-            <p class="mt-5 max-w-3xl text-base leading-8 text-slate-600">
-              {product.description}
-            </p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="/contacto" class="btn-primary">Solicitar información</a>
-              {family && <a href={`${family.href}#catalogo-productos`} class="btn-outline">Volver al catálogo</a>}
+
+            <div class="mt-5 grid grid-cols-5 gap-3">
+              {product.gallery.map((image, index) => (
+                <button
+                  type="button"
+                  class={`aspect-square border bg-white p-2 ${index === 0 ? 'border-black' : 'border-slate-200'}`}
+                  data-gallery-thumb
+                  data-image={image}
+                  aria-label={`Imagen ${index + 1}`}
+                >
+                  <img src={image} alt={product.name} class="h-full w-full object-contain" loading="lazy" />
+                </button>
+              ))}
+            </div>
+
+            <div class="mt-5 flex justify-center gap-3">
+              <button type="button" data-gallery-prev class="flex h-14 w-14 items-center justify-center rounded-full border border-slate-300 text-3xl text-slate-600 transition hover:border-slate-950 hover:text-slate-950">‹</button>
+              <button type="button" data-gallery-next class="flex h-14 w-14 items-center justify-center rounded-full border border-slate-300 text-3xl text-slate-600 transition hover:border-slate-950 hover:text-slate-950">›</button>
             </div>
           </div>
 
-          <div class="overflow-hidden rounded-[8px] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
-            <div class="flex aspect-[4/3] items-center justify-center bg-slate-50 p-8">
-              <img src={product.image} alt={product.name} class="h-full w-full object-contain" />
-            </div>
-            <div class="grid grid-cols-2 gap-3 border-t border-slate-200 p-4">
-              {product.gallery.map((image) => (
-                <div class="flex aspect-[4/3] items-center justify-center rounded-[8px] bg-slate-50 p-4">
-                  <img src={image} alt={product.name} class="h-full w-full object-contain" loading="lazy" />
+          <div>
+            <p class="text-sm font-semibold text-slate-500">Número de producto: {product.slug.toUpperCase()}</p>
+            <h1 class="mt-4 text-3xl font-bold leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
+              {product.summary}
+            </h1>
+
+            <div class="mt-8 grid gap-5">
+              {(product.optionGroups || []).map((group) => (
+                <div>
+                  <p class="text-base font-bold text-slate-950">{group.label}</p>
+                  <div class="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                    {group.options.map((option) => (
+                      <button
+                        type="button"
+                        class={`min-h-[48px] border px-4 py-3 text-sm font-bold transition ${option.disabled ? 'cursor-not-allowed border-slate-100 bg-slate-100 text-slate-300' : option.selected ? 'border-black bg-white text-slate-950 ring-1 ring-black' : 'border-slate-300 bg-white text-slate-950 hover:border-black'}`}
+                        data-option-button
+                        disabled={option.disabled}
+                      >
+                        {option.label}
+                      </button>
+                    ))}
+                  </div>
+                  {group.help && <a href="/contacto" class="mt-3 inline-flex text-sm font-semibold text-blue-600 underline">{group.help}</a>}
                 </div>
               ))}
             </div>
+
+            <a href="/contacto" class="mt-8 inline-flex items-center justify-center gap-3 bg-black px-8 py-5 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-sky-800">
+              ✉ Pregunte ahora
+            </a>
+
+            <div class="mt-10">
+              <h2 class="text-3xl font-bold tracking-[-0.04em] text-slate-950">Aspectos destacados</h2>
+              <div class="mt-4 min-h-[112px] text-lg leading-8 text-slate-700" data-highlight-text>
+                {slides[0]}
+              </div>
+              <div class="mt-6 flex items-center gap-4">
+                <button type="button" data-highlight-prev class="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-2xl text-slate-600 transition hover:border-slate-950">‹</button>
+                <span class="text-base font-semibold text-slate-700"><span data-highlight-index>1</span>/{slides.length}</span>
+                <button type="button" data-highlight-next class="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-2xl text-slate-600 transition hover:border-slate-950">›</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="bg-white py-16 sm:py-20">
-      <div class="shell">
-        <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <article class="rounded-[8px] border border-slate-200 bg-white p-6 shadow-[0_16px_44px_rgba(15,23,42,0.05)]">
-            <span class="section-kicker text-slate-700">Características</span>
-            <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-slate-950">Puntos clave</h2>
-            <ul class="mt-6 grid gap-4">
-              {product.highlights.map((highlight) => (
-                <li class="rounded-[8px] border border-slate-200 bg-slate-50 p-4 text-sm font-semibold leading-7 text-slate-700">
-                  {highlight}
-                </li>
+        <section class="mt-20">
+          <div class="flex flex-wrap gap-8 border-b border-slate-200" role="tablist">
+            {['Descripción', 'Datos técnicos', 'Descargas', 'Piezas de recambio'].map((tab, index) => (
+              <button
+                type="button"
+                data-detail-tab
+                data-panel={`panel-${index}`}
+                class={`border-b-2 px-1 pb-4 text-xl font-semibold ${index === 0 ? 'border-black text-slate-950' : 'border-transparent text-slate-500'}`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          <div class="pt-8" data-detail-panel id="panel-0">
+            <div class="grid gap-6 lg:grid-cols-2">
+              {product.detailBlocks.map((block) => (
+                <article class="border-b border-slate-200 pb-6">
+                  <h3 class="text-xl font-bold text-slate-950">{block.title}</h3>
+                  <p class="mt-3 text-base leading-8 text-slate-600">{block.body}</p>
+                </article>
               ))}
-            </ul>
-          </article>
+            </div>
+          </div>
 
-          <article class="rounded-[8px] border border-slate-200 bg-white p-6 shadow-[0_16px_44px_rgba(15,23,42,0.05)]">
-            <span class="section-kicker text-slate-700">Datos técnicos</span>
-            <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-slate-950">Información del producto</h2>
-            <dl class="mt-6 grid gap-3 sm:grid-cols-2">
+          <div class="hidden pt-8" data-detail-panel id="panel-1">
+            <div class="mb-8 flex gap-3">
+              <button type="button" class="min-w-[180px] border border-black px-6 py-4 text-sm font-bold uppercase">Métrico</button>
+              <button type="button" class="min-w-[180px] border border-slate-200 bg-slate-50 px-6 py-4 text-sm font-bold uppercase">Imperial</button>
+            </div>
+            <dl class="grid gap-x-8 lg:grid-cols-2">
               {product.specs.map((spec) => (
-                <div class="rounded-[8px] border border-slate-200 bg-slate-50 p-4">
-                  <dt class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{spec.label}</dt>
-                  <dd class="mt-2 text-sm font-semibold leading-6 text-slate-900">{spec.value}</dd>
+                <div class="flex justify-between gap-6 border-b border-slate-200 py-5 text-base">
+                  <dt class="font-bold text-slate-800">{spec.label}</dt>
+                  <dd class="text-right text-slate-700">{spec.value}</dd>
                 </div>
               ))}
             </dl>
-          </article>
-        </div>
+          </div>
 
-        <div class="mt-6 grid gap-6 lg:grid-cols-2">
-          <article class="rounded-[8px] border border-slate-200 bg-white p-6 shadow-[0_16px_44px_rgba(15,23,42,0.05)]">
-            <span class="section-kicker text-slate-700">Variantes</span>
-            <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-slate-950">Opciones disponibles</h2>
-            <div class="mt-6 grid gap-3">
-              {product.variants.map((variant) => (
-                <div class="rounded-[8px] border border-slate-200 bg-slate-50 p-4">
-                  <p class="text-base font-bold text-slate-950">{variant.name}</p>
-                  <p class="mt-2 text-sm leading-7 text-slate-600">{variant.note}</p>
-                </div>
+          <div class="hidden pt-8" data-detail-panel id="panel-2">
+            <div class="grid gap-3 md:grid-cols-3">
+              {(product.downloads || ['Ficha técnica', 'Manual de operación']).map((download) => (
+                <a href="/contacto" class="border border-slate-200 bg-slate-50 p-5 text-base font-bold text-slate-950 transition hover:border-slate-950">
+                  {download}
+                </a>
               ))}
             </div>
-          </article>
+          </div>
 
-          <article class="rounded-[8px] border border-slate-200 bg-white p-6 shadow-[0_16px_44px_rgba(15,23,42,0.05)]">
-            <span class="section-kicker text-slate-700">Detalle</span>
-            <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-slate-950">Uso y asesoría</h2>
-            <div class="mt-6 grid gap-5">
-              {product.detailBlocks.map((block) => (
-                <div>
-                  <h3 class="text-lg font-bold tracking-[-0.03em] text-slate-950">{block.title}</h3>
-                  <p class="mt-2 text-sm leading-7 text-slate-600">{block.body}</p>
-                </div>
-              ))}
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    {
-      relatedProducts.length > 0 && (
-        <section class="bg-[#f6f9fc] py-16 sm:py-20">
-          <div class="shell">
-            <div class="max-w-3xl">
-              <span class="section-kicker text-slate-700">Relacionados</span>
-              <h2 class="section-title mt-4 text-slate-950">Más productos de esta línea</h2>
-            </div>
-            <div class="mt-8 grid gap-4 md:grid-cols-3">
-              {relatedProducts.map((item) => (
-                <a href={productDetailPath(item)} class="rounded-[8px] border border-slate-200 bg-white p-5 shadow-[0_14px_38px_rgba(15,23,42,0.05)] transition hover:-translate-y-1 hover:border-sky-200">
-                  <div class="flex h-40 items-center justify-center bg-slate-50 p-4">
-                    <img src={item.image} alt={item.name} class="h-full w-full object-contain" loading="lazy" />
-                  </div>
-                  <p class="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-sky-700">{item.brand}</p>
-                  <h3 class="mt-2 text-lg font-bold tracking-[-0.03em] text-slate-950">{item.name}</h3>
-                  <p class="mt-2 text-sm leading-6 text-slate-600">{item.summary}</p>
+          <div class="hidden pt-8" data-detail-panel id="panel-3">
+            <div class="grid gap-3 md:grid-cols-4">
+              {(product.spareParts || ['Kit de mantenimiento', 'Juntas', 'Accesorios']).map((part) => (
+                <a href="/contacto" class="border border-slate-200 bg-slate-50 p-5 text-base font-bold text-slate-950 transition hover:border-slate-950">
+                  {part}
                 </a>
               ))}
             </div>
           </div>
         </section>
-      )
-    }
+      </div>
+    </section>
+
+    {relatedProducts.length > 0 && (
+      <section class="bg-[#f6f9fc] py-16 sm:py-20">
+        <div class="shell">
+          <h2 class="section-title text-slate-950">Productos relacionados</h2>
+          <div class="mt-8 grid gap-6 md:grid-cols-4">
+            {relatedProducts.map((item) => (
+              <a href={productDetailPath(item)} class="border border-slate-200 bg-white transition hover:border-slate-950">
+                <div class="flex h-56 items-center justify-center bg-[#f7f7f7] p-5">
+                  <img src={item.image} alt={item.name} class="h-full w-full object-contain" loading="lazy" />
+                </div>
+                <div class="p-5">
+                  <p class="text-sm text-slate-500">{item.interest || item.category}</p>
+                  <h3 class="mt-2 text-xl font-semibold text-slate-950">{item.name}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
   </main>
 
   <Footer />
 </Layout>
+
+<script define:vars={{ slides }}>
+  document.querySelectorAll('[data-product-detail]').forEach((detail) => {
+    const mainImage = detail.querySelector('[data-gallery-main]');
+    const thumbs = Array.from(detail.querySelectorAll('[data-gallery-thumb]'));
+    let imageIndex = 0;
+
+    const setImage = (index) => {
+      imageIndex = (index + thumbs.length) % thumbs.length;
+      const active = thumbs[imageIndex];
+      mainImage.src = active.dataset.image;
+      thumbs.forEach((thumb, thumbIndex) => {
+        thumb.classList.toggle('border-black', thumbIndex === imageIndex);
+        thumb.classList.toggle('border-slate-200', thumbIndex !== imageIndex);
+      });
+    };
+
+    thumbs.forEach((thumb, index) => thumb.addEventListener('click', () => setImage(index)));
+    detail.querySelector('[data-gallery-prev]')?.addEventListener('click', () => setImage(imageIndex - 1));
+    detail.querySelector('[data-gallery-next]')?.addEventListener('click', () => setImage(imageIndex + 1));
+
+    detail.querySelectorAll('[data-option-button]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const group = button.closest('div');
+        group.querySelectorAll('[data-option-button]').forEach((item) => {
+          item.classList.remove('border-black', 'ring-1', 'ring-black');
+          item.classList.add('border-slate-300');
+        });
+        button.classList.add('border-black', 'ring-1', 'ring-black');
+        button.classList.remove('border-slate-300');
+      });
+    });
+
+    const highlightText = detail.querySelector('[data-highlight-text]');
+    const highlightIndex = detail.querySelector('[data-highlight-index]');
+    let slideIndex = 0;
+    const setSlide = (index) => {
+      slideIndex = (index + slides.length) % slides.length;
+      highlightText.textContent = slides[slideIndex];
+      highlightIndex.textContent = String(slideIndex + 1);
+    };
+    detail.querySelector('[data-highlight-prev]')?.addEventListener('click', () => setSlide(slideIndex - 1));
+    detail.querySelector('[data-highlight-next]')?.addEventListener('click', () => setSlide(slideIndex + 1));
+
+    const tabs = Array.from(detail.querySelectorAll('[data-detail-tab]'));
+    const panels = Array.from(detail.querySelectorAll('[data-detail-panel]'));
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((item) => {
+          item.classList.toggle('border-black', item === tab);
+          item.classList.toggle('text-slate-950', item === tab);
+          item.classList.toggle('border-transparent', item !== tab);
+          item.classList.toggle('text-slate-500', item !== tab);
+        });
+        panels.forEach((panel) => panel.classList.toggle('hidden', panel.id !== tab.dataset.panel));
+      });
+    });
+  });
+</script>
